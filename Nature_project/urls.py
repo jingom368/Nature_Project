@@ -19,5 +19,5 @@ from .views import Seoul_forest
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Seoul_forest.as_view())
+    path('seoul_forest', Seoul_forest.as_view())
 ]
