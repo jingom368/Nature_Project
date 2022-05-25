@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <divc class="black" ></div>    
         <div class="image">
             사진
             
@@ -76,28 +76,31 @@
                 <div class="contact-index col-2">
                     <div>Oumtt</div>
                     <div>Programs</div>
-                    <div>About Us</div>
+                    <a href="https://www.notion.so/About-Project-Oumtt-15b99b05c08442b0b19454fdfdd67962"><div>About Us</div></a>
                     <div>Location</div>
                 </div>
                 <div class="contact-channel col-4">
-                    <div>Instagram</div>
+                    <a href="https://www.instagram.com/project_oumtt/"><div>Instagram</div></a>
                     <div>Facebook</div>
                 </div>
                 <div class="contact-submit col-4">
                     <div class="contact-submit_title">Please fiil out and submit to receive a call from us</div>
-                    <div>name</div>
-                    <div>contact</div>
-                    <div>course</div>
+                    <form action="" method="post">
+                        <input type="text" id="input_box" placeholder="name">
+                        <input type="text" id="input_box" placeholder="contact">
+
+                    </form>
                 </div>
             </div>
         </div>
 
     </section>
 
+    <div id="map" style="width: 50%; height:500px;"></div>
+
     <section class="media">
         <div>
-            <!-- <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/TVTuTZ8kIsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-        </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
         <div>
             
         </div>
@@ -134,9 +137,44 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous">
+        crossorigin="anonymous"></script>
 
-    
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=nii6f0fr51"></script>
+
+    <script>
+        var mapOptions = {
+            center: new naver.maps.LatLng(37.5419442,127.038577),
+            zoom: 16
+        };
+        var map = new naver.maps.Map('map', mapOptions);
+
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.5419442,127.038577),
+            title: '서울 숲',
+            map: map
+        });
+
+        var contentString = [
+            '<div style="padding:4px 4px;">',
+            '   <div style="font-weight:bold;padding-bottom:3px;">서울숲</div>',
+            '   <p>보산관 10호<p>',
+            '</div>'
+        ].join('');
+
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+        });
+
+        naver.maps.Event.addListener(marker, "click", function (e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map, marker);
+            }
+        });
+
+        infowindow.open(map, marker);
     </script>
+        
 </body>
 </html>

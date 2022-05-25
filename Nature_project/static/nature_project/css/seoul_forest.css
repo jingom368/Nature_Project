@@ -75,6 +75,10 @@ body {
     font-size: 30px;
 }
 
+#input_box { 
+    border-right:0px; border-top:0px; border-left:0px; outline: none;
+}
+
 /* madia */
 
 .media {
@@ -132,4 +136,11 @@ body {
     align-items: center;
     width: 100%;
     height: 800px;
+}
+
+
+.black {
+    width: 500px;
+    height: 500px;
+    background-color: black;
 }
