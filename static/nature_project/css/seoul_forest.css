@@ -1,0 +1,146 @@
+* {
+    font-size: 30px;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+/* Intro */
+
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introduction {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Nature_project {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-2 {
+    display: flex;
+    width: 60%;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Contact */
+
+.contact {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+}
+
+.contact-title {
+    font-size: 70px;
+}
+
+.contact-index {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-channel {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-submit {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-submit_title {
+    font-size: 30px;
+}
+
+#input_box { 
+    border-right:0px; border-top:0px; border-left:0px; outline: none;
+}
+
+/* madia */
+
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1200px;
+}
+
+/* Schedule */
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.schedule-title {
+    width: 60%;
+}
+
+.schedule-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 300px;
+}
+
+/* Activity */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.gallery-title {
+    width: 60%;
+}
+
+/* Send */
+
+.send {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+
+.black {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
