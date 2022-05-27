@@ -21,3 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('seoul_forest', Seoul_forest.as_view())
 ]
+

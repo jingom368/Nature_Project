@@ -14,97 +14,98 @@
     <title>Document</title>
 </head>
 <body>
-    <divc class="black" ></div>    
-        <div class="image">
-            사진
+    <header>
+        <nav>
+            <div class="nav_home">
+                <div style="color:#DBFD5C;">Main</div>
+                <div>Program</div>
+                <a style="text-decoration: none;" href="https://www.notion.so/About-Project-Oumtt-15b99b05c08442b0b19454fdfdd67962"><div>Oumtt</div></a>
+            </div>
+            <button class="nav_button">관람 신청하기</button>
+        </nav>
+    </header>
+
+    <main>
+    <div class="item_wrapper">
+        <img class="main_image" src="/static/nature_project/assets/img/2.main/main.png">
+        <div class="item-info-box">        
             
-            <div class="hello">title justify-content center</div>
-            <div>관람신청, 관람후기, 검색 : justify-content end</div>
+            <!-- introduction -->
 
-        <!-- nav -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Preview</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Schedule">Schedule</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Artists</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Gallery">Gallery</a>
-                            </li>
-                        </ul>
+            <section class="introduction">
+
+                    <div class="intro">
+                        <div class="intro_calender">2022.06.11 4pm</br>
+                            Seoul Forest</div> 
+                        <div class="intro_team" >OUMTT X YOCHAN</div>
+                        <div class="intro_title">Monthly Art SeoulForestival with you</div>
                     </div>
-                </div>
-            </nav>
+
+                    <button class="intro_cta-button">관람 신청하기</button>
+
+            </section>
+
+                <!-- media -->
+
+            <section class="media">
+        <div class="media_title">
+            OUMTT X YOCHAN collaboration preview
         </div>
-    
-    <section class="intro">
-
-            <div class="introduction">
-                <div>2022.06.11 sat</div> 
-                <div>OUMTT X YOCHAN </br> Monthly Art SeoulForestival with you</div>
-            </div>
-
-            <div class="Nature_project">
-                Oumtt's First 'Nature' Project </br>자연에서 자연스럽게
-            </div>
-
-            <div class="main-2">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam a, porro ullam nobis dicta soluta blanditiis nam ab, voluptates eligendi similique quaerat rerum optio reprehenderit molestiae exercitationem quae, aperiam doloribus?</br></br></div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, incidunt vero adipisci doloribus, est iusto quas illum at voluptatem recusandae illo. Nulla impedit deleniti doloribus rem assumenda provident eligendi exercitationem.</div>
-            </div>
-
-    </section>
+        <div class="media_Oumtt">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            </section>
+        </div>
+    </div>
 
     <section class="contact">
-        <div class="contact-title">'Seoul Forestival' With you</div>
         <div class="container-fluid" >
             <div class="row">
-                <div class="contact-index col-2">
-                    <div>Oumtt</div>
-                    <div>Programs</div>
-                    <a href="https://www.notion.so/About-Project-Oumtt-15b99b05c08442b0b19454fdfdd67962"><div>About Us</div></a>
-                    <div>Location</div>
+                <div class="contact-index col-md-4 offset-md-1">
+                    <div class="contact-title">'Seoul Forestival' With you</div>
+                        <div class="contact-info">
+                            <div class="contact-info_time">2022.06.11 4pm. Seoul Forest</div>
+                            <div class="contact-info_place">서울숲 서울특별시 성동구 뚝섬로 273</div>
+                            <div class="contact-info_notice">*사전 매칭 작업 인원제한으로 인하여
+                            </br>관람 장소 및 상세 일정은 추후 공지해드릴 예정입니다.
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-channel col-4">
-                    <a href="https://www.instagram.com/project_oumtt/"><div>Instagram</div></a>
-                    <div>Facebook</div>
-                </div>
-                <div class="contact-submit col-4">
-                    <div class="contact-submit_title">Please fiil out and submit to receive a call from us</div>
+                <div class="contact-submit col-md-4 offset-md-2">
                     <form action="" method="post">
-                        <input type="text" id="input_box" placeholder="name">
-                        <input type="text" id="input_box" placeholder="contact">
-
+                        <div class="contact-submit_info-personal">
+                            <div class="contact-submit_info-name">
+                                이름
+                            </div>
+                            <input type="name" id="input_box" >
+                            <div class="contact-submit_info-phonenumber">
+                                전화번호
+                            </div>
+                            <input type="phonenumber" id="input_box" >
+                        </div>
+                        <div class="contact-submit_info-dance">
+                            <div class="contact-submit_info-Koreandance">
+                                무용전공여부
+                            </div>
+                            <input class="form-check-input" type="checkbox" id="contact-submit_check-box">
+                        </div>
+                        <div class="contact-submit_how-think">
+                            자연에서 산책할 때, 어떤 생각을 하시나요?
+                        </div>
+                        <div>                    
+                            <select name="how-think" class="contact-submit_select-think">
+                                <option style="background-color: black; color: #ffffff;" value="">당신의 생각을 선택해 주세요.</option>
+                                <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">프로젝트 움트</option>
+                                <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">내일도 화이팅!</option>
+                                <option style="background-color: black; color: #ffffff;" value="화이팅"></option>
+                            </select>
+                        </div>
+                        <button class="contact-submit-button">관람 신청하기</button>
                     </form>
                 </div>
             </div>
         </div>
 
-    </section>
-
-    <div id="map" style="width: 50%; height:500px;"></div>
-
-    <section class="media">
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
-        <div>
-            
-        </div>
     </section>
 
     <section id="Schedule" class="schedule">
@@ -139,43 +140,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=nii6f0fr51"></script>
-
-    <script>
-        var mapOptions = {
-            center: new naver.maps.LatLng(37.5419442,127.038577),
-            zoom: 16
-        };
-        var map = new naver.maps.Map('map', mapOptions);
-
-        var marker = new naver.maps.Marker({
-            position: new naver.maps.LatLng(37.5419442,127.038577),
-            title: '서울 숲',
-            map: map
-        });
-
-        var contentString = [
-            '<div style="padding:4px 4px;">',
-            '   <div style="font-weight:bold;padding-bottom:3px;">서울숲</div>',
-            '   <p>보산관 10호<p>',
-            '</div>'
-        ].join('');
-
-        var infowindow = new naver.maps.InfoWindow({
-            content: contentString
-        });
-
-        naver.maps.Event.addListener(marker, "click", function (e) {
-            if (infowindow.getMap()) {
-                infowindow.close();
-            } else {
-                infowindow.open(map, marker);
-            }
-        });
-
-        infowindow.open(map, marker);
-    </script>
         
+    </main>
+    
 </body>
 </html>
