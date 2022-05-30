@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import Seoul_forest
+from .views import Personal_Information
+from .views import seoul_forest_read
+
 
 urlpatterns = [
-    path('seoul_forest/', Seoul_forest.as_view())
+    path('', Personal_Information.as_view()),
+    path('read',seoul_forest_read),
 ]

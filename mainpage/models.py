@@ -8,3 +8,6 @@ class Apply(models.Model):
     # select = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+class Email(models.Model):
+    email = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)

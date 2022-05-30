@@ -1,29 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Mada&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Maitree&display=swap');
-@import url('https://webfontworld.github.io/ridi/RidiBatang.css');
+
 /* @font-face {
-    font-family: 'RIDIBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Maitree';
+    src: url('https://fonts.googleapis.com/css2?family=Maitree&display=swap');
     font-style: normal;
 } */
-/* @font-face {
-    font-family: 'RIDIBatang';
-    src:url("/static/nature_project/assets/otf/RIDIBatang.otf") format("opentype");
-    font-weight: 400;
-} */
+
+@font-face {
+    font-family: 'Maitree';
+    src: url("/static/nature_project/assets/fonts/RIDIBatang_min.otf") format("opentype");
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
 
 * {
-    font-family: 'Maitree', serif !important;
-    /* font-family: 'RIDIBatang' !important;                   */
+    font-family: 'Maitree' !important;                 
     color: #FFFFFF;
 }
 
 body {
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
     height: auto;
 }
 
@@ -46,10 +43,11 @@ nav {
 .nav_home {
     display: flex;
     flex-direction: row;
-    width: 231px;
+    width: 251px;
     justify-content: space-between;
     font-size: 18px;
     line-height: 26px;
+
 }
 
 .nav_button {
@@ -58,9 +56,18 @@ nav {
     border: 1px solid #FFFFFF;
     border-radius: 8px;
     background-color: transparent;
+    font-size: 16px;
     line-height: 24px;
+    letter-spacing: -0.04em;
 }
 
+
+/* main */
+
+main {
+    width: 100%;
+    height: auto;
+}
 
 /* item_wrapper */
 
@@ -71,8 +78,9 @@ nav {
 .main_image {
     display: flex;
     width: 100%;
-    height: 2040px;
+    height: 1800px;
     vertical-align: middle;
+    object-fit:none;
 }
 
 .item-info-box {
@@ -145,21 +153,95 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 1136px;
+    height: 896px;
 }
 
-.media_title {
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 36px;
+.media_text {
+    font-size: 24px;
+    line-height: 34px;
     margin-top: 120px;
 }
 
-.media_Oumtt {
-    margin-top: 48px;
-    margin-bottom: 155px;
+.media_title {
+    font-size: 34px;
+    line-height: 40px;
+    margin-top: 12px;
+    color: #DBFD5C;
 }
 
+.media_Oumtt {
+    margin-top: 56px;
+}
+
+.media_notice {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 24px;
+    margin-bottom: 133px;
+}
+
+
+/* Nature */
+
+.nature {
+    width: 100%;
+    height: 1780px;
+    padding-left: 107px;
+    padding-right: 107px;
+    background-color: black;
+}
+
+.nature_title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+    padding-top: 160px;
+}
+
+.nature_text {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+}
+
+.nature_intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 120px;
+}
+
+.nature_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nature_photo {
+    display: block;
+    width: 810px;
+    height: 440px;
+    padding-top: 16px;
+}
+
+.nature_value_1 {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.005em;
+    padding-top: 24px;
+    text-align: end;
+}
+
+.nature_value_2 {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.005em;
+    padding-top: 52px;
+    text-align: end;
+}
 
 /* Contact */
 
@@ -172,26 +254,35 @@ nav {
     outline: none;
     background-color: transparent;
     margin-top: 4px;
+    padding: 0px 0px;
 }
 
 .contact {
     display: flex;
     width: 100%;
     height: 680px;
-    flex-direction: column;
+    flex-direction: row;
     background-color: black;
+    padding-left: 107px;
+    padding-right: 107px;
+}
+
+.contact-index {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-title {
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 58px;
-    letter-spacing: -0.01em;
-    margin-top: 120px;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+    margin-top: 112px;
 }
 
 .contact-info {
-    margin-top: 196px;
+    margin-top: 216px;
 }
 
 .contact-info_time {
@@ -204,6 +295,7 @@ nav {
 .contact-info_place {
     font-size: 18px;
     line-height: 26px;
+    margin-top: 4px;
 }
 
 .contact-info_notice {
@@ -212,28 +304,15 @@ nav {
     margin-top: 24px;
 }
 
-.contact-index {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-channel {
-    display: flex;
-    flex-direction: column;
-}
-
 .contact-submit {
     display: flex;
     flex-direction: column;
-    margin-top: 130px;
-}
-
-.contact-submit_title {
-    font-size: 30px;
+    padding-top: 122px;
+    padding-left: 190px;
 }
 
 .contact-submit_info-personal {
-    width: 311px;
+    width: 310px;
     height: 156px;
 }
 
@@ -247,7 +326,7 @@ nav {
     font-size: 14px;
     line-height: 24px;
     color: #DBFD5C;
-    margin-top: 24px;
+    margin-top: 28px;
 }
 
 .contact-submit_info-notice {
@@ -257,12 +336,13 @@ nav {
     line-height: 20px;
     letter-spacing: -0.005em;
     color: #E0E0E0;
+    padding-top: 2px;
 }
 
 .contact-submit_check {
     display: flex;
     flex-direction: row;
-    width: 400px;
+    width: auto;
     height: 24px;
     margin-top: 34px;
 }
@@ -285,7 +365,7 @@ nav {
     width: 16px;
     height: 16px;
     margin-left: 8px;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .contact-submit_how-think {
@@ -299,6 +379,9 @@ nav {
 select {
     width: 310px;
     height: 36px;
+    border: 1px solid #9E9E9E;
+    border-radius: 4px;
+    padding: 0px 8px;
 }
 
 .contact-submit_select-think {
@@ -361,35 +444,99 @@ select {
 }
 
 
-/* Activity */
+/* footer */
 
-.gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+footer {
     width: 100%;
-    height: 800px;
-}
-
-.gallery-title {
-    width: 60%;
-}
-
-/* Send */
-
-.send {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 800px;
-}
-
-
-.black {
-    width: 500px;
-    height: 500px;
+    height: 400px;
+    padding-left: 24px;
+    padding-right: 24px;
     background-color: black;
+}
+
+.footer_info {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #424242 
+}
+
+.footer_info-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_info-contact {
+    padding-top: 72px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.footer_info-link {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+}
+
+.footer_info-link_image {
+    width: 20px;
+    height: 20px;
+    margin-left: 40px;
+    margin-top: 3px;
+}
+
+.footer_info-link_text {
+    font-size: 16px;
+    line-height: 26px;
+    padding-left: 6px;
+}
+
+.footer_info-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 240px;
+}
+
+.footer_info-click {
+    width: 388px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.footer_input_box {
+    width: 280px;
+    height: 36px;
+    border-right:0px; 
+    border-top:0px; 
+    border-left:0px; 
+    outline: none;
+    background-color: transparent;
+    padding: 0px 0px;
+}
+
+.footer-submit-button {
+    width: 100px;
+    height: 36px;
+    background: #DBFD5C;
+    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+}
+
+.footer_info-copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9E9E9E;
+    padding-top: 50px;
 }

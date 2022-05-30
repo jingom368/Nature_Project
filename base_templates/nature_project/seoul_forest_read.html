@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seoul_forest_data List</h1>
+    {% if personal_list %}
+    <table border="1">
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>보낸 시간</th>
+        <th>무용 전공 여부</th>
+        <th>개인 정보 동의</th>
+        {% for post in personal_list %}
+        <tr>
+            <td>{{ post.name }}</td>
+            <td>{{ post.phonenumber }}</td>
+            <td>{{ post.created_at }}</td>
+            <td>{{ post.koreandance }}</td>
+            <td>{{ PIagree }}</td>
+        </tr>
+
+        {% empty %}
+        <h2> No posts </h2>
+
+        {% endfor %}
+    </table>
+    
+    {% else %}
+    <h2> No posts </h2>
+    
+    {% endif %}
+
+
+    {% if dancer_email_list %}
+    <table border="1">
+        <th>이메일</th>
+        <th>보낸 시간</th>
+        {% for post in dancer_email_list %}
+        <tr>
+            <td>{{ post.email }}</td>
+            <td>{{ post.created_at }}</td>
+        </tr>
+
+        {% empty %}
+        <h2> No posts </h2>
+
+        {% endfor %}
+    
+    {% else %}
+    <h2> No posts </h2>
+
+    {% endif %}
+</body>
+</html>
