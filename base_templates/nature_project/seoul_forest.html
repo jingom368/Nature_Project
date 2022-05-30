@@ -14,6 +14,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <header>
         <nav>
             <div class="nav_home">
@@ -26,122 +27,143 @@
     </header>
 
     <main>
-    <div class="item_wrapper">
-        <img class="main_image" src="/static/nature_project/assets/img/2.main/main.png">
-        <div class="item-info-box">        
-            
-            <!-- introduction -->
+        <div class="item_wrapper">
+            <img class="main_image" src="/static/nature_project/assets/img/2.main/main.png">
+            <div class="item-info-box">        
+                
+                <!-- introduction -->
 
-            <section class="introduction">
+                <section class="introduction">
 
-                    <div class="intro">
-                        <div class="intro_calender">2022.06.11 4pm</br>
-                            Seoul Forest</div> 
-                        <div class="intro_team" >OUMTT X YOCHAN</div>
-                        <div class="intro_title">Monthly Art SeoulForestival with you</div>
-                    </div>
-
-                    <button class="intro_cta-button">관람 신청하기</button>
-
-            </section>
-
-                <!-- media -->
-
-            <section class="media">
-        <div class="media_title">
-            OUMTT X YOCHAN collaboration preview
-        </div>
-        <div class="media_Oumtt">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-            </section>
-        </div>
-    </div>
-
-    <section class="contact">
-        <div class="container-fluid" >
-            <div class="row">
-                <div class="contact-index col-md-4 offset-md-1">
-                    <div class="contact-title">'Seoul Forestival' With you</div>
-                        <div class="contact-info">
-                            <div class="contact-info_time">2022.06.11 4pm. Seoul Forest</div>
-                            <div class="contact-info_place">서울숲 서울특별시 성동구 뚝섬로 273</div>
-                            <div class="contact-info_notice">*사전 매칭 작업 인원제한으로 인하여
-                            </br>관람 장소 및 상세 일정은 추후 공지해드릴 예정입니다.
+                        <div class="intro">
+                            <div class="intro_calender">2022.06.11 4pm</br>
+                                Seoul Forest</div> 
+                            <div class="intro_team" >OUMTT X YOCHAN</div>
+                            <div class="intro_title">Monthly Art SeoulForestival with you</div>
                         </div>
-                    </div>
-                </div>
-                <div class="contact-submit col-md-4 offset-md-2">
-                    <form action="" method="post">
-                        <div class="contact-submit_info-personal">
-                            <div class="contact-submit_info-name">
-                                이름
-                            </div>
-                            <input type="name" id="input_box" >
-                            <div class="contact-submit_info-phonenumber">
-                                전화번호
-                            </div>
-                            <input type="phonenumber" id="input_box" >
-                        </div>
-                        <div class="contact-submit_info-dance">
-                            <div class="contact-submit_info-Koreandance">
-                                무용전공여부
-                            </div>
-                            <input class="form-check-input" type="checkbox" id="contact-submit_check-box">
-                        </div>
-                        <div class="contact-submit_how-think">
-                            자연에서 산책할 때, 어떤 생각을 하시나요?
-                        </div>
-                        <div>                    
-                            <select name="how-think" class="contact-submit_select-think">
-                                <option style="background-color: black; color: #ffffff;" value="">당신의 생각을 선택해 주세요.</option>
-                                <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">프로젝트 움트</option>
-                                <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">내일도 화이팅!</option>
-                                <option style="background-color: black; color: #ffffff;" value="화이팅"></option>
-                            </select>
-                        </div>
-                        <button class="contact-submit-button">관람 신청하기</button>
-                    </form>
-                </div>
+
+                        <button class="intro_cta-button">관람 신청하기</button>
+
+                </section>
+
+                    <!-- media -->
+
+        <section class="media">
+            <div style="margin-top:320px;"></div>
+            <div class="media_title">
+                OUMTT X YOCHAN collaboration preview
+            </div>
+            <div class="media_Oumtt">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+                </section>
             </div>
         </div>
 
-    </section>
+        <section class="contact">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="contact-index col-md-4 offset-md-1">
+                        <div class="contact-title">'Seoul Forestival' With you</div>
+                            <div class="contact-info">
+                                <div class="contact-info_time">2022.06.11 4pm. Seoul Forest</div>
+                                <div class="contact-info_place">서울숲 서울특별시 성동구 뚝섬로 273</div>
+                                <div class="contact-info_notice">*사전 매칭 작업 인원제한으로 인하여
+                                </br>관람 장소 및 상세 일정은 추후 공지해드릴 예정입니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-submit col-md-4 offset-md-2">
+                        <form action="/mainpage/seoul_forest/" method="post">
+                            {% csrf_token %}
+                            <div class="contact-submit_info-personal">
+                                <div class="contact-submit_info-name">
+                                    이름
+                                </div>
+                                <input type="name" id="input_box" name="name" autocomplete="off" maxlength="4">
+                                <div class="contact-submit_info-phonenumber">
+                                    전화번호
+                                </div>
+                                <input type="phonenumber" id="input_box" name="phonenumber" autocomplete="off" maxlength="13" pattern="^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$">
+                            </div>
+                                <div class="contact-submit_info-notice"> 
+                                    입력하신 번호로 공연안내가 전송되오니 정확히 입력해 주세요
+                                </div>
+                            <div class="contact-submit_check">
+                                <div class="contact-submit_check-dance">
+                                    무용전공여부
+                                </div>
+                                <input class="form-check-input" type="checkbox" id="contact-submit_check-box" name="answer_1[]" value="1">
+                                <div class="contact-submit_check-agree">
+                                    개인정보활용동의
+                                </div>
+                                <input class="form-check-input" type="checkbox" id="contact-submit_check-box" name="answer_2[]" value="2">
+                            </div>
+                            <!-- <div class="contact-submit_how-think">
+                                자연에서 산책할 때, 어떤 생각을 하시나요?
+                            </div>
+                            <div>                    
+                                <select name="how-think" class="contact-submit_select-think">
+                                    <option style="background-color: black; color: #ffffff;" value="">당신의 생각을 선택해 주세요.</option>
+                                    <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">프로젝트 움트</option>
+                                    <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">내일도 화이팅!</option>
+                                    <option style="background-color: black; color: #ffffff;" value="화이팅"></option>
+                                </select>
+                            </div> -->
+                            <button class="contact-submit-button">관람 신청하기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="Schedule" class="schedule">
-        <div class="schedule-title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatum odit a, recusandae expedita iure non, porro beatae suscipit mollitia harum odio enim consequuntur cumque quia. Hic quod ipsam accusamus?
-        </div>
-        <div class="schedule-table">
-            Day1
-        </div>
-        <div class="schedule-table">
-            Day2
-        </div>
-    </section>
+        <section id="Artist" class="Artist">
+            <div class="Artist_title">
+                OUMTT X YOCHAN            
+            </div>
+            <div style="display:flex; flex-direction:row;">
+                <div class="Artist-Bian"> 
+                    <div class="Artist-Bian_name">
+                        BIAN
+                    </div>
+                    <div class="Artist-Bian_image">
+                        <img src="/static/nature_project/assets/img/2.main/Oumtt_Bian.png">
+                    </div>
+                    <div class="Artist-Yochan_intro">
+                        <div>Monthly Art Festival</div>
+                        <div>장르는 구분하되, 움직임과 사고, 사운드와 표현에 제한을 두지 않는, 하나의 기준에 국한되지 않음을 추구하는 ‘넓은 가치의 목적을 가진 작업’을 통해 우리의 삶의 가장 밀접한 곳에서
+                            일어났던 일들, 그리고 일어나고 있는 일들, 또한 일어날 일들까지 고찰하고 관찰합니다.
+                        </br></br>
+                            매번 실험적이고 다양한 방식으로 해석함을 통해 누구나 이해하고 공감할 수 있는 작품을
+                            제작하는 것을 꿈꾸며, 궁극적으로는 밝은 사회를 만들고자 합니다.
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="Artist-Yochan">
+                    <div class="Artist-Oumtt_intro">
+                        <div>OUMTT</div>
+                        <div>‘예술을 움 틔우다’ 라는 슬로건에서 비롯되었으며, ‘작은 씨앗이 결실을 맺기 위해 자연을 만나 자라듯, ‘자연히 할 수 있는 표현의 시작으로부터 누구나의 마음 속 예술을 움 틔워 향유시키다’ 라는 뜻을 가지고 있습니다.
+                        </br></br>
+                            예술의 접근성과 한계에, 미디어 매체를 이용하고 다양한 시도들을 통하여, 많은 사람들에게
+                            예술을 향유시키는데 목적이 있습니다.
+                        </div>
+                    </div>
+                    <div class="Artist-Yochan_image">
+                        <img src="/static/nature_project/assets/img/2.main/Oumtt_Yochan.png">
+                    </div>
+                    <div class="Artist-Yochan_name">
+                        YOCHAN
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="Gallery" class="gallery">
-        <div class="gallery-title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quas, quo minus sunt, blanditiis alias, voluptas mollitia explicabo perferendis vitae sit unde rerum reiciendis tenetur iste non ab eos amet.
-        </div>
-        <div>
-            <img src="https://mediahub.seoul.go.kr/wp-content/uploads/2020/04/7aff07f4b79a5be6a136b3e384fd5136.jpg">
-        </div>
-    </section>
-
-    <section class="send">
-        <div class="send-title">Be the first to join and get something special</div>
-        <div class="send-email">email send</div>
-    </section>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+            
     </main>
-    
+
 </body>
 </html>
