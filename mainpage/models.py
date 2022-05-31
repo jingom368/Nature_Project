@@ -5,7 +5,7 @@ class Apply(models.Model):
     phonenumber = models.TextField()
     koreandance = models.TextField(null=True)
     PIagree= models.TextField(null=True)
-    # select = models.TextField()
+    how_think = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Email(models.Model):

@@ -9,7 +9,7 @@
 <body>
     <h1>Seoul_forest_data List</h1>
     {% if personal_list %}
-    <table border="1">
+    <table border="2">
         <th>이름</th>
         <th>전화번호</th>
         <th>보낸 시간</th>
@@ -21,7 +21,7 @@
             <td>{{ post.phonenumber }}</td>
             <td>{{ post.created_at }}</td>
             <td>{{ post.koreandance }}</td>
-            <td>{{ PIagree }}</td>
+            <td>{{ post.PIagree }}</td>
         </tr>
 
         {% empty %}

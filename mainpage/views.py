@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.http import HttpResponseRedirect
 
 
+
 class Personal_Information(APIView):
     def get(self, request):
         return render(request, "nature_project/seoul_forest.html")
@@ -16,7 +17,7 @@ class Personal_Information(APIView):
             new_post.phonenumber = request.POST["phonenumber"]
             new_post.koreandance = request.POST.getlist('answer_1[]')
             new_post.PIagree = request.POST.getlist('answer_2[]')
-            # new_post.select = request.POST.get('how-think')
+            new_post.how_think = request.POST.get('how-think')
             new_post.created_at = timezone.now()
             new_post.save()
 

@@ -20,7 +20,7 @@
 }
 
 body {
-    width: 100%;
+        width: 100%;
     height: auto;
 }
 
@@ -47,7 +47,6 @@ nav {
     justify-content: space-between;
     font-size: 18px;
     line-height: 26px;
-
 }
 
 .nav_button {
@@ -67,20 +66,17 @@ nav {
 main {
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 /* item_wrapper */
-
-.item_wrapper {
-    position: relative;
-}
 
 .main_image {
     display: flex;
     width: 100%;
     height: 1800px;
     vertical-align: middle;
-    object-fit:none;
+    object-fit: cover;
 }
 
 .item-info-box {
@@ -143,6 +139,7 @@ main {
     letter-spacing: -0.04em;
     color: #DBFD5C;
     margin-top: 112px;
+    margin-bottom: 200px;
 }
 
 
@@ -184,11 +181,19 @@ main {
 /* Nature */
 
 .nature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 1780px;
+    height: 1784px;
+    background-color: black;
+}
+
+.nature_box {
+    width: 1024px;
     padding-left: 107px;
     padding-right: 107px;
-    background-color: black;
+    height: 1784px;
 }
 
 .nature_title {
@@ -218,20 +223,21 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .nature_photo {
     display: block;
     width: 810px;
     height: 440px;
-    padding-top: 16px;
+    margin-top: 16px;
 }
 
-.nature_value_1 {
+.nature_value {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: -0.005em;
-    padding-top: 24px;
+    padding-top: 14px;
     text-align: end;
 }
 
@@ -239,7 +245,8 @@ main {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: -0.005em;
-    padding-top: 52px;
+    padding-top: 14px;
+    padding-bottom: 160px;
     text-align: end;
 }
 
@@ -259,10 +266,19 @@ main {
 
 .contact {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: 680px;
-    flex-direction: row;
     background-color: black;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1024px;
+    height: 100%;
     padding-left: 107px;
     padding-right: 107px;
 }
@@ -282,14 +298,13 @@ main {
 }
 
 .contact-info {
-    margin-top: 216px;
+    margin-top: 218px;
 }
 
 .contact-info_time {
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: -0.01em;
-    color: #EEEEEE;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
 }
 
 .contact-info_place {
@@ -302,13 +317,14 @@ main {
     font-size: 12px;
     line-height: 20px;
     margin-top: 24px;
+    margin-bottom: 112px;
 }
 
 .contact-submit {
     display: flex;
     flex-direction: column;
     padding-top: 122px;
-    padding-left: 190px;
+    padding-left: 197px;
 }
 
 .contact-submit_info-personal {
@@ -403,43 +419,164 @@ select {
     font-size: 22px;
     line-height: 30px;
     color: black;
+    margin-bottom: 112px;
+}
+
+/* Schedule */
+
+.schedule {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 760px;
+    background-color: #f5f5f5;
+}
+
+.schedule_box {
+    width: 1024px;
+    padding: 148px 108px;
+    display: flex;
+    flex-direction: row;
+}
+
+.schedule_photo {
+    width: 310px;
+    height: 440px;
+    margin-top: 12px;
+}
+
+.schedule_content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 38px;
+}
+
+.schedule_program {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.schedule_category {
+    width: 460px;
+    height: 279px;
+    border-bottom: 1px solid #757575;
+    margin-top: 43px;
+}
+
+.schedule_number {
+    width: 460px;
+    height: 56px;
+    font-weight: 600;
+    border-top: 1px solid #757575;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.schedule_title {
+    margin-left: 56px;
+    color: #000000;
+}
+
+.schedule_about {
+    width: 460px;
+    height: 39px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #000000;
+    margin-top: 36px;
+    color: black;
+    margin-bottom: 11px;
 }
 
 /* Artist */
 
-.Artist {
+.artist {
     width: 100%;
-    height: 1240px;
-    background-color: black;
+    height: 1776px;
+    background-color: #f5f5f5;
     padding-left: 24px;
     padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.Artist_title {
+.artist_title {
     font-size: 26px;
     line-height: 36px;
-    padding-top: 120px;
+    padding-top: 144px;
     text-align: center;
+    color: black;
 }
 
-.Artist-Bian_name {
-    font-size: 44px;
-    line-height: 48px;
+.artist_box {
+    width: 1024px;
+    height: 1224px;
+    padding: 96px 24px 0px 24px;
 }
 
-.Artist-Bian_image {
+.project_oumtt {
+    width: 1024px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.project_oumtt-content {
+    width: 336px;
+    height: 383px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_oumtt-name {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.project_oumtt-text {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.005em;
+    color: #000000;
+}
+
+.project_oumtt-about {
+    width: 460px;
+    height: 39px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #000000;
+    margin-top: 36px;
+    color: #000000;
+    margin-bottom: 11px;
+}
+
+.artist-Bian_image {
     width: 476px;
-    height: 560px;
+    height: 600px;
     object-fit: cover;
 }
  
-.Artist-Yochan_image {
+.artist-Yochan_image {
     width: 476px;
     height: 560px;
     object-fit: cover;
 }
 
-.Artist-Yochan {
+.artist-Yochan {
     padding-left: 24px;
 }
 
@@ -447,19 +584,26 @@ select {
 /* footer */
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 400px;
-    padding-left: 24px;
-    padding-right: 24px;
     background-color: black;
 }
 
+.footer_box {
+    width: 1024px;
+    height: 400px;
+}
+
 .footer_info {
-    width: 100%;
+    width: 1024px;
     height: 280px;
+    padding: 0px 24px;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid #424242 
+    border-bottom: 1px solid #424242;
 }
 
 .footer_info-left {
@@ -517,6 +661,7 @@ footer {
     outline: none;
     background-color: transparent;
     padding: 0px 0px;
+    color: #ffffff;
 }
 
 .footer-submit-button {
