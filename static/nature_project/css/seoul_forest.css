@@ -47,7 +47,6 @@ nav {
     justify-content: space-between;
     font-size: 18px;
     line-height: 26px;
-
 }
 
 .nav_button {
@@ -69,18 +68,20 @@ main {
     height: auto;
 }
 
-/* item_wrapper */
-
 .item_wrapper {
+    width: 100%;
+    height: auto;
     position: relative;
 }
+
+/* item_wrapper */
 
 .main_image {
     display: flex;
     width: 100%;
     height: 1800px;
     vertical-align: middle;
-    object-fit:none;
+    object-fit: cover;
 }
 
 .item-info-box {
@@ -143,6 +144,7 @@ main {
     letter-spacing: -0.04em;
     color: #DBFD5C;
     margin-top: 112px;
+    margin-bottom: 200px;
 }
 
 
@@ -184,11 +186,19 @@ main {
 /* Nature */
 
 .nature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 1780px;
+    height: 1784px;
+    background-color: black;
+}
+
+.nature_box {
+    width: 1024px;
     padding-left: 107px;
     padding-right: 107px;
-    background-color: black;
+    height: 1784px;
 }
 
 .nature_title {
@@ -218,20 +228,21 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .nature_photo {
     display: block;
     width: 810px;
     height: 440px;
-    padding-top: 16px;
+    margin-top: 16px;
 }
 
-.nature_value_1 {
+.nature_value {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: -0.005em;
-    padding-top: 24px;
+    padding-top: 14px;
     text-align: end;
 }
 
@@ -239,7 +250,8 @@ main {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: -0.005em;
-    padding-top: 52px;
+    padding-top: 14px;
+    padding-bottom: 160px;
     text-align: end;
 }
 
@@ -257,12 +269,30 @@ main {
     padding: 0px 0px;
 }
 
+.hello {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #DBFD5C;
+    display: inline-block;
+    margin-bottom: 26px;
+}
+
 .contact {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: 680px;
-    flex-direction: row;
     background-color: black;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1024px;
+    height: 100%;
     padding-left: 107px;
     padding-right: 107px;
 }
@@ -282,14 +312,13 @@ main {
 }
 
 .contact-info {
-    margin-top: 216px;
+    margin-top: 218px;
 }
 
 .contact-info_time {
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: -0.01em;
-    color: #EEEEEE;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
 }
 
 .contact-info_place {
@@ -302,13 +331,14 @@ main {
     font-size: 12px;
     line-height: 20px;
     margin-top: 24px;
+    margin-bottom: 112px;
 }
 
 .contact-submit {
     display: flex;
     flex-direction: column;
     padding-top: 122px;
-    padding-left: 190px;
+    padding-left: 197px;
 }
 
 .contact-submit_info-personal {
@@ -403,63 +433,282 @@ select {
     font-size: 22px;
     line-height: 30px;
     color: black;
+    margin-bottom: 112px;
+}
+
+/* Schedule */
+
+.schedule {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 760px;
+    background-color: #f5f5f5;
+}
+
+.schedule_box {
+    width: 1024px;
+    padding: 148px 108px;
+    display: flex;
+    flex-direction: row;
+}
+
+.schedule_photo {
+    width: 310px;
+    height: 440px;
+    margin-top: 12px;
+}
+
+.schedule_content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 38px;
+}
+
+.schedule_program {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.schedule_category {
+    width: 460px;
+    height: 279px;
+    border-bottom: 1px solid #757575;
+    margin-top: 43px;
+}
+
+.schedule_number {
+    width: 460px;
+    height: 56px;
+    font-weight: 600;
+    border-top: 1px solid #757575;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.schedule_title {
+    margin-left: 56px;
+    color: #000000;
+}
+
+.schedule_about {
+    width: 460px;
+    height: 39px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #000000;
+    margin-top: 36px;
+    color: black;
+    margin-bottom: 11px;
 }
 
 /* Artist */
 
-.Artist {
+.artist {
     width: 100%;
-    height: 1240px;
-    background-color: black;
+    height: 1776px;
+    background-color: #f5f5f5;
     padding-left: 24px;
     padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.Artist_title {
+.artist_title {
     font-size: 26px;
     line-height: 36px;
-    padding-top: 120px;
+    padding-top: 144px;
     text-align: center;
+    color: black;
 }
 
-.Artist-Bian_name {
-    font-size: 44px;
-    line-height: 48px;
+.artist_box {
+    width: 1024px;
+    height: 1224px;
+    margin-top: 96px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
-.Artist-Bian_image {
+.artist_line {
+    position: absolute;
+    left: 24px;
+}
+
+.project_oumtt_box {
+    position: absolute;
+}
+
+.project_oumtt {
+    width: 976px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.project_oumtt-content {
+    width: 336px;
+    height: 383px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 108px;
+    margin-left: 70px;
+}
+
+.project_oumtt-name {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.project_oumtt-text {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.005em;
+    color: #000000;
+    margin-top: 48px;
+}
+
+.project_oumtt-about {
+    width: 336px;
+    height: 39px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    letter-spacing: -0.01em;
+    border-bottom: 0.05px solid #000000;
+    margin-top: 64px;
+    color: #000000;
+}
+
+.artist-Bian_image {
     width: 476px;
-    height: 560px;
+    height: 600px;
     object-fit: cover;
+    margin-left: 94px;
 }
  
-.Artist-Yochan_image {
+.artist-Yochan_image {
     width: 476px;
-    height: 560px;
+    height: 600px;
     object-fit: cover;
 }
 
-.Artist-Yochan {
-    padding-left: 24px;
+.art-festival {
+    width: 976px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
 }
 
+.art-festival-content {
+    width: 337px;
+    height: 407px;
+    display: flex;
+    flex-direction: column;
+    margin: 94px 69px 97px 94px;
+}
+
+.art-festival-name {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.art-festival-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 48px;
+}
+
+.art-festival-about {
+    width: 336px;
+    height: 39px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    letter-spacing: -0.01em;
+    border-bottom: 0.05px solid #000000;
+    margin-top: 64px;
+    color: #000000;
+}
+
+.project {
+    width: 100%;
+    height: 1000px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.project_box {
+    width: 1024px;
+    height: 1000px;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 164px;
+}
+
+.project_media {
+    width: 976px;
+    height: 548px;
+    margin-top: 40px;
+}
+
+.project_media_notice {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 24px;
+    margin-bottom: 168px;
+}
 
 /* footer */
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 400px;
-    padding-left: 24px;
-    padding-right: 24px;
     background-color: black;
 }
 
+.footer_box {
+    width: 1024px;
+    height: 400px;
+}
+
 .footer_info {
-    width: 100%;
+    width: 1024px;
     height: 280px;
+    padding: 0px 24px;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid #424242 
+    border-bottom: 1px solid #424242;
 }
 
 .footer_info-left {
@@ -496,11 +745,11 @@ footer {
 .footer_info-right {
     display: flex;
     flex-direction: column;
-    padding-left: 240px;
+    padding-left: 160px;
 }
 
 .footer_info-click {
-    width: 388px;
+    width: 468px;
     height: 36px;
     display: flex;
     flex-direction: row;
@@ -509,7 +758,7 @@ footer {
 }
 
 .footer_input_box {
-    width: 280px;
+    width: 360px;
     height: 36px;
     border-right:0px; 
     border-top:0px; 
@@ -519,12 +768,17 @@ footer {
     padding: 0px 0px;
 }
 
+input::placeholder {
+    color: #E0E0E0;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
 .footer-submit-button {
     width: 100px;
     height: 36px;
     background: #DBFD5C;
-    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(4px);
     border-radius: 4px;
     margin-left: 8px;
     font-size: 16px;
