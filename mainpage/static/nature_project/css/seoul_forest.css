@@ -20,7 +20,7 @@
 }
 
 body {
-        width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -64,6 +64,11 @@ nav {
 /* main */
 
 main {
+    width: 100%;
+    height: auto;
+}
+
+.item_wrapper {
     width: 100%;
     height: auto;
     position: relative;
@@ -262,6 +267,15 @@ main {
     background-color: transparent;
     margin-top: 4px;
     padding: 0px 0px;
+}
+
+.hello {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #DBFD5C;
+    display: inline-block;
+    margin-bottom: 26px;
 }
 
 .contact {
@@ -519,11 +533,25 @@ select {
 .artist_box {
     width: 1024px;
     height: 1224px;
-    padding: 96px 24px 0px 24px;
+    margin-top: 96px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.artist_line {
+    position: absolute;
+    left: 24px;
+}
+
+.project_oumtt_box {
+    position: absolute;
 }
 
 .project_oumtt {
-    width: 1024px;
+    width: 976px;
     height: 600px;
     display: flex;
     flex-direction: row;
@@ -534,6 +562,8 @@ select {
     height: 383px;
     display: flex;
     flex-direction: column;
+    margin-top: 108px;
+    margin-left: 70px;
 }
 
 .project_oumtt-name {
@@ -549,37 +579,112 @@ select {
     line-height: 24px;
     letter-spacing: -0.005em;
     color: #000000;
+    margin-top: 48px;
 }
 
 .project_oumtt-about {
-    width: 460px;
+    width: 336px;
     height: 39px;
     font-size: 18px;
     line-height: 26px;
     text-align: left;
     letter-spacing: -0.01em;
-    border-bottom: 1px solid #000000;
-    margin-top: 36px;
+    border-bottom: 0.05px solid #000000;
+    margin-top: 64px;
     color: #000000;
-    margin-bottom: 11px;
 }
 
 .artist-Bian_image {
     width: 476px;
     height: 600px;
     object-fit: cover;
+    margin-left: 94px;
 }
  
 .artist-Yochan_image {
     width: 476px;
-    height: 560px;
+    height: 600px;
     object-fit: cover;
 }
 
-.artist-Yochan {
-    padding-left: 24px;
+.art-festival {
+    width: 976px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
 }
 
+.art-festival-content {
+    width: 337px;
+    height: 407px;
+    display: flex;
+    flex-direction: column;
+    margin: 94px 69px 97px 94px;
+}
+
+.art-festival-name {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.art-festival-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 48px;
+}
+
+.art-festival-about {
+    width: 336px;
+    height: 39px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    letter-spacing: -0.01em;
+    border-bottom: 0.05px solid #000000;
+    margin-top: 64px;
+    color: #000000;
+}
+
+.project {
+    width: 100%;
+    height: 1000px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.project_box {
+    width: 1024px;
+    height: 1000px;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 164px;
+}
+
+.project_media {
+    width: 976px;
+    height: 548px;
+    margin-top: 40px;
+}
+
+.project_media_notice {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 24px;
+    margin-bottom: 168px;
+}
 
 /* footer */
 
@@ -640,11 +745,11 @@ footer {
 .footer_info-right {
     display: flex;
     flex-direction: column;
-    padding-left: 240px;
+    padding-left: 160px;
 }
 
 .footer_info-click {
-    width: 388px;
+    width: 468px;
     height: 36px;
     display: flex;
     flex-direction: row;
@@ -653,7 +758,7 @@ footer {
 }
 
 .footer_input_box {
-    width: 280px;
+    width: 360px;
     height: 36px;
     border-right:0px; 
     border-top:0px; 
@@ -661,15 +766,19 @@ footer {
     outline: none;
     background-color: transparent;
     padding: 0px 0px;
-    color: #ffffff;
+}
+
+input::placeholder {
+    color: #E0E0E0;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
 }
 
 .footer-submit-button {
     width: 100px;
     height: 36px;
     background: #DBFD5C;
-    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(4px);
     border-radius: 4px;
     margin-left: 8px;
     font-size: 16px;
