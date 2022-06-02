@@ -27,232 +27,543 @@ body {
 
 /* header */
 
-nav {
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
-    width: 100%;
-    height: 64px;
-    z-index: 10;
+
+@media (max-width: 576px) {
+    header {
+        display: flex;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 48px;
+        z-index: 10;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%
+    }
+    
+    .nav_home {
+        display: flex;
+        flex-direction: row;
+        width: 166px;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .nav_button {
+        width: 80px;
+        height: 24px;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.04em;
+    }
+
+    .nav_button::after{content: "관람 신청";}
 }
 
-.nav_home {
-    display: flex;
-    flex-direction: row;
-    width: 251px;
-    justify-content: space-between;
-    font-size: 18px;
-    line-height: 26px;
-}
+@media (min-width:576px) {
+    header {
+        display: flex;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 64px;
+        z-index: 10;
+    }
 
-.nav_button {
-    width: 144px;
-    height: 36px;
-    border: 1px solid #FFFFFF;
-    border-radius: 8px;
-    background-color: transparent;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.04em;
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        width: calc(33.04% + 686px);
+    }
+    
+    .nav_home {
+        display: flex;
+        flex-direction: row;
+        width: 251px;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .nav_button {
+        width: 144px;
+        height: 36px;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.04em;
+    }
+
+    .nav_button::after{content: "관람 신청하기";}
 }
 
 
 /* main */
 
-main {
-    width: 100%;
-    height: auto;
+@media (max-width:576px) {
+
+    main {
+        width: 100%;
+        height: auto;
+    }
+
+    .item_wrapper {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    /* item_wrapper */
+
+    .main_image {
+        display: flex;
+        width: 100%;
+        height: 976px;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+
+    .item-info-box {
+        position: absolute;
+        width: 100%;
+        top:0px;
+    }
 }
 
-.item_wrapper {
-    width: 100%;
-    height: auto;
-    position: relative;
+@media (min-width:576px) {
+
+    main {
+        width: 100%;
+        height: auto;
+    }
+
+    .item_wrapper {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    /* item_wrapper */
+
+    .main_image {
+        display: flex;
+        width: 100%;
+        height: 1800px;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+
+    .item-info-box {
+        position: absolute;
+        width: 100%;
+        top:0px;
+    }
 }
-
-/* item_wrapper */
-
-.main_image {
-    display: flex;
-    width: 100%;
-    height: 1800px;
-    vertical-align: middle;
-    object-fit: cover;
-}
-
-.item-info-box {
-    position: absolute;
-    width: 100%;
-    top:0px;
-}
-
 
 /* Intro */
 
-.introduction {
-    width: 100%;
-    height: 904px;
-    padding-top: 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width:576px) {
+
+    .introduction {
+        width: 100%;
+        height: 512px;
+        padding-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro_calender {
+        display: flex;
+        text-align: center;
+        font-size: 12px;
+        line-height: 20px;
+        color: #EEEEEE;
+        margin-top: 96px;
+    }
+
+    .intro_team {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 56px;
+    }
+
+    .intro_title {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -0.01em;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .intro_cta-button {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(4px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 12px;
+        width: 240px;
+        height: 52px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.04em;
+        color: #DBFD5C;
+        margin-top: 60px;
+        margin-bottom: 64px;
+    }
+
+    .intro_title::after{content:"Monthly Art \A SeoulForestival with you"; white-space: pre;}
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+@media (min-width:576px) {
 
-.intro_calender {
-    display: flex;
-    text-align: center;
-    font-size: 24px;
-    line-height: 36px;
-    color: #EEEEEE;
-    margin-top: 220px;
-}
+    .introduction {
+        width: 100%;
+        height: 904px;
+        padding-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.intro_team {
-    font-size: 28px;
-    line-height: 40px;
-    margin-top: 64px;
-}
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.intro_title {
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 68px;
-    letter-spacing: -0.01em;
-}
+    .intro_calender {
+        display: flex;
+        text-align: center;
+        font-size: 24px;
+        line-height: 36px;
+        color: #EEEEEE;
+        margin-top: 220px;
+    }
 
-.intro_cta-button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(4px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 12px;
-    width: 310px;
-    height: 64px;
-    font-size: 22px;
-    line-height: 30px;
-    letter-spacing: -0.04em;
-    color: #DBFD5C;
-    margin-top: 112px;
-    margin-bottom: 200px;
+    .intro_team {
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: 64px;
+    }
+
+    .intro_title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 68px;
+        letter-spacing: -0.01em;
+    }
+
+    .intro_cta-button {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(4px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 12px;
+        width: 310px;
+        height: 64px;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -0.04em;
+        color: #DBFD5C;
+        margin-top: 112px;
+        margin-bottom: 200px;
+    }
+
+    .intro_title::after{content:"Monthly Art SeoulForestival with you";}
 }
 
 
 /* media */
 
-.media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 896px;
+@media (max-width:576px) {
+
+    .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 464px;
+    }
+
+    .media_text {
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 72px;
+    }
+
+    .media_title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 4px;
+        color: #DBFD5C;
+    }
+
+    .media_Oumtt {
+        width: 328px;
+        height: 184px;
+        margin-top: 32px;
+    }
+
+    .media_Oumtt_2 {
+        display: none;
+    }
+
+    .media_notice {
+        font-size: 11px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        margin-top: 12px;
+        margin-bottom: 96px;
+    }
+
 }
 
-.media_text {
-    font-size: 24px;
-    line-height: 34px;
-    margin-top: 120px;
-}
+@media (min-width:576px) {
 
-.media_title {
-    font-size: 34px;
-    line-height: 40px;
-    margin-top: 12px;
-    color: #DBFD5C;
-}
+    .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 896px;
+    }
 
-.media_Oumtt {
-    margin-top: 56px;
-}
+    .media_text {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 120px;
+    }
 
-.media_notice {
-    font-size: 14px;
-    line-height: 20px;
-    margin-top: 24px;
-    margin-bottom: 133px;
-}
+    .media_title {
+        font-size: 34px;
+        line-height: 40px;
+        margin-top: 12px;
+        color: #DBFD5C;
+    }
 
+    .media_Oumtt {
+        width: 800px; 
+        height: 450px; 
+        margin-top: 56px;
+    }
+
+    .media_Oumtt_1 {
+        display: none;
+    }
+
+    .media_notice {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 24px;
+        margin-bottom: 133px;
+    }
+
+}
 
 /* Nature */
 
-.nature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 1784px;
-    background-color: black;
+@media (max-width:576px) {
+
+    .nature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 984px;
+        background-color: black;
+    }
+
+    .nature_box {
+        width: 360px;
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 1984px;
+    }
+
+    .nature_title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        padding-top: 80px;
+    }
+
+    .nature_text {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+    }
+
+    .nature_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 8px;
+        line-height: 12px;
+        padding-top: 56px;
+    }
+
+    .nature_image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .nature_photo_1 {
+        display: block;
+        width: 328px;
+        height: 178px;
+        margin-top: 4px;
+        object-fit: cover;
+    }
+
+    .nature_photo_2 {
+        display: block;
+        width: 328px;
+        height: 178px;
+        margin-top: 8px;
+        object-fit: cover;
+    }
+
+    .nature_value {
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: -0.005em;
+        padding-top: 16px;
+        text-align: end;
+    }
+
+    #nature_value::after {
+        content:"서울의 정신없는 도심 속 자연, 서울숲 공원\A숨 막히는 도시를 지나 서울숲으로 들어가면,\A코를 간질이는 자연의 향, 사람들의 여유로운 표정,\A아이들의 웃음소리 그리고 산책하는 강아지들";
+        white-space: pre;
+    }
+
+    .nature_value_2 {
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: -0.005em;
+        padding-top: 16px;
+        padding-bottom: 86px;
+        text-align: end;
+    }
+
+    .nature_value_2::after {
+        content:"가장 푸릇푸릇 한 6월의 여름날,\A자연을 대하는 가지각색의 모든 존재들에게\A‘가장 자연한 마음’을 담아 - 우리의 춤과 예술로\A‘있는 그대로의 당신’에게 더 다가가고자 합니다\A\A우리와 만나, 함께 자연을 느끼고, 예술을 움 틔워보아요";
+        white-space: pre;
+    }
+
 }
 
-.nature_box {
-    width: 1024px;
-    padding-left: 107px;
-    padding-right: 107px;
-    height: 1784px;
-}
 
-.nature_title {
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 64px;
-    letter-spacing: -0.02em;
-    padding-top: 160px;
-}
+@media (min-width:576px) {
 
-.nature_text {
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: -0.02em;
-}
+    .nature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 1784px;
+        background-color: black;
+    }
 
-.nature_intro {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 14px;
-    line-height: 20px;
-    padding-top: 120px;
-}
+    .nature_box {
+        width: 1024px;
+        padding-left: 107px;
+        padding-right: 107px;
+        height: 1784px;
+    }
 
-.nature_image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
+    .nature_title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        padding-top: 160px;
+    }
 
-.nature_photo {
-    display: block;
-    width: 810px;
-    height: 440px;
-    margin-top: 16px;
-}
+    .nature_text {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+    }
 
-.nature_value {
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: -0.005em;
-    padding-top: 14px;
-    text-align: end;
-}
+    .nature_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 120px;
+    }
 
-.nature_value_2 {
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: -0.005em;
-    padding-top: 14px;
-    padding-bottom: 160px;
-    text-align: end;
+    .nature_image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .nature_photo_1 {
+        display: block;
+        width: 810px;
+        height: 440px;
+        margin-top: 16px;
+    }
+
+    .nature_photo_2 {
+        display: block;
+        width: 810px;
+        height: 440px;
+        margin-top: 16px;
+    }
+
+    .nature_value {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.005em;
+        padding-top: 14px;
+        text-align: end;
+    }
+
+    .nature_value_2 {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.005em;
+        padding-top: 14px;
+        padding-bottom: 160px;
+        text-align: end;
+    }
+
 }
 
 /* Contact */
@@ -337,13 +648,13 @@ main {
 .contact-submit {
     display: flex;
     flex-direction: column;
-    padding-top: 122px;
+    padding-top: 130px;
     padding-left: 197px;
 }
 
 .contact-submit_info-personal {
     width: 310px;
-    height: 156px;
+    height: 168px;
 }
 
 .contact-submit_info-name {
@@ -356,7 +667,7 @@ main {
     font-size: 14px;
     line-height: 24px;
     color: #DBFD5C;
-    margin-top: 28px;
+    margin-top: 40px;
 }
 
 .contact-submit_info-notice {
@@ -366,7 +677,55 @@ main {
     line-height: 20px;
     letter-spacing: -0.005em;
     color: #E0E0E0;
-    padding-top: 2px;
+    margin-top: 2px;
+}
+
+.contact-submit_how-think {
+    width: 293px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 40px;
+}
+
+select::-ms-expand{
+    display:none;/*for IE10,11*/
+}
+
+.contact-submit_select-think {
+    width: 310px;
+    height: 40px;
+    border: 1px solid #9E9E9E;
+    border-radius: 4px;
+    padding: 0px 14px;
+    -webkit-appearance:none; /* for chrome */
+    -moz-appearance:none; /*for firefox*/ 
+    appearance:none;
+    background: url("/static/nature_project/assets/img/2.main/Polygon.png") no-repeat 97% 50%/16px auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: #DBFD5C;
+    background-color: transparent;
+    margin-top: 12px;
+}
+
+.contact-submit_select-think option {
+    width: 310px;
+    height: 40px;
+    background-color: #000000;
+}
+
+.contact-submit-button {
+    width: 310px;
+    height: 64px;
+    background: #DBFD5C;
+    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    margin-top: 28px;
+    font-size: 22px;
+    line-height: 30px;
+    color: black;
 }
 
 .contact-submit_check {
@@ -374,13 +733,13 @@ main {
     flex-direction: row;
     width: auto;
     height: 24px;
-    margin-top: 34px;
+    margin-top: 16px;
+    margin-bottom: 112px;
 }
 
-.contact-submit_check-info {
+.contact-submit_check-dance {
     font-size: 16px;
-    line-height: 24px;
-    
+    line-height: 24px;    
 }
 
 .contact-submit_check-agree {
@@ -398,43 +757,6 @@ main {
     margin-top: 4px;
 }
 
-.contact-submit_how-think {
-    width: 293px;
-    height: 24px;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 34px;
-}
-
-select {
-    width: 310px;
-    height: 36px;
-    border: 1px solid #9E9E9E;
-    border-radius: 4px;
-    padding: 0px 8px;
-}
-
-.contact-submit_select-think {
-    font-size: 12px;
-    line-height: 20px;
-    color: #DBFD5C;
-    background-color: transparent;
-    margin-top: 12px;
-}
-
-.contact-submit-button {
-    width: 310px;
-    height: 64px;
-    background: #DBFD5C;
-    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(4px);
-    border-radius: 12px;
-    margin-top: 40px;
-    font-size: 22px;
-    line-height: 30px;
-    color: black;
-    margin-bottom: 112px;
-}
 
 /* Schedule */
 
@@ -794,3 +1116,91 @@ input::placeholder {
     color: #9E9E9E;
     padding-top: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.selectBox2 * { box-sizing: border-box; }
+.selectBox2 {
+
+  position: relative;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid lightcoral;
+  background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat;
+  background-size: 20px;
+
+}
+
+.selectBox2:after {
+  content: '';
+  display: block; 
+  width: 2px;
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  right: 35px;
+  background: lightcoral;
+}
+
+.selectBox2 .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+}
+
+.selectBox2 .optionList {
+  position: absolute; 
+  top: 28px;
+  left: 0;
+  width: 100%;
+  background: lightcoral;
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+  max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+  border-bottom: 1px dashed rgb(170, 72, 72);
+  padding: 5px 15px 5px;
+  transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+  background: rgb(175, 93, 93);
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
+}
+
+/* 스크롤 커스텀 */
+.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
