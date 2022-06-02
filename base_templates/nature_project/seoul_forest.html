@@ -20,9 +20,9 @@
             <div class="nav_home">
                 <a style="text-decoration: none;" href="#introduction"><div style="color:#DBFD5C;">Main</div></a>
                 <div>Program</div>
-                <a style="text-decoration: none;" href="https://www.notion.so/About-Project-Oumtt-15b99b05c08442b0b19454fdfdd67962"><div>Oumtt</div></a>
+                <a style="text-decoration: none;" href="https://www.notion.so/NATURE-Project-Series-70fd6fa703c045ee940342dedf63b7f1"><div>Oumtt</div></a>
             </div>
-            <a href="#contact-title"><button class="nav_button">관람 신청하기</button></a>
+            <a href="#contact"><button class="nav_button"></button></a>
         </nav>
     </header>
 
@@ -36,13 +36,15 @@
                 <section id="introduction" class="introduction">
 
                         <div class="intro">
-                            <div class="intro_calender">2022.06.11 4pm.</br>
-                                Seoul Forest.</div> 
+                            <div class="intro_calender">
+                                2022.06.11 4pm.
+                            </br>Seoul Forest.
+                            </div> 
                             <div class="intro_team" >OUMTT X YOCHAN</div>
-                            <div class="intro_title">Monthly Art SeoulForestival with you</div>
+                            <div class="intro_title"></div>
                         </div>
 
-                        <button class="intro_cta-button">관람 신청하기</button>
+                        <a href="#contact"><button class="intro_cta-button">관람 신청하기</button></a>
 
                 </section>
 
@@ -56,7 +58,8 @@
                         ‘Naturally in Nature’
                     </div>
                     <div class="media_Oumtt">
-                        <iframe width="800" height="450" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="media_Oumtt_1" width="328" height="184" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="media_Oumtt_2" width="800" height="450" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="media_notice">
                         음소거 해제 버튼을 눌러 소리와 함께 감상해주세요
@@ -81,27 +84,15 @@
                     <div>with You</div>
                 </div>
                 <div class="nature_image">
-                    <img class="nature_photo" src="/static/nature_project/assets/img/2.main/nature_1.png">
-                    <img class="nature_photo" src="/static/nature_project/assets/img/2.main/nature_2.png">
+                    <img class="nature_photo_1" src="/static/nature_project/assets/img/2.main/nature_1.png">
+                    <img class="nature_photo_2" src="/static/nature_project/assets/img/2.main/nature_2.png">
                 </div>
-                <div class="nature_value">
-                    서울의 정신없는 도심 속 자연, 서울숲 공원 
-                </br>    
-                    숨 막히는 도시를 지나 서울숲으로 들어가면, 코를 간질이는 자연의 향, 
-                </br>    
-                    사람들의 여유로운 표정, 아이들의 웃음소리 그리고 산책하는 강아지들
+                <div id="nature_value" class="nature_value">
                 </div>
                 <div class="nature_value"> 
                     -
                 </div>
                 <div class="nature_value_2">
-                    가장 푸릇푸릇 한 6월의 여름날,
-                </br>    
-                    자연을 대하는 가지각색의 모든 존재들에게 ‘가장 자연한 마음’을 담아
-                </br>    
-                    우리의 춤과 예술로 ‘있는 그대로의 당신’에게 더 다가가고자 합니다      
-                </br></br>
-                우리와 만나, 함께 자연을 느끼고, 예술을 움 틔워보아요
                 </div>
             </div>
         </section>
@@ -137,6 +128,19 @@
                             <div class="contact-submit_info-notice"> 
                                 입력하신 번호로 공연안내가 전송되오니 정확히 입력해 주세요
                             </div>
+                        <div class="contact-submit_how-think">
+                            자연에서 산책할 때, 어떤 생각을 하시나요?
+                        </div>
+                        <div>
+                            <select name="how-think" class="contact-submit_select-think">
+                                <option class="contact-submit_select-box" value="" hidden>당신의 생각을 선택해 주세요.</option>
+                                <option class="contact-submit_select-box" value="푸릇푸릇한 자연을 좋아해서.">푸릇푸릇한 자연을 좋아해서.</option>
+                                <option class="contact-submit_select-box" value="아무런 이유없이도 산책을 즐겨해요.">아무런 이유없이도 산책을 즐겨해요.</option>
+                                <option class="contact-submit_select-box" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</option>
+                                <option class="contact-submit_select-box" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</option>
+                            </select>
+                        </div>
+                        <button name="contact-submit-button" class="contact-submit-button">관람 신청하기</button>
                         <div class="contact-submit_check">
                             <div class="contact-submit_check-dance">
                                 무용전공여부
@@ -147,22 +151,49 @@
                             </div>
                             <input class="form-check-input" type="checkbox" id="contact-submit_check-box" name="answer_2[]" value="2">
                         </div>
-                        <div class="contact-submit_how-think">
-                            자연에서 산책할 때, 어떤 생각을 하시나요?
-                        </div>
-                        <div>
-                            <select name="how-think" class="contact-submit_select-think" >
-                                <option style="background-color: black; color: #ffffff;" value="">당신의 생각을 선택해 주세요.</option>
-                                <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">프로젝트 움트</option>
-                                <option style="background-color: black; color: #ffffff;" value="프로젝트 움트">내일도 화이팅!</option>
-                                <option style="background-color: black; color: #ffffff;" value="화이팅"></option>
-                            </select>
-                        </div>
-                        <button name="contact-submit-button" class="contact-submit-button">관람 신청하기</button>
                     </form>
                 </div>
             </div>
         </section>
+
+        <!-- <div style="width:100%; height:200px; background-color: black;">
+            <div class="selectBox2 ">
+                <button class="label">fruits 🍊</button>
+                <ul class="optionList">
+                <li class="optionItem">apple</li>
+                <li class="optionItem">orange</li>
+                <li class="optionItem">grape</li>
+                <li class="optionItem">melon</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            /* 화살표 함수 */
+            const label = document.querySelector('.label');
+            const options = document.querySelectorAll('.optionItem');
+
+            // 클릭한 옵션의 텍스트를 라벨 안에 넣음
+            const handleSelect = (item) => {
+            label.parentNode.classList.remove('active');
+            label.innerHTML = item.textContent;
+            }
+            // 옵션 클릭시 클릭한 옵션을 넘김
+            options.forEach(option => {
+                option.addEventListener('click', () => handleSelect(option))
+            })
+
+            // 라벨을 클릭시 옵션 목록이 열림/닫힘
+            label.addEventListener('click', () => {
+            if(label.parentNode.classList.contains('active')) {
+                label.parentNode.classList.remove('active');
+            } else {
+                label.parentNode.classList.add('active');
+            }
+            }) -->
+
+            
+        </script>
 
     <!-- schedule -->
 
@@ -265,11 +296,6 @@
                 </div>
             </div>
         </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-            
     </main>
 
     <!-- footer -->
@@ -303,6 +329,25 @@
             Copyrightⓒ 2022. Oumtt. All right reserved.
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var height = $(window).scrollTop();
+            console.log(height);
+
+            if (height < 1800) {
+                $("header").css("background-color", "transparent");
+            }
+
+            else if (height >= 1800) {
+                $("header").css("background-color", "#000000");
+            }
+        });
+    </script>
 
 </body>
 </html>
