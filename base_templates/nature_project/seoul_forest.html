@@ -144,17 +144,17 @@
                                 <option class="contact-submit_select-box" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</option>
                                 <option class="contact-submit_select-box" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</option>
                             </select>
-                            <!-- <div class="box">
-                                <div class="selectBox2 ">
-                                    <div class="label">fruits 🍊</div>
-                                    <ul class="optionList">
-                                        <li class="optionItem" value="apple">apple</li>
-                                        <li class="optionItem" value="orange">orange</li>
-                                        <li class="optionItem" value="grape">grape</li>
-                                        <li class="optionItem" value="melon">melon</li>
+                            <div class="box">
+                                <div class="selectBox2">
+                                    <div class="label">당신의 생각을 선택해 주세요.</div>
+                                    <ul name="fruit" class="optionList">
+                                        <li class="optionItem" value="푸릇푸릇한 자연을 좋아해서.">푸릇푸릇한 자연을 좋아해서.</li>
+                                        <li class="optionItem" value="아무런 이유없이도 산책을 즐겨해요.">아무런 이유없이도 산책을 즐겨해요.</li>
+                                        <li class="optionItem" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</li>
+                                        <li class="optionItem" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</li>
                                     </ul>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                         <button name="contact-submit-button" class="contact-submit-button" onClick="button();">관람 신청하기</button>
                         <div class="contact-submit_check">
@@ -166,7 +166,7 @@
                                 <label for="agree_1"></label>
                             </div>
                             <div class="contact-submit_check-agree">
-                                개인정보활용동의
+                                <a href="https://www.notion.so/bfa7747d14b1495f9923ac8dab8ea43d">개인정보활용동의</a>
                             </div>
                             <div class="contact-submit_check-box">
                                 <input type="checkbox" id="agree_2" name="answer_2[]" value="2" required/>
@@ -256,7 +256,7 @@
                             </br>예술을 향유시키는데 목적이 있습니다.
                             </div>
                             <div class="project_oumtt-about">
-                                About Project Oumtt<img style="margin-left: 4px;" src="/static/nature_project/assets/img/2.main/chevron_Right.png">
+                                <a style="text-decoration:none;" href="https://www.notion.so/NATURE-Project-Series-70fd6fa703c045ee940342dedf63b7f1">About Project Oumtt<img style="margin-left: 4px;" src="/static/nature_project/assets/img/2.main/chevron_Right.png"></a>
                             </div>
                         </div>
                         <div class="artist-Bian_image_2">
@@ -290,7 +290,7 @@
                             </br>궁극적으로는 밝은 사회를 만들고자 합니다.
                             </div>
                             <div class="art-festival-about">
-                                About Monthlt Art Festival<img style="margin-left: 4px;" src="/static/nature_project/assets/img/2.main/chevron_Right.png">
+                                <a style="text-decoration:none;" href="https://youtube.com/channel/UCcE_wQlmbSyl-vrqAI5ORwQ">About Monthlt Art Festival<img style="margin-left: 4px;" src="/static/nature_project/assets/img/2.main/chevron_Right.png"></a>
                             </div>
                         </div>
                     </div>
@@ -361,7 +361,7 @@
     <script>
         $(window).scroll(function(){
             var height = $(window).scrollTop();
-            console.log(height);
+            // console.log(height);
 
             if (height < 1800) {
                 $("header").css("background-color", "transparent");
@@ -373,19 +373,20 @@
         });
 
         function button() {
-                    var f = document.contact;
-                    if($("#input_box_1").val().length==0) {
-                    } 
-                    else if($("#input_box_2").val().length==0 ) {
-                    }  
-                    else if(f.agree_2.checked!=true ) {
-                        alert('개인정보활용동의에 체크해 주세요.');
-                    } 
-                    else {
-                        alert('제출되었습니다');
-                        f.submit();
-                    }
-                }
+            var f = document.contact;
+            if($("#input_box_1").val().length==0) {
+            } 
+            else if($("#input_box_2").val().length==0 ) {
+            }  
+            else if(f.agree_2.checked!=true ) {
+                alert('개인정보활용동의에 체크해 주세요.');
+            } 
+            else {
+                alert('제출되었습니다');
+                f.submit();
+            }
+        }
+
     </script>
 
     <script> 

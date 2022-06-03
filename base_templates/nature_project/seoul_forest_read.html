@@ -16,6 +16,7 @@
         <th>무용 전공 여부</th>
         <th>개인 정보 동의</th>
         <th>자연에서 산책할 때</th>
+        <th>fruit</th>
         {% for post in personal_list %}
         <tr>
             <td>{{ post.name }}</td>
@@ -24,6 +25,7 @@
             <td>{{ post.koreandance }}</td>
             <td>{{ post.PIagree }}</td>
             <td>{{ post.how_think }}</td>
+            <td>{{ post.fruit }}</td>
         </tr>
 
         {% empty %}
