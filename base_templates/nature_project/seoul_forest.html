@@ -11,6 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <link href="{% static 'nature_project/css/seoul_forest.css' %}" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -36,12 +39,12 @@
                 <section id="introduction" class="introduction">
 
                         <div class="intro">
-                            <div class="intro_calender">
+                            <div class="intro_calender" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                                 2022.06.11 4pm.
                             </br>Seoul Forest.
                             </div> 
-                            <div class="intro_team" >OUMTT X YOCHAN</div>
-                            <div class="intro_title"></div>
+                            <div class="intro_team" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">OUMTT X YOCHAN</div>
+                            <div class="intro_title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200"></div>
                         </div>
 
                         <a href="#contact"><button class="intro_cta-button">관람 신청하기</button></a>
@@ -51,15 +54,17 @@
                 <!-- media -->
 
                 <section class="media">
+                    <div style="display:flex; flex-direction:column; align-items:center;" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                     <div class="media_text">
                         Oumtt’s First Nature Project Series
                     </div>
                     <div class="media_title">
                         ‘Naturally in Nature’
                     </div>
+                    </div>
                     <div class="media_Oumtt">
-                        <iframe class="media_Oumtt_1" width="328" height="184" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="media_Oumtt_2" width="800" height="450" src="https://www.youtube.com/embed/U34kLXjdw90?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="media_Oumtt_1" width="328" height="184" src="https://www.youtube.com/embed/XNXEwBlRvpY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="media_Oumtt_2" width="800" height="450" src="https://www.youtube.com/embed/XNXEwBlRvpY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="media_notice">
                         음소거 해제 버튼을 눌러 소리와 함께 감상해주세요
@@ -89,10 +94,10 @@
                 </div>
                 <div id="nature_value" class="nature_value">
                 </div>
-                <div class="nature_value"> 
+                <div class="nature_value_2"> 
                     -
                 </div>
-                <div class="nature_value_2">
+                <div class="nature_value_3">
                 </div>
             </div>
         </section>
@@ -113,17 +118,17 @@
                     </div>
                 </div>
                 <div class="contact-submit">
-                    <form action="/" method="post">
+                    <form action="/" method="post" name="contact">
                         {% csrf_token %}
                         <div class="contact-submit_info-personal">
                             <div class="contact-submit_info-name">
                                 이름
                             </div>
-                            <input type="name" id="input_box" name="name" autocomplete="off" maxlength="4">
+                            <input type="name" id="input_box_1" name="name" autocomplete="off" maxlength="4" required>
                             <div class="contact-submit_info-phonenumber">
                                 전화번호
                             </div>
-                            <input type="phonenumber" id="input_box" name="phonenumber" autocomplete="off" maxlength="13" pattern="^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$">
+                            <input type="phonenumber" id="input_box_2" name="phonenumber_1" autocomplete="off" maxlength="13" pattern="^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$" required>
                         </div>
                             <div class="contact-submit_info-notice"> 
                                 입력하신 번호로 공연안내가 전송되오니 정확히 입력해 주세요
@@ -139,8 +144,19 @@
                                 <option class="contact-submit_select-box" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</option>
                                 <option class="contact-submit_select-box" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</option>
                             </select>
+                            <!-- <div class="box">
+                                <div class="selectBox2 ">
+                                    <div class="label">fruits 🍊</div>
+                                    <ul class="optionList">
+                                        <li class="optionItem" value="apple">apple</li>
+                                        <li class="optionItem" value="orange">orange</li>
+                                        <li class="optionItem" value="grape">grape</li>
+                                        <li class="optionItem" value="melon">melon</li>
+                                    </ul>
+                                </div>
+                            </div> -->
                         </div>
-                        <button name="contact-submit-button" class="contact-submit-button">관람 신청하기</button>
+                        <button name="contact-submit-button" class="contact-submit-button" onClick="button();">관람 신청하기</button>
                         <div class="contact-submit_check">
                             <div class="contact-submit_check-dance">
                                 무용전공여부
@@ -153,7 +169,7 @@
                                 개인정보활용동의
                             </div>
                             <div class="contact-submit_check-box">
-                                <input type="checkbox" id="agree_2" name="answer_2[]" value="2" />
+                                <input type="checkbox" id="agree_2" name="answer_2[]" value="2" required/>
                                 <label for="agree_2"></label>
                             </div>
                         </div>
@@ -162,43 +178,24 @@
             </div>
         </section>
 
-        <!-- <div style="width:100%; height:200px; background-color: black;">
-            <div class="selectBox2 ">
-                <button class="label">fruits 🍊</button>
-                <ul class="optionList">
-                <li class="optionItem">apple</li>
-                <li class="optionItem">orange</li>
-                <li class="optionItem">grape</li>
-                <li class="optionItem">melon</li>
-                </ul>
-            </div>
-        </div>
-
         <script>
-            /* 화살표 함수 */
             const label = document.querySelector('.label');
             const options = document.querySelectorAll('.optionItem');
-
-            // 클릭한 옵션의 텍스트를 라벨 안에 넣음
-            const handleSelect = (item) => {
-            label.parentNode.classList.remove('active');
+            const handleSelect = function(item) {
             label.innerHTML = item.textContent;
+            label.parentNode.classList.remove('active');
             }
-            // 옵션 클릭시 클릭한 옵션을 넘김
-            options.forEach(option => {
-                option.addEventListener('click', () => handleSelect(option))
+            options.forEach(function(option){
+            option.addEventListener('click', function(){handleSelect(option)})
             })
 
-            // 라벨을 클릭시 옵션 목록이 열림/닫힘
-            label.addEventListener('click', () => {
+            label.addEventListener('click', function(){
             if(label.parentNode.classList.contains('active')) {
                 label.parentNode.classList.remove('active');
             } else {
                 label.parentNode.classList.add('active');
             }
-            }) -->
-
-            
+            });
         </script>
 
     <!-- schedule -->
@@ -242,10 +239,11 @@
                     <div class="project_oumtt">
                         <div class="artist-Bian_image_1">
                             <img src="/static/nature_project/assets/img/2.main/Oumtt_Bian_1.png">
+                            <img class="artist-Bian_active" src="/static/nature_project/assets/img/2.main/Oumtt_Bian_1_active.png">
                         </div>
                         <div class="project_oumtt-content">
                             <div class="project_oumtt-name">
-                                project Oumtt
+                                Project Oumtt
                             </div>
                             <div class="project_oumtt-text">
                                 ‘예술을 움 틔우다’ 라는 슬로건에서 비롯되었으며,
@@ -263,15 +261,18 @@
                         </div>
                         <div class="artist-Bian_image_2">
                             <img src="/static/nature_project/assets/img/2.main/Oumtt_Bian_2.png">
+                            <img class="artist-Bian_hover" src="/static/nature_project/assets/img/2.main/Oumtt_Bian_2_hover.png">
                         </div>
                     </div>
 
                     <div class="art-festival">
                         <div class="artist-Yochan_image_1">
                             <img src="/static/nature_project/assets/img/2.main/Oumtt_Yochan_1.png">
+                            <img class="artist-Yochan_active" src="/static/nature_project/assets/img/2.main/Oumtt_Yochan_1_active.png">
                         </div>
                         <div class="artist-Yochan_image_2">
                             <img src="/static/nature_project/assets/img/2.main/Oumtt_Yochan_2.png">
+                            <img class="artist-Yochan_hover" src="/static/nature_project/assets/img/2.main/Oumtt_Yochan_2_hover.png">
                         </div>
                         <div class="art-festival-content">
                             <div class="art-festival-name">
@@ -303,8 +304,8 @@
                     OUMTT & YOCHAN’s Latest Project
                 </div>
                 <div class="project_media">
-                    <iframe class="project_oumtt_1" width="328" height="184" src="https://www.youtube.com/embed/8DUKvaDyd1Y?rel=0&vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe class="project_oumtt_2" width="976" height="548" src="https://www.youtube.com/embed/8DUKvaDyd1Y?rel=0&vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="project_oumtt_1" width="328" height="184" src="https://www.youtube.com/embed/8DUKvaDyd1Y?vq=hd1080&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="project_oumtt_2" width="976" height="548" src="https://www.youtube.com/embed/8DUKvaDyd1Y?vq=hd1080&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="project_media_notice">
                     영상 재생 버튼을 누르고, 소리와 함께 감상해주세요
@@ -322,26 +323,34 @@
                     Follow Us
                 </div>
                 <div class="footer_info-link">
+                    <a style="text-decoration: none; display: inline-flex;" href="https://www.notion.so/NATURE-Project-Series-70fd6fa703c045ee940342dedf63b7f1">
                     <img class="footer_info-link_image" style="margin-left: 0px;" src="/static/nature_project/assets/img/3.footer/Notion.png">
                     <div class="footer_info-link_text">Notion</div>
+                    </a>
+                    <a style="text-decoration: none; display: inline-flex;" href="https://www.instagram.com/project_oumtt/">
                     <img class="footer_info-link_image" src="/static/nature_project/assets/img/3.footer/Instagram.png">
                     <div class="footer_info-link_text">Instagram</div>
+                    </a>
+                    <a style="text-decoration: none; display: inline-flex;" href="https://www.youtube.com/channel/UCjaqvJXS6w5W7EtdPT-w4aQ">
                     <img class="footer_info-link_image" src="/static/nature_project/assets/img/3.footer/YouTube.png">
                     <div class="footer_info-link_text">Youtube</div>
+                    </a>
                 </div>
             </div>
             <div class="footer_info-right">
                 <div class="footer_info-contact_2">
-                    Contact us
+                    Contact Us
                 </div>
                 <form action="/" method="post" class="footer_info-click">
-                <input type="email" class="footer_input_box" name="email" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="움트와 함께 하고 싶으시다면, 연락처를 남겨 주세요!">
+                <input type="contact" class="footer_input_box" name="contact" autocomplete="off" placeholder="움트와 함께 하고 싶으시다면, 연락처를 남겨 주세요!">
                 <button name="footer-submit-button" class="footer-submit-button">연락하기</button>
                 </form>
             </div>
         </div>
-        <div class="footer_info-copyright">
-            Copyrightⓒ 2022. Oumtt. All right reserved.
+        <div class="footer_info-line">
+            <div class="footer_info-copyright">
+                Copyrightⓒ 2022. Oumtt. All right reserved.
+            </div>
         </div>
     </footer>
 
@@ -362,7 +371,25 @@
                 $("header").css("background-color", "#000000");
             }
         });
+
+        function button() {
+                    var f = document.contact;
+                    if($("#input_box_1").val().length==0) {
+                    } 
+                    else if($("#input_box_2").val().length==0 ) {
+                    }  
+                    else if(f.agree_2.checked!=true ) {
+                        alert('개인정보활용동의에 체크해 주세요.');
+                    } 
+                    else {
+                        alert('제출되었습니다');
+                        f.submit();
+                    }
+                }
     </script>
 
+    <script> 
+        AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
 </body>
 </html>

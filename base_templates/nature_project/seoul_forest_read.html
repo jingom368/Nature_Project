@@ -15,13 +15,15 @@
         <th>보낸 시간</th>
         <th>무용 전공 여부</th>
         <th>개인 정보 동의</th>
+        <th>자연에서 산책할 때</th>
         {% for post in personal_list %}
         <tr>
             <td>{{ post.name }}</td>
-            <td>{{ post.phonenumber }}</td>
+            <td>{{ post.phonenumber_1 }}</td>
             <td>{{ post.created_at }}</td>
             <td>{{ post.koreandance }}</td>
             <td>{{ post.PIagree }}</td>
+            <td>{{ post.how_think }}</td>
         </tr>
 
         {% empty %}
@@ -36,13 +38,13 @@
     {% endif %}
 
 
-    {% if dancer_email_list %}
+    {% if dancer_phonenumber_list %}
     <table border="1">
-        <th>이메일</th>
+        <th>Contact</th>
         <th>보낸 시간</th>
-        {% for post in dancer_email_list %}
+        {% for post in dancer_phonenumber_list %}
         <tr>
-            <td>{{ post.email }}</td>
+            <td>{{ post.contact }}</td>
             <td>{{ post.created_at }}</td>
         </tr>
 

@@ -469,6 +469,14 @@ body {
     }
 
     .nature_value_2 {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.005em;
+        padding-top: 16px;
+        text-align: end;
+    }
+
+    .nature_value_3 {
         font-size: 13px;
         line-height: 24px;
         letter-spacing: -0.005em;
@@ -477,7 +485,7 @@ body {
         text-align: end;
     }
 
-    .nature_value_2::after {
+    .nature_value_3::after {
         content:"가장 푸릇푸릇 한 6월의 여름날,\A자연을 대하는 가지각색의 모든 존재들에게\A‘가장 자연한 마음’을 담아 - 우리의 춤과 예술로\A‘있는 그대로의 당신’에게 더 다가가고자 합니다\A\A우리와 만나, 함께 자연을 느끼고, 예술을 움 틔워보아요";
         white-space: pre;
     }
@@ -555,13 +563,31 @@ body {
         text-align: end;
     }
 
+    #nature_value::after {
+        content:"서울의 정신없는 도심 속 자연, 서울숲 공원\A숨 막히는 도시를 지나 서울숲으로 들어가면,코를 간질이는 자연의 향,\A사람들의 여유로운 표정, 아이들의 웃음소리 그리고 산책하는 강아지들";
+        white-space: pre;
+    }
+
     .nature_value_2 {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.005em;
+        padding-top: 14px;
+        text-align: end;
+    }
+
+    .nature_value_3 {
         font-size: 16px;
         line-height: 28px;
         letter-spacing: -0.005em;
         padding-top: 14px;
         padding-bottom: 160px;
         text-align: end;
+    }
+
+    .nature_value_3::after {
+        content:"가장 푸릇푸릇 한 6월의 여름날,\A자연을 대하는 가지각색의 모든 존재들에게 ‘가장 자연한 마음’을 담아\A우리의 춤과 예술로 ‘있는 그대로의 당신’에게 더 다가가고자 합니다\A\A우리와 만나, 함께 자연을 느끼고, 예술을 움 틔워보아요";
+        white-space: pre;
     }
 
 }
@@ -661,7 +687,19 @@ body {
         margin-top: 40px;
     }
 
-    #input_box {
+    #input_box_1 {
+        width: 328px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px; 
+        outline: none;
+        background-color: transparent;
+        margin-top: 4px;
+        padding: 0px 0px;
+    }
+
+    #input_box_2 {
         width: 328px;
         height: 36px;
         border-right:0px; 
@@ -692,7 +730,7 @@ body {
     }
 
     .contact-submit_select-think {
-        width: 310px;
+        width: 328px;
         height: 40px;
         border: 1px solid #9E9E9E;
         border-radius: 4px;
@@ -778,7 +816,19 @@ body {
 
 @media (min-width:1024px) {
 
-    #input_box {
+    #input_box_1 {
+        width: 310px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px; 
+        outline: none;
+        background-color: transparent;
+        margin-top: 4px;
+        padding: 0px 0px;
+    }
+
+    #input_box_2 {
         width: 310px;
         height: 36px;
         border-right:0px; 
@@ -810,7 +860,7 @@ body {
     }
 
     .contact-index {
-        width: 310px;
+        width: 303px;
         display: flex;
         flex-direction: column;
     }
@@ -1056,7 +1106,7 @@ body {
         border-bottom: 1px solid #000000;
         margin-top: 40px;
         color: black;
-        margin-bottom: 82px;
+        margin-bottom: 83px;
     }
 
 }
@@ -1198,6 +1248,17 @@ body {
         width: 328px;
         height: 412px;
         object-fit: cover;
+        position: relative;
+    }
+
+    .artist-Bian_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .artist-Bian_image_1:active .artist-Bian_active {
+        display: block;
     }
 
     .artist-Bian_image_2 {
@@ -1253,6 +1314,17 @@ body {
         width: 328px;
         height: 412px;
         object-fit: cover;
+        position: relative;
+    }
+
+    .artist-Yochan_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .artist-Yochan_image_1:active .artist-Yochan_active {
+        display: block;
     }
 
     .artist-Yochan_image_2 {
@@ -1397,7 +1469,18 @@ body {
         height: 600px;
         object-fit: cover;
         margin-left: 94px;
+        position: relative;
     }
+
+    .artist-Bian_hover {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .artist-Bian_image_2:hover .artist-Bian_hover {
+        display: block;
+      }
 
     .art-festival {
         width: 976px;
@@ -1415,7 +1498,18 @@ body {
         width: 476px;
         height: 600px;
         object-fit: cover;
+        position: relative;
     }
+
+    .artist-Yochan_hover {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .artist-Yochan_image_2:hover .artist-Yochan_hover {
+        display: block;
+      }
 
     .art-festival-content {
         width: 337px;
@@ -1571,7 +1665,6 @@ body {
         padding: 0px 16px;
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid #424242;
     }
 
     .footer_info-left {
@@ -1655,6 +1748,12 @@ body {
         color: black;
     }
 
+    .footer_info-line {
+        width: 100%;
+        height: 68px;
+        border-top: 1px solid #424242;
+    }
+
     .footer_info-copyright {
         width: 100%;
         text-align: center;
@@ -1689,16 +1788,16 @@ body {
         padding: 0px 24px;
         display: flex;
         flex-direction: row;
-        border-bottom: 1px solid #424242;
     }
 
     .footer_info-left {
         display: flex;
         flex-direction: column;
+        padding-top: 72px;
+        margin-bottom: 139px;
     }
 
     .footer_info-contact {
-        padding-top: 72px;
         font-weight: 600;
         font-size: 18px;
         line-height: 26px;
@@ -1726,11 +1825,19 @@ body {
     .footer_info-right {
         display: flex;
         flex-direction: column;
-        padding-left: 160px;
+        padding-left: 140px;
+        padding-top: 72px;
+        margin-bottom: 137px;
+    }
+
+    .footer_info-contact_2 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
     }
 
     .footer_info-click {
-        width: 468px;
+        width: 488px;
         height: 36px;
         display: flex;
         flex-direction: row;
@@ -1751,13 +1858,13 @@ body {
 
     input::placeholder {
         color: #E0E0E0;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 20px;
         margin-bottom: 5px;
     }
 
     .footer-submit-button {
-        width: 100px;
+        width: 120px;
         height: 36px;
         background: #DBFD5C;
         border-radius: 4px;
@@ -1767,6 +1874,12 @@ body {
         color: black;
     }
 
+    .footer_info-line {
+        width: 100%;
+        height: 120px;
+        border-top: 1px solid #424242;
+    }
+
     .footer_info-copyright {
         width: 100%;
         text-align: center;
@@ -1774,6 +1887,7 @@ body {
         line-height: 20px;
         color: #9E9E9E;
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
 }
@@ -1781,85 +1895,152 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-.selectBox2 * { box-sizing: border-box; }
-.selectBox2 {
-
-  position: relative;
-  width: 150px;
-  height: 35px;
-  border-radius: 4px;
-  border: 2px solid lightcoral;
-  background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat;
-  background-size: 20px;
-
-}
-
-.selectBox2:after {
-  content: '';
-  display: block; 
-  width: 2px;
-  height: 100%; 
-  position: absolute; 
-  top: 0; 
-  right: 35px;
-  background: lightcoral;
-}
-
-.selectBox2 .label {
-  display: flex;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0 none;
-  outline: 0 none;
-  padding-left: 15px;
-  background: transparent;
-}
-
-.selectBox2 .optionList {
-  position: absolute; 
-  top: 28px;
-  left: 0;
-  width: 100%;
-  background: lightcoral;
-  color: #fff;
-  list-style-type: none;
-  padding: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  max-height: 0;
-  transition: .3s ease-in;
-}
-
-.selectBox2.active .optionList {
-  max-height: 500px;
-}
-
-.selectBox2 .optionItem {
-  border-bottom: 1px dashed rgb(170, 72, 72);
-  padding: 5px 15px 5px;
-  transition: .1s;
-}
-
-.selectBox2 .optionItem:hover {
-  background: rgb(175, 93, 93);
-}
-
-.selectBox2 .optionItem:last-child {
-  border-bottom: 0 none;
-}
-
-/* 스크롤 커스텀 */
-.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
-.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
-.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
-.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+select::-ms-expand { 
+    display: none;
+  }
+  
+  select {
+  -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* .select {
+    width: 150px;
+    height: 35px;
+    background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 5px) center no-repeat;
+    background-size: 20px;
+    padding: 5px 30px 5px 10px;
+    border-radius: 4px;
+    outline: 0 none;
+  }
+  .select option {
+    background: black;
+    color: #fff;
+    padding: 3px 0;
+  }
+  .select option:hover {
+    background: rgb(58, 58, 58)
+  }
+   */
+  
+  /* ------------------------------------------------------- */
+  /* .selectBox {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid lightcoral;
+  }
+  .selectBox .select {
+    width: inherit;
+    height: inherit;
+    background: transparent;
+    border: 0 none;
+    outline: 0 none;
+    padding: 0 5px;
+    position: relative;
+    z-index: 3; 
+  }
+  .selectBox .select option {
+    background: lightcoral;
+    color: #fff;
+    padding: 3px 0;
+    font-size: 16px;
+  }
+  .selectBox .icoArrow {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 1; 
+    width: 35px; 
+    height: inherit;
+    border-left: 2px solid lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .selectBox .icoArrow img {
+    width: 50%;
+    transition: .3s;
+  }
+  
+  .selectBox .select:focus + .icoArrow img {
+    transform: rotate(180deg);
+  }
+   */
+  /* ------------------------------------------------------- */
+  .selectBox2 * { box-sizing: border-box; }
+  .selectBox2 {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid lightcoral;
+    background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+  }
+  
+  .selectBox2:after {
+    content: '';
+    display: block; 
+    width: 2px;
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    right: 35px;
+    background: lightcoral;
+  }
+  
+  .selectBox2 .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .selectBox2 .optionList {
+    position: absolute; 
+    top: 28px;
+    left: 0;
+    width: 100%;
+    background: lightcoral;
+    color: #fff;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+  }
+  
+  .selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+  .selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+  .selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+  .selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+  
+  .selectBox2.active .optionList {
+    max-height: 500px;
+  }
+  
+  .selectBox2 .optionItem {
+    border-bottom: 1px dashed rgb(170, 72, 72);
+    padding: 5px 15px 5px;
+    transition: .1s;
+  }
+  
+  .selectBox2 .optionItem:hover {
+    background: rgb(175, 93, 93);
+  }
+  
+  .selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+  }
