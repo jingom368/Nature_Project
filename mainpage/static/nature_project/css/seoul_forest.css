@@ -19,6 +19,7 @@
     color: #FFFFFF;
 }
 
+
 body {
     width: 100%;
     height: auto;
@@ -733,7 +734,7 @@ body {
         width: 328px;
         height: 40px;
         border: 1px solid #9E9E9E;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 0px 14px;
         -webkit-appearance:none; /* for chrome */
         -moz-appearance:none; /*for firefox*/ 
@@ -811,6 +812,9 @@ body {
 
     .contact-submit_check-box input[type="checkbox"]:checked + label {
         background:url("/static/nature_project/assets/img/2.main/checkbox_check.png") no-repeat center/16px 16px; float: right}
+
+    .contact a:link {color: #ffffff;}
+    .contact a:visited {color: #FFFFFF;}
 
 }
 
@@ -1028,6 +1032,9 @@ body {
     .contact-submit_check-box input[type="checkbox"]:checked + label {
         background:url("/static/nature_project/assets/img/2.main/checkbox_check.png") no-repeat center/16px 16px; float: right}
 
+    .contact a:link {color: #ffffff;}
+    .contact a:visited {color: #FFFFFF;}
+
 }
 
 /* Schedule */
@@ -1212,6 +1219,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .artist_title {
@@ -1380,6 +1388,8 @@ body {
         justify-content: center;
     }
 
+    .artist a:link {color: #000000;}
+    .artist a:visited {color: #000000;}
 }
 
 @media (min-width:1024px) {
@@ -1551,6 +1561,8 @@ body {
         color: #000000;
     }
 
+    .artist a:link {color: #000000;}
+    .artist a:visited {color: #000000;}
 }
 
 
@@ -1902,81 +1914,15 @@ body {
 
 select::-ms-expand { 
     display: none;
-  }
+}
   
-  select {
-  -o-appearance: none;
+select {
+    -o-appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-  }
+}
   
-  /* .select {
-    width: 150px;
-    height: 35px;
-    background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 5px) center no-repeat;
-    background-size: 20px;
-    padding: 5px 30px 5px 10px;
-    border-radius: 4px;
-    outline: 0 none;
-  }
-  .select option {
-    background: black;
-    color: #fff;
-    padding: 3px 0;
-  }
-  .select option:hover {
-    background: rgb(58, 58, 58)
-  }
-   */
-  
-  /* ------------------------------------------------------- */
-  /* .selectBox {
-    position: relative;
-    width: 150px;
-    height: 35px;
-    border-radius: 4px;
-    border: 2px solid lightcoral;
-  }
-  .selectBox .select {
-    width: inherit;
-    height: inherit;
-    background: transparent;
-    border: 0 none;
-    outline: 0 none;
-    padding: 0 5px;
-    position: relative;
-    z-index: 3; 
-  }
-  .selectBox .select option {
-    background: lightcoral;
-    color: #fff;
-    padding: 3px 0;
-    font-size: 16px;
-  }
-  .selectBox .icoArrow {
-    position: absolute; 
-    top: 0; 
-    right: 0; 
-    z-index: 1; 
-    width: 35px; 
-    height: inherit;
-    border-left: 2px solid lightcoral;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .selectBox .icoArrow img {
-    width: 50%;
-    transition: .3s;
-  }
-  
-  .selectBox .select:focus + .icoArrow img {
-    transform: rotate(180deg);
-  }
-   */
-  /* ------------------------------------------------------- */
 .selectBox2 * { box-sizing: border-box; }
 
 .selectBox2 {
@@ -2017,12 +1963,13 @@ select::-ms-expand {
     max-height: 0;
     transition: .3s ease-in;
     z-index: 3;
+    border:0px;
   }
   
-  .selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
-  .selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
-  .selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
-  .selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
   
   .selectBox2.active .optionList {
     max-height: 500px;

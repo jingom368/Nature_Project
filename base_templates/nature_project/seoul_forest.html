@@ -78,7 +78,7 @@
         <section class="nature">
             <div class="nature_box">
                 <div class="nature_title">
-                    SeoulForestival with You
+                    Art SeoulForestival with You
                 </div>
                 <div class="nature_text">
                     Naturally in Nature
@@ -118,7 +118,7 @@
                     </div>
                 </div>
                 <div class="contact-submit">
-                    <form action="/" method="post" name="contact">
+                    <form action="/" method="post" name="contact" >
                         {% csrf_token %}
                         <div class="contact-submit_info-personal">
                             <div class="contact-submit_info-name">
@@ -137,24 +137,22 @@
                             자연에서 산책할 때, 어떤 생각을 하시나요?
                         </div>
                         <div>
-                            <select name="how-think" class="contact-submit_select-think">
+                            <select id="how_think" name="how_think" class="contact-submit_select-think" required>
                                 <option class="contact-submit_select-box" value="" hidden>당신의 생각을 선택해 주세요.</option>
                                 <option class="contact-submit_select-box" value="푸릇푸릇한 자연을 좋아해서.">푸릇푸릇한 자연을 좋아해서.</option>
                                 <option class="contact-submit_select-box" value="아무런 이유없이도 산책을 즐겨해요.">아무런 이유없이도 산책을 즐겨해요.</option>
                                 <option class="contact-submit_select-box" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</option>
                                 <option class="contact-submit_select-box" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</option>
                             </select>
-                            <div class="box">
-                                <div class="selectBox2">
-                                    <div class="label">당신의 생각을 선택해 주세요.</div>
-                                    <ul name="fruit" class="optionList">
-                                        <li class="optionItem" value="푸릇푸릇한 자연을 좋아해서.">푸릇푸릇한 자연을 좋아해서.</li>
-                                        <li class="optionItem" value="아무런 이유없이도 산책을 즐겨해요.">아무런 이유없이도 산책을 즐겨해요.</li>
-                                        <li class="optionItem" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</li>
-                                        <li class="optionItem" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <!-- <div class="selectBox2">
+                                <div class="label">당신의 생각을 선택해 주세요.</div>
+                                <ul id="fruit" name="fruit" class="optionList">
+                                    <li class="optionItem" value="푸릇푸릇한 자연을 좋아해서.">푸릇푸릇한 자연을 좋아해서.</li>
+                                    <li class="optionItem" value="아무런 이유없이도 산책을 즐겨해요.">아무런 이유없이도 산책을 즐겨해요.</li>
+                                    <li class="optionItem" value="생각(고민)의 정리가 필요할 때.">생각(고민)의 정리가 필요할 때.</li>
+                                    <li class="optionItem" value="스트레스를 해소하기 위해서.">스트레스를 해소하기 위해서.</li>
+                                </ul>
+                            </div> -->
                         </div>
                         <button name="contact-submit-button" class="contact-submit-button" onClick="button();">관람 신청하기</button>
                         <div class="contact-submit_check">
@@ -178,7 +176,7 @@
             </div>
         </section>
 
-        <script>
+        <!-- <script>
             const label = document.querySelector('.label');
             const options = document.querySelectorAll('.optionItem');
             const handleSelect = function(item) {
@@ -186,17 +184,20 @@
             label.parentNode.classList.remove('active');
             }
             options.forEach(function(option){
-            option.addEventListener('click', function(){handleSelect(option)})
+            option.addEventListener('click', function(){handleSelect(option);
+                $(".optionList").css("border","0px");})
             })
 
             label.addEventListener('click', function(){
             if(label.parentNode.classList.contains('active')) {
                 label.parentNode.classList.remove('active');
+                setTimeout(function() { $(".optionList").css("border","0px"); },280);
             } else {
                 label.parentNode.classList.add('active');
+                $(".optionList").css("border","1px solid #9E9E9E");
             }
             });
-        </script>
+        </script> -->
 
     <!-- schedule -->
 
@@ -377,17 +378,69 @@
             if($("#input_box_1").val().length==0) {
             } 
             else if($("#input_box_2").val().length==0 ) {
-            }  
-            else if(f.agree_2.checked!=true ) {
-                alert('개인정보활용동의에 체크해 주세요.');
+            }
+            else if(f.how_think.value =="") {
+            }
+            else if(f.agree_2.checked!==true) {
+                alert('개인정보활용동의를 체크해 주세요.');
             } 
             else {
                 alert('제출되었습니다');
+                value = f.how_think.value
                 f.submit();
             }
         }
 
     </script>
+
+    <script>
+        document.cookie = "safeCookie1=foo; SameSite=Lax"; 
+        document.cookie = "safeCookie2=foo"; 
+        document.cookie = "crossCookie=bar; SameSite=None; Secure";
+    </script>
+
+<!-- Channel Plugin Scripts -->
+    <script>
+        (function () {
+            var w = window;
+            if (w.ChannelIO) {
+                return (window.console.error || window.console.log || function () { })('ChannelIO script included twice.');
+            }
+            var ch = function () {
+                ch.c(arguments);
+            };
+            ch.q = [];
+            ch.c = function (args) {
+                ch.q.push(args);
+            };
+            w.ChannelIO = ch;
+            function l() {
+                if (w.ChannelIOInitialized) {
+                    return;
+                }
+                w.ChannelIOInitialized = true;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+                s.charset = 'UTF-8';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if (document.readyState === 'complete') {
+                l();
+            } else if (window.attachEvent) {
+                window.attachEvent('onload', l);
+            } else {
+                window.addEventListener('DOMContentLoaded', l, false);
+                window.addEventListener('load', l, false);
+            }
+        })();
+        ChannelIO('boot', {
+            "pluginKey": "34055b75-dfc7-49ce-b6d4-fd6f6a7616b1"
+        });
+    </script>
+<!-- End Channel Plugin -->
 
     <script> 
         AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
