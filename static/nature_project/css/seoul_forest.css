@@ -619,7 +619,6 @@ body {
     .contact-index {
         width: 328px;
         height: 268px;
-        border-bottom: 1px solid #212121;
         display: flex;
         flex-direction: column;
     }
@@ -1118,7 +1117,14 @@ body {
         border-bottom: 1px solid #000000;
         margin-top: 40px;
         color: black;
-        margin-bottom: 83px;
+
+    }
+
+    .schedule_about_notice {
+        font-size: 8px;
+        line-height: 22px;
+        color: black;
+        align-self: end;
     }
 
 }
@@ -1136,7 +1142,7 @@ body {
 
     .schedule_box {
         width: 1024px;
-        padding: 148px 108px;
+        padding: 148px 108px 134px 108px;
         display: flex;
         flex-direction: row;
     }
@@ -1203,7 +1209,13 @@ body {
         border-bottom: 1px solid #000000;
         margin-top: 36px;
         color: black;
-        margin-bottom: 11px;
+    }
+
+    .schedule_about_notice {
+        font-size: 10px;
+        line-height: 26px;
+        color: black;
+        align-self: end;
     }
 
 }

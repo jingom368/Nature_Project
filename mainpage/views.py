@@ -37,3 +37,11 @@ def seoul_forest_read(request):
         "dancer_phonenumber_list": dancer_phonenumber_list
     }
     return render(request, "nature_project/seoul_forest_read.html", context)
+
+
+class Program(APIView):
+    def get(self, request):
+        return render(request, "nature_project/program.html")
+
+    def post(self, request):
+        return render(request, "nature_project/program.html")
