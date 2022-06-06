@@ -1281,10 +1281,6 @@ body {
         top:0px;
     }
 
-    .artist-Bian_image_1:active .artist-Bian_active {
-        display: block;
-    }
-
     .artist-Bian_image_2 {
         display: none;
     }
@@ -1345,10 +1341,6 @@ body {
         position: absolute;
         display: none;
         top:0px;
-    }
-
-    .artist-Yochan_image_1:active .artist-Yochan_active {
-        display: block;
     }
 
     .artist-Yochan_image_2 {
