@@ -386,6 +386,29 @@
     crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
+
+        $(function() {
+            $("#artist-Bian_image_1").on("click", function() {
+                if ($(".artist-Bian_active").css('display') == "none") {
+                    $(".artist-Bian_active").css({"display":"block"});
+                }
+                else {
+                    $(".artist-Bian_active").css({"display":"none"});
+                } 
+            });
+        });
+
+        $(function() {
+            $("#artist-Yochan_image_1").on("click", function() {
+                if ($(".artist-Yochan_active").css('display') == "none") {
+                    $(".artist-Yochan_active").css({"display":"block"});
+                }
+                else {
+                    $(".artist-Yochan_active").css({"display":"none"});
+                } 
+            });
+        });
+
         $(window).scroll(function(){
             var height = $(window).scrollTop();
             // console.log(height);
