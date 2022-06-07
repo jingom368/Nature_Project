@@ -772,7 +772,7 @@ body {
         -webkit-appearance:none; /* for chrome */
         -moz-appearance:none; /*for firefox*/ 
         appearance:none;
-        background: url("/static/nature_project/assets/img/2.main/Polygon.png") no-repeat 97% 50%/16px auto;
+        background: url("/static/nature_project/assets/img/2.main/Polygon.png") no-repeat 95% 50%/16px auto;
         font-size: 14px;
         line-height: 20px;
         color: #DBFD5C;
@@ -995,7 +995,7 @@ body {
         -webkit-appearance:none; /* for chrome */
         -moz-appearance:none; /*for firefox*/ 
         appearance:none;
-        background: url("/static/nature_project/assets/img/2.main/Polygon.png") no-repeat 97% 50%/16px auto;
+        background: url("/static/nature_project/assets/img/2.main/Polygon.png") no-repeat 95% 50%/14px 12px;
         font-size: 14px;
         line-height: 20px;
         color: #DBFD5C;
