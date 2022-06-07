@@ -1,1 +1,407 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Mada&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Maitree&display=swap');
 
+/* @font-face {
+    font-family: 'Maitree';
+    src: url('https://fonts.googleapis.com/css2?family=Maitree&display=swap');
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Maitree';
+    src: url("/static/nature_project/assets/fonts/RIDIBatang_min.otf") format("opentype");
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
+
+* {
+    font-family: 'Maitree' !important;                 
+    color: #FFFFFF;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.row_flex {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color:inherit
+}
+
+.column_flex {
+    display:flex;
+    flex-direction: column;
+    color:inherit
+}
+
+/* header */
+
+@media (max-width: 1024px) {
+    header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+        height: 48px;
+        z-index: 10;
+        background-color: black;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%
+    }
+    
+    .nav_home {
+        display: flex;
+        flex-direction: row;
+        width: 166px;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .nav_active {
+        position: relative;
+        color:#DBFD5C;
+        font-weight: 600;
+    }
+
+    .nav_point {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #DBFD5C;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .nav_button {
+        width: 120px;
+        height: 24px;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.04em;
+    }
+
+    .nav_button::after{content: "오픈카톡 참여하기";}
+}
+
+
+/* Intro */
+
+@media (max-width:1024px) {
+
+    .introduction {
+        width: 100%;
+        height: 552px;
+        padding-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+    }
+
+    .intro_box {
+        width: 360px;
+        height: 562px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro_team {
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        margin-top: 56px;
+    }
+
+    .intro_title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .intro_nature {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #DBFD5C;
+        margin-top: 8px;
+    }
+
+    .intro_photo_1 {
+        display: block;
+        width: 328px;
+        height: 178px;
+        margin-top: 24px;
+        object-fit: cover;
+    }
+
+    .intro_border {
+        position: relative;
+        width: 328px;
+        height: 27.5px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .intro_round {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        left:0px;
+        top:22.5px;
+        background-color: #ffffff;
+    }
+
+    .intro_title::after{content:"Monthly Art \A SeoulForestival with you"; white-space: pre;}
+}
+
+
+/* guest */
+
+@media (max-width:1024px) {
+
+    .guest {
+        width: 100%;
+        height: 728px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .guest_box {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        height: 728px;
+        padding: 0px 16px;
+        color: inherit
+    }
+
+    .guset_title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-top: 48px;
+        color: inherit
+    }    
+
+    .guest_photo_aran {
+        width: 328px;
+        height: 240px;
+        margin-top: 32px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_aran_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .guest_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .guest_intro div {
+        color: inherit;
+    }
+
+    .guest_photo_hyekyung {
+        width: 328px;
+        height: 240px;
+        margin-top: 16px;
+        position: relative;
+    }
+
+    .artist_hyekyung_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+}
+
+
+/* withyou */
+
+@media (max-width:1024px) {
+
+    .withyou {
+        width: 100%;
+        height: 916px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .withyou_box {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        height: 916px;
+        padding: 0px 16px;
+        color: inherit
+    }
+
+    .withyou_title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-top: 48px;
+        color: inherit
+    }
+
+    .withyou_profile {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        margin-top: 32px;
+        color: inherit
+    }    
+
+    .withyou_photo_hasom {
+        width: 156x;
+        height: 200px;
+        margin-top: 12px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_hasom_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .withyou_photo_hahyeon {
+        width: 156x;
+        height: 200px;
+        margin-top: 12px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_hahyeon_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .withyou_photo_seoyeon {
+        width: 156x;
+        height: 200px;
+        margin-top: 12px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_seoyeon_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .withyou_photo_minseop {
+        width: 156x;
+        height: 200px;
+        margin-top: 12px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_minseop_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .withyou_photo_sohyun {
+        width: 156x;
+        height: 200px;
+        margin-top: 12px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_sohyun_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .withyou_photo_sohee {
+        width: 156x;
+        height: 200px;
+        margin-top: 12px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_sohee_active {
+        position: absolute;
+        display: none;
+        top:0px;
+    }
+
+    .withyou_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+        width: 156px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .withyou_intro div {
+        color: inherit;
+    }
+
+}
+
+/* 
+.toggle {
+    width: 328px;
+    height: 40px;
+    border: 1px solid #9E9E9E;
+    border-radius: 8px;
+    padding: 0px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #DBFD5C;
+    background-color: black;
+    margin-top: 12px;
+} */
