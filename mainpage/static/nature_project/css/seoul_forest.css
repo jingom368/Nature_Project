@@ -579,6 +579,7 @@ body {
         width: 810px;
         height: 440px;
         margin-top: 16px;
+        object-fit: cover;
     }
 
     .nature_photo_2 {
@@ -586,6 +587,7 @@ body {
         width: 810px;
         height: 440px;
         margin-top: 16px;
+        object-fit: cover;
     }
 
     .nature_value {
@@ -1104,6 +1106,7 @@ body {
         width: 328px;
         height: 200px;
         margin-top: 32px;
+        object-fit: cover;
     }
 
     .schedule_photo_2 {
@@ -1189,6 +1192,7 @@ body {
         width: 310px;
         height: 440px;
         margin-top: 12px;
+        object-fit: cover;
     }
 
     .schedule_content {
@@ -1313,7 +1317,17 @@ body {
         position: relative;
     }
 
+    .artist-Bian_none_1 {
+        width: 328px;
+        height: 412px;
+        object-fit: cover;
+    }
+
     .artist-Bian_active {
+        width: 328px;
+        height: 412px;
+        object-fit: cover;
+        top:0px;
         position: absolute;
         display: none;
         top:0px;
@@ -1379,7 +1393,16 @@ body {
         position: relative;
     }
 
+    .artist-Yochan_none_1 {
+        width: 328px;
+        height: 412px;
+        object-fit: cover;
+    }
+
     .artist-Yochan_active {
+        width: 328px;
+        height: 412px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -1536,7 +1559,17 @@ body {
         position: relative;
     }
 
+    .artist-Bian_none_2 {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+    }
+
     .artist-Bian_hover {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+        top:0px;
         position: absolute;
         display: none;
         top:0px;
@@ -1565,7 +1598,17 @@ body {
         position: relative;
     }
 
+    .artist-Yochan_none_2 {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+    }
+
     .artist-Yochan_hover {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+        top:0px;
         position: absolute;
         display: none;
         top:0px;

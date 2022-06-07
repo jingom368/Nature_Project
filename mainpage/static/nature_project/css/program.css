@@ -700,7 +700,7 @@ body {
         -webkit-appearance:none; /* for chrome */
         -moz-appearance:none; /*for firefox*/ 
         appearance:none;
-        background: url("/static/nature_project/assets/img/program/polygon.svg") no-repeat 94% 50%/14px 12px;
+        background: url("/static/nature_project/assets/svg/polygon.svg") no-repeat 94% 50%/14px 12px;
         font-size: 14px;
         line-height: 20px;
         color: #616161;
@@ -810,11 +810,11 @@ body {
         margin: 3.5px 0px 0px 0px;
         border: 1px solid #000000;
         border-radius: 2px;
-        background:url("/static/nature_project/assets/img/program/checkbox_none.svg") no-repeat center/16px 16px;
+        background:url("/static/nature_project/assets/svg/checkbox_none.svg") no-repeat center/16px 16px;
     }
 
     .event_list_check input[type="checkbox"]:checked + label {
-        background:url("/static/nature_project/assets/img/program/checkbox_check.svg") no-repeat center/16px 16px; float: right}
+        background:url("/static/nature_project/assets/svg/checkbox_check.svg") no-repeat center/16px 16px; float: right}
 }
 /* 
 .toggle {
