@@ -59,6 +59,22 @@ body {
         line-height: 20px;
     }
 
+    .nav_active {
+        position: relative;
+        color:#DBFD5C;
+        font-weight: 600;
+    }
+
+    .nav_point {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #DBFD5C;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
     .nav_button {
         width: 80px;
         height: 24px;
@@ -101,6 +117,22 @@ body {
         justify-content: space-between;
         font-size: 18px;
         line-height: 26px;
+    }
+
+    .nav_active {
+        position: relative;
+        color:#DBFD5C;
+        font-weight: 600;
+    }
+
+    .nav_point {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #DBFD5C;
+        display: inline-block;
+        margin-bottom: 15px;
     }
 
     .nav_button {
@@ -1126,6 +1158,9 @@ body {
         align-self: end;
     }
 
+    .schedule a:link {color: #212121;}
+    .schedule a:visited {color: #212121;}
+
 }
 
 @media (min-width:1024px) {
@@ -1217,6 +1252,9 @@ body {
         align-self: end;
     }
 
+    .schedule a:link {color: #212121;}
+    .schedule a:visited {color: #212121;}
+
 }
 
 /* Artist */
@@ -1281,6 +1319,10 @@ body {
         top:0px;
     }
 
+    .artist-Bian_image_1:active .artist-Bian_active {
+        display: block;
+    }
+
     .artist-Bian_image_2 {
         display: none;
     }
@@ -1341,6 +1383,10 @@ body {
         position: absolute;
         display: none;
         top:0px;
+    }
+
+    .artist-Yochan_image_1:active .artist-Yochan_active {
+        display: block;
     }
 
     .artist-Yochan_image_2 {

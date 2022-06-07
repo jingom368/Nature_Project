@@ -28,7 +28,8 @@ body {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    color:inherit
+    align-items: center;
+    color: inherit;
 }
 
 .column_flex {
@@ -96,7 +97,7 @@ body {
         letter-spacing: -0.04em;
     }
 
-    .nav_button::after{content: "오픈카톡 참여하기";}
+    .nav_button::after{content: "관객참여 Talk 가기";}
 }
 
 
@@ -214,7 +215,16 @@ body {
         object-fit: cover;
     }
 
+    .artist_aran_none {
+        width: 328px;
+        height: 240px;
+        object-fit: cover;
+    }
+
     .artist_aran_active {
+        width: 328px;
+        height: 240px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -242,7 +252,16 @@ body {
         position: relative;
     }
 
+    .artist_hyekyung_none {
+        width: 328px;
+        height: 240px;
+        object-fit: cover;
+    }
+
     .artist_hyekyung_active {
+        width: 328px;
+        height: 240px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -298,7 +317,16 @@ body {
         object-fit: cover;
     }
 
+    .artist_hasom_none {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .artist_hasom_active {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -312,7 +340,16 @@ body {
         object-fit: cover;
     }
 
+    .artist_hahyeon_none {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .artist_hahyeon_active {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -321,12 +358,21 @@ body {
     .withyou_photo_seoyeon {
         width: 156x;
         height: 200px;
-        margin-top: 12px;
+        margin-top: 16px;
         position: relative;
         object-fit: cover;
     }
 
+    .artist_seoyeon_none {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .artist_seoyeon_active {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -335,12 +381,21 @@ body {
     .withyou_photo_minseop {
         width: 156x;
         height: 200px;
-        margin-top: 12px;
+        margin-top: 16px;
         position: relative;
         object-fit: cover;
     }
 
+    .artist_minseop_none {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .artist_minseop_active {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -349,12 +404,21 @@ body {
     .withyou_photo_sohyun {
         width: 156x;
         height: 200px;
-        margin-top: 12px;
+        margin-top: 16px;
         position: relative;
         object-fit: cover;
     }
 
+    .artist_sohyun_none {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .artist_sohyun_active {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -363,12 +427,21 @@ body {
     .withyou_photo_sohee {
         width: 156x;
         height: 200px;
-        margin-top: 12px;
+        margin-top: 16px;
         position: relative;
         object-fit: cover;
     }
 
+    .artist_sohee_none {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .artist_sohee_active {
+        width: 156x;
+        height: 200px;
+        object-fit: cover;
         position: absolute;
         display: none;
         top:0px;
@@ -392,6 +465,357 @@ body {
 
 }
 
+@media (max-width:1024px) {
+
+    .program {
+        width: 100%;
+        height: auto;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .program_box {
+        width: 360px;
+        height: auto;
+        padding: 0px 16px 48px 16px;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+    }
+
+    .program_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .program_notice {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #616161;
+        margin-top: 12px;
+    }
+
+    .program_list {
+        width: 328px;
+        height: 44px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
+    .program_list_1 {
+        width: 328px;
+        height: 116px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px 18px;
+        margin-top: 24px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_2 {
+        width: 328px;
+        height: 446px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px 18px;
+        margin-top: 12px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_3 {
+        width: 328px;
+        height: 116px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px 18px;
+        margin-top: 12px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_4 {
+        width: 328px;
+        height: 270px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px 18px;
+        margin-top: 12px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_5 {
+        width: 328px;
+        height: 292px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px 18px;
+        margin-top: 12px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_title {
+        color: inherit;
+    }
+
+    .program_list_text {
+        line-height: 22px;
+        margin-top: 22px;
+        color: inherit;
+    }
+
+    .program_button {
+        width: 16px;
+        height: 16px;
+        margin-right: 2px;
+        background-color: transparent;
+        border:0px;
+    }
+
+    .program_polygon {
+        width: 14px;
+        height: 12px;
+        cursor: pointer;
+    }
+
+    .program_polygon_1 {
+        width: 14px;
+        height: 12px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .event {
+        width: 100%;
+        height: auto;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .event_box {
+        width: 360px;
+        height: auto;
+        padding: 0px 16px 48px 16px;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+    }
+
+    .event_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .event_text {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        margin-top: 24px;
+        color: inherit;
+    }
+
+    .event_notice {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #616161;
+        margin-top: 8px;
+    }
+
+    form {
+        color:inherit
+    }
+
+    .event_list_1 {
+        margin-top: 12px;
+        color: inherit;
+    }
+
+    .event_list_number {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .event_list_choice {
+        width: 256px;
+        height: 44px;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px;
+        -webkit-appearance:none; /* for chrome */
+        -moz-appearance:none; /*for firefox*/ 
+        appearance:none;
+        background: url("/static/nature_project/assets/img/program/polygon.svg") no-repeat 94% 50%/14px 12px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #616161;
+    }
+
+    select::-ms-expand{
+        display:none;/*for IE10,11*/
+    }
+
+    .event_list_choice_1 {
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #616161;
+    }
+
+    .event_list_name {
+        font-size: 14px;
+        line-height: 24px;
+        color: inherit;
+        margin-top: 48px;
+    }
+
+    .event_list_phonenumber {
+        font-size: 14px;
+        line-height: 24px;
+        color: inherit;
+        margin-top: 24px;
+    }
+
+    .event_name {
+        width: 328px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px; 
+        border-bottom: 1px solid #BDBDBD;;
+        outline: none;
+        margin-top: 4px;
+        padding: 0px 0px;
+        background-color: transparent;
+        color: inherit;
+    }
+
+    .event_phonenumber {
+        width: 328px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px;
+        border-bottom: 1px solid #BDBDBD;;
+        outline: none;
+        margin-top: 4px;
+        padding: 0px 0px;
+        background-color: transparent;
+        color: inherit;
+    }
+
+    .event_list_notice_2 {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: -0.005em;
+        color: #616161;
+    }
+
+    .event_list_button {
+        width: 328px;
+        height: 56px;
+        background: #DBFD5C;
+        box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+        border-radius: 12px;
+        margin-top: 32px;
+        font-size: 16px;
+        line-height: 22px;       
+        color: black;
+        border: none;
+    }
+
+    .event_list_agree {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: inherit;
+        margin-top: 18px;
+    }
+
+    .event_list_text {
+        font-size: 14px;
+        line-height: 24px;
+        color: inherit;
+    }
+
+    .event_list_check {
+        width: 16px;
+        height: 24px;
+    }
+
+    .event_list_check input[type="checkbox"] {
+        display: none;
+    }
+
+    .event_list_check input[type="checkbox"] + label {
+        width: 16px;
+        height: 16px;
+        margin: 3.5px 0px 0px 0px;
+        border: 1px solid #000000;
+        border-radius: 2px;
+        background:url("/static/nature_project/assets/img/program/checkbox_none.svg") no-repeat center/16px 16px;
+    }
+
+    .event_list_check input[type="checkbox"]:checked + label {
+        background:url("/static/nature_project/assets/img/program/checkbox_check.svg") no-repeat center/16px 16px; float: right}
+}
 /* 
 .toggle {
     width: 328px;
