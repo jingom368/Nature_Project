@@ -949,6 +949,7 @@ body {
         font-weight: 600;
         font-size: 22px;
         line-height: 36px;
+        letter-spacing: -0.02em;
         color: inherit;
     }
 
@@ -1309,7 +1310,7 @@ body {
     }
 
     .support_project_text {
-        font-size: 13.7px;
+        font-size: 13.6px;
         line-height: 22px;
         letter-spacing: -0.02em;
         margin-top: 24px;
