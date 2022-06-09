@@ -550,6 +550,19 @@
     crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script> 
+
+        $(window).scroll(function(){
+            var height = $(window).scrollTop();
+            console.log(height);
+
+            if (height < 480) {
+                $("header").css("background-color", "transparent");
+            }
+
+            else if (height >= 480) {
+                $("header").css("background-color", "#000000");
+            }
+        });
         
         $(function() {
             $(".guest_photo_aran").on("click", function() {
