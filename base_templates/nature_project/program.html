@@ -163,11 +163,11 @@
             <div class="program_box">
                 <div class="program_title">Program List</div>
                 <div class="program_notice">*작품 주제 및 내용은 1장 진행순서와 무관합니다. </div>
-                <div id="program_list_1" style="margin-top: 24px;" class="program_list">
+                <div id="program_list_1" style="margin-top: 24px;" >
                     바람
                     <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div id="program_list_1" class="program_list_1">
+                <div class="program_list_1">
                     <div class="row_flex">
                         <div class="program_list_title">바람</div>
                         <img class="program_polygon" src="/static/nature_project/assets/svg/polygon_1.svg">
@@ -175,11 +175,11 @@
                     <div class="program_list_text">바람이 분다.
                     </br>이제야 이 간절한 덫을 놓는다.</div>
                 </div>
-                <div id="program_list_2" class="program_list">
+                <div id="program_list_2">
                     보라연기
                     <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div id="program_list_2" class="program_list_2">
+                <div class="program_list_2">
                     <div class="row_flex">
                         <div class="program_list_title">보라연기</div>
                         <img class="program_polygon" src="/static/nature_project/assets/svg//polygon_1.svg">
@@ -200,11 +200,11 @@
                     </br>자연 속에서 보랏빛 연기를 온전히 느끼는 것. 이것이
                     </br>나에게는 가장 자연스러운 모습이다.</div>
                 </div>
-                <div id="program_list_3" class="program_list">
+                <div id="program_list_3">
                     내적댄스
                     <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div id="program_list_3" class="program_list_3">
+                <div class="program_list_3">
                     <div class="row_flex">
                         <div class="program_list_title">내적댄스</div>
                         <img class="program_polygon" src="/static/nature_project/assets/svg//polygon_1.svg">
@@ -212,11 +212,11 @@
                     <div class="program_list_text">음악과 자연에 몸을 맡겨 춤을 추고 싶은 사람들을
                     </br>위해 제가 같이 춰드릴게요! 둠칫둠칫 🕺🏾</div>
                 </div>
-                <div id="program_list_4" class="program_list">
+                <div id="program_list_4">
                     온전한 것들
                     <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div id="program_list_4" class="program_list_4">
+                <div class="program_list_4">
                     <div class="row_flex">
                         <div class="program_list_title">온전한 것들</div>
                         <img class="program_polygon" src="/static/nature_project/assets/svg/polygon_1.svg">
@@ -231,11 +231,11 @@
                     </br>
                     </br>그저 바람과 함께 춤을 추자</div>
                 </div>
-                <div id="program_list_5" class="program_list">
+                <div id="program_list_5">
                     서로의 존재 그리고 위로
                     <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div id="program_list_5" class="program_list_5">
+                <div class="program_list_5">
                     <div class="row_flex">
                         <div class="program_list_title">서로의 존재 그리고 위로</div>
                         <img class="program_polygon" src="/static/nature_project/assets/svg/polygon_1.svg">
@@ -488,7 +488,7 @@
         <section id="support2" class="support2">
             <div class="support2_box">
 
-                <div class="support_project">Suport Project</div>
+                <div class="support_project">Support Project</div>
                 <div class="support_project_text">움트의 빛나는 도약을 함께하고 지지해 주셔서 감사합니다. 
                 </br>
                 </br>프로젝트 움트는 여러분의 소중한 후원금을 통해 
@@ -553,7 +553,7 @@
 
         $(window).scroll(function(){
             var height = $(window).scrollTop();
-            console.log(height);
+            // console.log(height);
 
             if (height < 480) {
                 $("header").css("background-color", "transparent");
@@ -664,7 +664,9 @@
                 $(".program_list_1").css({"display":"flex"});
                 $("#program_list_1").css({"display":"none"});
             }
-            else {
+        });
+        $(".program_list_1").click(function() {
+            if ($(".program_list_1").css("display") == "flex") {
                 $(".program_list_1").css({"display":"none"});
                 $("#program_list_1").css({"display":"flex"});
             }
@@ -675,7 +677,9 @@
                 $(".program_list_2").css({"display":"flex"});
                 $("#program_list_2").css({"display":"none"});
             }
-            else {
+        });
+        $(".program_list_2").click(function() {
+            if ($(".program_list_2").css("display") == "flex") {
                 $(".program_list_2").css({"display":"none"});
                 $("#program_list_2").css({"display":"flex"});
             }
@@ -686,7 +690,9 @@
                 $(".program_list_3").css({"display":"flex"});
                 $("#program_list_3").css({"display":"none"});
             }
-            else {
+        });
+        $(".program_list_3").click(function() {
+            if ($(".program_list_3").css("display") == "flex") {
                 $(".program_list_3").css({"display":"none"});
                 $("#program_list_3").css({"display":"flex"});
             }
@@ -697,18 +703,21 @@
                 $(".program_list_4").css({"display":"flex"});
                 $("#program_list_4").css({"display":"none"});
             }
-            else {
+        });
+        $(".program_list_4").click(function() {
+            if ($(".program_list_4").css("display") == "flex") {
                 $(".program_list_4").css({"display":"none"});
                 $("#program_list_4").css({"display":"flex"});
             }
         });
-
         $("#program_list_5").click(function() {
             if ($(".program_list_5").css("display") == "none") {
                 $(".program_list_5").css({"display":"flex"});
                 $("#program_list_5").css({"display":"none"});
             }
-            else {
+        });
+        $(".program_list_5").click(function() {
+            if ($(".program_list_5").css("display") == "flex") {
                 $(".program_list_5").css({"display":"none"});
                 $("#program_list_5").css({"display":"flex"});
             }

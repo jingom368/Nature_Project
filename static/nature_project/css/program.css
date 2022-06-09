@@ -94,6 +94,7 @@ body {
         font-size: 13px;
         line-height: 20px;
         letter-spacing: -0.04em;
+        padding: 0px 0px;
     }
 
     .nav_button::after{content: "관객참여 Talk 가기";}
@@ -604,7 +605,7 @@ body {
         margin-top: 12px;
     }
 
-    .program_list {
+    #program_list_1 {
         width: 328px;
         height: 44px;
         background: #FFFFFF;
@@ -639,6 +640,25 @@ body {
         letter-spacing: -0.02em;
     }
 
+    #program_list_2 {
+        width: 328px;
+        height: 44px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
     .program_list_2 {
         width: 328px;
         height: 446px;
@@ -653,6 +673,25 @@ body {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: -0.02em;
+    }
+
+    #program_list_3 {
+        width: 328px;
+        height: 44px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        position: relative;
     }
 
     .program_list_3 {
@@ -671,6 +710,25 @@ body {
         letter-spacing: -0.02em;
     }
 
+    #program_list_4 {
+        width: 328px;
+        height: 44px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
     .program_list_4 {
         width: 328px;
         height: 270px;
@@ -685,6 +743,25 @@ body {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: -0.02em;
+    }
+
+    #program_list_5 {
+        width: 328px;
+        height: 44px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        position: relative;
     }
 
     .program_list_5 {
@@ -940,7 +1017,7 @@ body {
     .table_box {
         width: 360px;
         height: 920px;
-        padding: 40px 16px 80px 16px;
+        padding: 40px 0px 80px 16px;
         color: inherit;
     }
     
@@ -1116,6 +1193,9 @@ body {
         color: inherit;
     }
 
+    .part2 .row_flex {
+        margin-right: 16px;
+    }
 }
 
 @media (max-width:1024px) {
@@ -1294,7 +1374,7 @@ body {
     .support2_box {
         width: 360px;
         height: 342px;
-        padding: 40px 16px 56px 16px;
+        padding: 40px 0px 56px 16px;
         display: flex;
         flex-direction: column;
         color: inherit;
@@ -1309,7 +1389,7 @@ body {
     }
 
     .support_project_text {
-        font-size: 13.6px;
+        font-size: 13.7px;
         line-height: 22px;
         letter-spacing: -0.02em;
         margin-top: 24px;
