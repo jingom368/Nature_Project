@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
-from .models import Apply, Contact
+from .models import Apply, Contact, Select
 from django.utils import timezone
 from django.http import HttpResponseRedirect
 
@@ -38,10 +38,34 @@ def seoul_forest_read(request):
     }
     return render(request, "nature_project/seoul_forest_read.html", context)
 
-
 class Program(APIView):
     def get(self, request):
         return render(request, "nature_project/program.html")
 
     def post(self, request):
-        return render(request, "nature_project/program.html")
+        if request.method=='POST' and 'event_list_button' in request.POST:
+            new_post2 = Select()
+            new_post2.select_1 = request.POST.get('select_1')
+            new_post2.select_2 = request.POST.get('select_2')
+            new_post2.select_3 = request.POST.get('select_3')
+            new_post2.select_4 = request.POST.get('select_4')
+            new_post2.select_5 = request.POST.get('select_5')            
+            new_post2.event_name = request.POST["event_name"]
+            new_post2.event_phonenumber = request.POST["event_phonenumber"]
+            new_post2.event_PIagree = request.POST.getlist('event_answer[]')
+            new_post2.event_created_at = timezone.now()
+            new_post2.save()
+
+        elif request.method=='POST' and 'footer-submit-button2' in request.POST:
+            dancer_post = Contact()
+            dancer_post.contact = request.POST["contact"]
+            dancer_post.save()
+
+        return HttpResponseRedirect("/program")
+
+def seoul_forest_event_read(request):
+    event_list = Select.objects.all().order_by("-pk")
+    context = {
+        "event_list": event_list,
+    }
+    return render(request, "nature_project/seoul_forest_event.html", context)

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seoul_forest_Event List</h1>
+    {% if event_list %}
+    <table border="2">
+        <th>이름</th>
+        <th>전화번호</th>
+        <th>개인 정보 동의</th>
+        <th>첫 번째 정답</th>
+        <th>두 번째 정답</th>
+        <th>세 번째 정답</th>
+        <th>네 번째 정답</th>
+        <th>다섯 번째 정답</th>
+        <th>보낸 시간</th>
+
+        {% for post in event_list %}
+        <tr>
+            <td>{{ post.event_name }}</td>
+            <td>{{ post.event_phonenumber }}</td>
+            <td>{{ post.event_PIagree }}</td>            <td>{{ post.select_1 }}</td>
+            <td>{{ post.select_2 }}</td>
+            <td>{{ post.select_3 }}</td>
+            <td>{{ post.select_4 }}</td>
+            <td>{{ post.select_5 }}</td>
+            <td>{{ post.event_created_at }}</td>
+        </tr>
+
+        {% empty %}
+        <h2> No posts </h2>
+
+        {% endfor %}
+    </table>
+    
+    {% else %}
+    <h2> No posts </h2>
+    
+    {% endif %}
+</body>
+</html>

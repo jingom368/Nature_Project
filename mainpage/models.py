@@ -15,3 +15,15 @@ class Apply(models.Model):
 class Contact(models.Model):
     contact = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+class Select(models.Model):
+    category_Choices_select = (('바람','바람'),('보라연기','보라연기'),('내적댄스','내적댄스'),('온전한 것들','온전한 것들'),('서로의 존재 그리고 위로','서로의 존재 그리고 위로'))
+    select_1 = models.CharField(null=True, max_length=20, choices=category_Choices_select)
+    select_2 = models.CharField(null=True, max_length=20, choices=category_Choices_select)
+    select_3 = models.CharField(null=True, max_length=20, choices=category_Choices_select)
+    select_4 = models.CharField(null=True, max_length=20, choices=category_Choices_select)
+    select_5 = models.CharField(null=True, max_length=20, choices=category_Choices_select)
+    event_name = models.TextField()
+    event_phonenumber = models.TextField()
+    event_PIagree = models.TextField()
+    event_created_at = models.DateTimeField(auto_now_add=True)
