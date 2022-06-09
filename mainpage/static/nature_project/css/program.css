@@ -271,7 +271,7 @@ body {
         font-size: 11px;
         line-height: 20px;
         letter-spacing: -0.04em;
-        left:273px;
+        left:271px;
         top:218.5px;
     }
 
@@ -809,6 +809,8 @@ body {
         line-height: 20px;
         background-color: #ffffff;
         color: #616161;
+        border:none;
+        outline: none;
     }
 
     select::-ms-expand{
@@ -850,6 +852,7 @@ body {
         padding: 0px 0px;
         background-color: transparent;
         color: inherit;
+        border-radius: 0px;
     }
 
     .event_phonenumber {
@@ -864,6 +867,7 @@ body {
         padding: 0px 0px;
         background-color: transparent;
         color: inherit;
+        border-radius: 0px;
     }
 
     .event_list_notice_2 {
@@ -902,7 +906,9 @@ body {
     }
 
     .event_list_check {
-        width: 16px;
+        /* width: 16px;
+        height: 24px; */
+        width: 20px;
         height: 24px;
     }
 
@@ -911,11 +917,9 @@ body {
     }
 
     .event_list_check input[type="checkbox"] + label {
-        width: 16px;
-        height: 16px;
-        margin: 3.5px 0px 0px 0px;
-        border: 1px solid #000000;
-        border-radius: 2px;
+        width: 20px;
+        height: 20px;
+        margin: 2px 0px 0px 0px;
         background:url("/static/nature_project/assets/svg/checkbox_none.svg") no-repeat center/16px 16px;
     }
 
@@ -1118,7 +1122,7 @@ body {
 
     .chair {
         width: 100%;
-        height: 414px;
+        height: 504px;
         background-color: black;
         display: flex;
         justify-content: center;
@@ -1127,11 +1131,11 @@ body {
 
     .chair_box {
         width: 360px;
-        height: 414px;
-        padding: 0px 16px 56px 16px;
+        height: 504px;
+        padding: 0px 16px 58px 16px;
         display: flex;
-        flex-direction: column;
         color: inherit;
+        flex-direction: column;
     }
 
     .chair_title_1 {
@@ -1155,23 +1159,40 @@ body {
         letter-spacing: -0.02em;
         margin-top: 64px;
     }
+
+    .chair_link {
+        font-weight: 600;
+        width: 328px;
+        height: 33px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: -0.01em;
+        border-bottom: 1px solid #ffffff;
+        margin-top: 56px;
+        color: inherit;
+        text-align: end;
+    }
+
+    .chair a:link {color: #ffffff;}
+    .chair a:visited {color: #ffffff;}
 }
 
 @media (max-width:1024px) {
 
-    .support {
+    .support1 {
         width: 100%;
-        height: 920px;
+        height: 552px;
         background-color: #ffffff;
         display: flex;
         justify-content: center;
         color: black;
     }
 
-    .support_box {
+    .support1_box {
         width: 360px;
-        height: 920px;
-        padding: 40px 16px 58px 13px;
+        height: 552px;
+        padding: 40px 16px 56px 16px;
         display: flex;
         flex-direction: column;
         color: inherit;
@@ -1257,13 +1278,34 @@ body {
         color: inherit;
     }
 
+}
+
+@media (max-width:1024px) {
+
+    .support2 {
+        width: 100%;
+        height: 342px;
+        background-color: #F7FCE7;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .support2_box {
+        width: 360px;
+        height: 342px;
+        padding: 40px 16px 56px 16px;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+    }
+
     .support_project {
         font-weight: 600;
         font-size: 18px;
         line-height: 24px;
         letter-spacing: -0.02em;
         color: inherit;
-        margin-top: 56px;
     }
 
     .support_project_text {
@@ -1306,22 +1348,6 @@ body {
         border: none;
     }
 
-    .support_project_link {
-        font-weight: 600;
-        width: 328px;
-        height: 33px;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: left;
-        letter-spacing: -0.01em;
-        border-bottom: 1px solid #000000;
-        margin-top: 32px;
-        color: #000000;
-        text-align: end;
-    }
-
-    .support a:link {color: #000000;}
-    .support a:visited {color: #000000;}
 }
 
 /* footer */

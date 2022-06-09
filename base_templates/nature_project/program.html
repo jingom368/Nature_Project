@@ -48,7 +48,7 @@
                                 <div class="intro_round_4"></div>
                                 <div class="intro_line_text_4">The Table</div>
                                 <div class="intro_round_5"></div>
-                                <div class="intro_line_text_5">The Chair</div>
+                                <div class="intro_line_text_5">The Chairs</div>
                             </div>
                         </div>
                     </div>
@@ -165,24 +165,24 @@
                 <div class="program_notice">*작품 주제 및 내용은 1장 진행순서와 무관합니다. </div>
                 <div id="program_list_1" style="margin-top: 24px;" class="program_list">
                     바람
-                    <img class="program_polygon arrow_1" src="/static/nature_project/assets/svg/polygon.svg">
+                    <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div class="program_list_1">
+                <div id="program_list_1" class="program_list_1">
                     <div class="row_flex">
                         <div class="program_list_title">바람</div>
-                        <img class="program_polygon arrow_1" src="/static/nature_project/assets/svg/polygon_1.svg">
+                        <img class="program_polygon" src="/static/nature_project/assets/svg/polygon_1.svg">
                     </div>
                     <div class="program_list_text">바람이 분다.
                     </br>이제야 이 간절한 덫을 놓는다.</div>
                 </div>
                 <div id="program_list_2" class="program_list">
                     보라연기
-                    <img class="program_polygon arrow_2" src="/static/nature_project/assets/svg/polygon.svg">
+                    <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div class="program_list_2">
+                <div id="program_list_2" class="program_list_2">
                     <div class="row_flex">
                         <div class="program_list_title">보라연기</div>
-                        <img class="program_polygon arrow_2" src="/static/nature_project/assets/svg//polygon_1.svg">
+                        <img class="program_polygon" src="/static/nature_project/assets/svg//polygon_1.svg">
                     </div>
                     <div class="program_list_text">만져지는 바람결, 반짝이는 새소리, 까슬한 작은 풀
                     </br>잎. 이것들은 바짝 긴장했던 몸을 녹이고 숨을 쉬게
@@ -202,24 +202,24 @@
                 </div>
                 <div id="program_list_3" class="program_list">
                     내적댄스
-                    <img class="program_polygon arrow_3" src="/static/nature_project/assets/svg/polygon.svg">
+                    <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div class="program_list_3">
+                <div id="program_list_3" class="program_list_3">
                     <div class="row_flex">
                         <div class="program_list_title">내적댄스</div>
-                        <img class="program_polygon arrow_3" src="/static/nature_project/assets/svg//polygon_1.svg">
+                        <img class="program_polygon" src="/static/nature_project/assets/svg//polygon_1.svg">
                     </div>
                     <div class="program_list_text">음악과 자연에 몸을 맡겨 춤을 추고 싶은 사람들을
                     </br>위해 제가 같이 춰드릴게요! 둠칫둠칫 🕺🏾</div>
                 </div>
                 <div id="program_list_4" class="program_list">
                     온전한 것들
-                    <img class="program_polygon arrow_4" src="/static/nature_project/assets/svg/polygon.svg">
+                    <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div class="program_list_4">
+                <div id="program_list_4" class="program_list_4">
                     <div class="row_flex">
                         <div class="program_list_title">온전한 것들</div>
-                        <img class="program_polygon arrow_4" src="/static/nature_project/assets/svg/polygon_1.svg">
+                        <img class="program_polygon" src="/static/nature_project/assets/svg/polygon_1.svg">
                     </div>
                     <div class="program_list_text">서서히 드리워지는 그늘에
                     </br>바람과 냄새가 짙어진다.
@@ -233,12 +233,12 @@
                 </div>
                 <div id="program_list_5" class="program_list">
                     서로의 존재 그리고 위로
-                    <img class="program_polygon arrow_5" src="/static/nature_project/assets/svg/polygon.svg">
+                    <img class="program_polygon" src="/static/nature_project/assets/svg/polygon.svg">
                 </div>
-                <div class="program_list_5">
+                <div id="program_list_5" class="program_list_5">
                     <div class="row_flex">
                         <div class="program_list_title">서로의 존재 그리고 위로</div>
-                        <img class="program_polygon arrow_5" src="/static/nature_project/assets/svg/polygon_1.svg">
+                        <img class="program_polygon" src="/static/nature_project/assets/svg/polygon_1.svg">
                     </div>
                     <div class="program_list_text">지나간 엄마의 시간,
                     </br>지났던, 그리고 흐르지 않는 할머니의 시간.
@@ -265,7 +265,7 @@
                 <form action="/program" method="post" name="event_action">
                     <div style="margin-top: 32px;" class="event_list_1 row_flex">
                         <div class="event_list_number">Team 1.</div>
-                        <select class="event_list_choice" name="select_1" required>
+                        <select id="team1" class="event_list_choice" name="select_1" required>
                             <option class="event_list_choice_0" value="" hidden>작품명을 선택해 주세요</option>
                             <option class="event_list_choice_1" value="바람">바람</option>
                             <option class="event_list_choice_1" value="보라연기">보라연기</option>
@@ -276,7 +276,7 @@
                     </div>
                     <div class="event_list_1 row_flex">
                         <div class="event_list_number">Team 2.</div>
-                        <select class="event_list_choice" name="select_2" required>
+                        <select id="team2" class="event_list_choice" name="select_2" required>
                             <option class="event_list_choice_0" value="" hidden>작품명을 선택해 주세요</option>
                             <option class="event_list_choice_1" value="바람">바람</option>
                             <option class="event_list_choice_1" value="보라연기">보라연기</option>
@@ -287,7 +287,7 @@
                     </div>
                     <div class="event_list_1 row_flex">
                         <div class="event_list_number">Team 3.</div>
-                        <select class="event_list_choice" name="select_3" required>
+                        <select id="team3" class="event_list_choice" name="select_3" required>
                             <option class="event_list_choice_0" value="" hidden>작품명을 선택해 주세요</option>
                             <option class="event_list_choice_1" value="바람">바람</option>
                             <option class="event_list_choice_1" value="보라연기">보라연기</option>
@@ -298,7 +298,7 @@
                     </div>
                     <div class="event_list_1 row_flex">
                         <div class="event_list_number">Team 4.</div>
-                        <select class="event_list_choice" name="select_4" required>
+                        <select id="team4" class="event_list_choice" name="select_4" required>
                             <option class="event_list_choice_0" value="" hidden>작품명을 선택해 주세요</option>
                             <option class="event_list_choice_1" value="바람">바람</option>
                             <option class="event_list_choice_1" value="보라연기">보라연기</option>
@@ -309,7 +309,7 @@
                     </div>
                     <div class="event_list_1 row_flex">
                         <div class="event_list_number">Team 5.</div>
-                        <select class="event_list_choice" name="select_5" required>
+                        <select id="team5" class="event_list_choice" name="select_5" required>
                             <option class="event_list_choice_0" value="" hidden>작품명을 선택해 주세요</option>
                             <option class="event_list_choice_1" value="바람">바람</option>
                             <option class="event_list_choice_1" value="보라연기">보라연기</option>
@@ -335,8 +335,8 @@
                             기프티콘 수령을 위한 <a href="https://www.notion.so/bfa7747d14b1495f9923ac8dab8ea43d">개인정보활용</a>에 동의합니다.
                         </div>
                         <div class="event_list_check">
-                            <input type="checkbox" id="check" name="event_answer[]" value="1" />
-                            <label for="check"></label>
+                            <input type="checkbox" id="check" name="event_answer[]" value="1" required/>
+                            <label class="label" for="check"></label>
                         </div>
                     </div>
                 </form>
@@ -436,11 +436,14 @@
                 </br>    
                 </br>의자 위에 앉아있는 것은 무엇인가?
                 </div>
+                <div class="chair_link">
+                    <a class="chair_notion" style="text-decoration:none;" href="https://jazzy-second-e86.notion.site/We-re-Project-Oumtt-70fd6fa703c045ee940342dedf63b7f1">More About Art Forestival<img style="margin-left: 4px;" src="/static/nature_project/assets/svg/chevron_Right.svg"></a>
+                </div>
             </div>
         </section>
 
-        <section id="support" class="support">
-            <div class="support_box">
+        <section id="support1" class="support1">
+            <div class="support1_box">
                 <div class="support_title">Naturally in Nature</div>
                 <div class="support_photo">Photo</div>
                 <div class="support_slide"></div>
@@ -479,6 +482,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="support2" class="support2">
+            <div class="support2_box">
+
                 <div class="support_project">Suport Project</div>
                 <div class="support_project_text">움트의 빛나는 도약을 함께하고 지지해 주셔서 감사합니다. 
                 </br>
@@ -490,9 +499,6 @@
                     <div class="support_project_account">신한은행 110 438 222561</div>
                     <div><button type="button" class="support_project_button">복사하기</button></div>
                     <input type="hidden" class="support_project_value" value="신한은행 110 438 222561">
-                </div>
-                <div class="support_project_link">
-                    <a class="support_project_notion" style="text-decoration:none;" href="https://jazzy-second-e86.notion.site/We-re-Project-Oumtt-70fd6fa703c045ee940342dedf63b7f1">More About Art Forestival<img style="margin-left: 4px;" src="/static/nature_project/assets/img/program/chevron_Right.png"></a>
                 </div>
             </div>
         </section>
@@ -640,7 +646,7 @@
             });
         });
 
-        $(".arrow_1").click(function() {
+        $("#program_list_1").click(function() {
             if ($(".program_list_1").css("display") == "none") {
                 $(".program_list_1").css({"display":"flex"});
                 $("#program_list_1").css({"display":"none"});
@@ -651,7 +657,7 @@
             }
         });
 
-        $(".arrow_2").click(function() {
+        $("#program_list_2").click(function() {
             if ($(".program_list_2").css("display") == "none") {
                 $(".program_list_2").css({"display":"flex"});
                 $("#program_list_2").css({"display":"none"});
@@ -662,7 +668,7 @@
             }
         });
 
-        $(".arrow_3").click(function() {
+        $("#program_list_3").click(function() {
             if ($(".program_list_3").css("display") == "none") {
                 $(".program_list_3").css({"display":"flex"});
                 $("#program_list_3").css({"display":"none"});
@@ -673,7 +679,7 @@
             }
         });
 
-        $(".arrow_4").click(function() {
+        $("#program_list_4").click(function() {
             if ($(".program_list_4").css("display") == "none") {
                 $(".program_list_4").css({"display":"flex"});
                 $("#program_list_4").css({"display":"none"});
@@ -684,7 +690,7 @@
             }
         });
 
-        $(".arrow_5").click(function() {
+        $("#program_list_5").click(function() {
             if ($(".program_list_5").css("display") == "none") {
                 $(".program_list_5").css({"display":"flex"});
                 $("#program_list_5").css({"display":"none"});
@@ -694,6 +700,30 @@
                 $("#program_list_5").css({"display":"flex"});
             }
         });
+
+        function button() {
+            var f = document.event_action;
+            if(team1.value=="") {
+            }
+            else if(team2.value=="") {
+            }
+            else if(team3.value=="") {
+            }
+            else if(team4.value=="") {
+            }
+            else if(team5.value=="") {
+            }
+            else if($(".event_name").val()=="") {
+            }
+            else if($(".event_phonenumber").val()=="") {
+            }
+            else if(f.check.checked!==true) {
+                alert('개인정보활용동의를 체크해 주세요.');
+            }
+            else {
+                alert('제출되었습니다');
+            }
+        }
 
         $(function() {
             $(".table_photo_yochan").on("click", function() {

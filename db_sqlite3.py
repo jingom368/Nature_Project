@@ -23,3 +23,6 @@ for row in rows2:
 
 df.to_excel('oumtt_apply.xlsx')
 df_2.to_excel('oumtt_contact.xlsx')
+
+conn.execute("DELETE FROM mainpage_select").rowcount
+conn.commit()
