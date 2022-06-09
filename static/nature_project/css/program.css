@@ -100,6 +100,67 @@ body {
     .nav_button::after{content: "관객참여 Talk 가기";}
 }
 
+@media (min-width: 1024px) {
+
+    header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+        height: 64px;
+        z-index: 10;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 100%
+    }
+    
+    .nav_home {
+        display: flex;
+        flex-direction: row;
+        width: 251px;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .nav_active {
+        position: relative;
+        color:#DBFD5C;
+        font-weight: 600;
+    }
+
+    .nav_point {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #DBFD5C;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .nav_button {
+        width: 160px;
+        height: 36px;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.04em;
+        padding: 0px 0px;
+    }
+
+    .nav_button::after{content: "관객참여 Talk 가기";}
+}
+
 
 /* main */
 
@@ -122,6 +183,44 @@ body {
         display: flex;
         width: 100%;
         height: 480px;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+
+    .main_image_2 {
+        display: none;
+    }
+
+    .item-info-box {
+        position: absolute;
+        width: 100%;
+        top:0px;
+    }
+}
+
+@media (min-width:1024px) {
+
+    main {
+        width: 100%;
+        height: auto;
+    }
+
+    .item_wrapper {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    /* item_wrapper */
+
+    .main_image {
+        display: none;
+    }
+
+    .main_image_2 {
+        display: flex;
+        width: 100%;
+        height: 1200px;
         vertical-align: middle;
         object-fit: cover;
     }
@@ -177,6 +276,7 @@ body {
         width: 328px;
         height: 211.5px;
         border-bottom: 1px solid #ffffff;
+        margin-bottom: 84.5px;
     }
 
     .intro_round_1 {
@@ -279,6 +379,148 @@ body {
     .intro_title::after{content:"Artist Profile & Program"; white-space: pre;}
 }
 
+@media (min-width:1024px) {
+
+    .introduction {
+        width: 100%;
+        height: 1200px;
+        padding-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro_box {
+        width: 100%;
+        height: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro_title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 68px;
+        letter-spacing: -0.02em;
+        margin-top: 240px;
+        text-align: center;
+    }
+
+    .intro_nature {
+        font-size: 34px;
+        line-height: 40px;
+        color: #DBFD5C;
+        margin-top: 40px;
+    }
+
+    .intro_border {
+        position: relative;
+        width: 477px;
+        height: 214px;
+        border-bottom: 2px solid #ffffff;
+        margin-bottom: 534px;
+    }
+
+    .intro_round_1 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: 37px;
+        top: 209px;
+        background-color: #ffffff;
+    }
+
+    .intro_line_text_1 {
+        position: absolute;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        left:25px;
+        top:225px;
+    }
+
+    .intro_round_2 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: 135px;
+        top: 209px;
+        background-color: #ffffff;
+    }
+
+    .intro_line_text_2 {
+        position: absolute;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        left:101px;
+        top:225px;
+    }
+
+    .intro_round_3 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: 233px;
+        top: 209px;
+        background-color: #ffffff;
+    }
+
+    .intro_line_text_3 {
+        position: absolute;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        left: 205px;
+        top: 225px;
+    }
+
+
+    .intro_round_4 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: 331px;
+        top: 209px;
+        background-color: #ffffff;
+    }
+
+    .intro_line_text_4 {
+        position: absolute;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        left: 303px;
+        top: 225px;
+    }
+
+    .intro_round_5 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: 429px;
+        top: 209px;
+        background-color: #ffffff;
+    }
+
+    .intro_line_text_5 {
+        position: absolute;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        left: 397px;
+        top: 225px;
+    }
+
+    /* .intro_title::after{content:""; white-space: pre;} */
+}
+
 
 /* guest */
 
@@ -298,7 +540,7 @@ body {
         flex-direction: column;
         width: 360px;
         height: 732px;
-        padding: 0px 16px;
+        padding: 0px 16px 56px 16px;
         color: inherit
     }
 
@@ -310,6 +552,10 @@ body {
         margin-top: 40px;
         color: inherit
     }    
+
+    .guest_photo_wrap {
+        color: inherit;
+    }
 
     .guest_photo_aran {
         width: 328px;
@@ -372,6 +618,109 @@ body {
     }
 }
 
+@media (min-width:1024px) {
+
+    .guest {
+        width: 100%;
+        height: 1104px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        color: #ffffff
+    }
+
+    .guest_box {
+        display: flex;
+        flex-direction: column;
+        width: 1024px;
+        height: 1104px;
+        padding: 0px 24px 168px 24px;
+        color: inherit;
+    }
+
+    .guset_title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        margin-top: 160px;
+        color: inherit;
+    }    
+
+    .guest_photo_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: inherit;
+    }
+
+    .guest_photo_aran {
+        width: 476px;
+        height: 600px;
+        margin-top: 64px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_aran_none {
+        width: 476px;
+        height: 600px;        
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/aran_2.png");
+    }
+
+    .artist_aran_active {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/aran_active_2.png");
+    }
+
+    .guest_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .guest_intro div {
+        color: inherit;
+    }
+
+    .guest_photo_hyekyung {
+        width: 476px;
+        height: 600px;
+        margin-top: 64px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_hyekyung_none {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/hyekyung_2.png");
+    }
+
+    .artist_hyekyung_active {
+        width: 476px;
+        height: 600px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/hyekyung_active_2.png");
+    }
+}
+
 
 /* withyou */
 
@@ -393,6 +742,15 @@ body {
         height: 920px;
         padding: 0px 16px;
         color: inherit
+    }
+
+    .withyou_react_1 {
+        display: flex;
+        color: inherit;
+    }
+
+    .withyou_react_2 {
+        display: none;
     }
 
     .withyou_title {
@@ -569,6 +927,230 @@ body {
 
 }
 
+@media (min-width:1024px) {
+
+    .withyou {
+        width: 100%;
+        height: 1332px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .withyou_box {
+        display: flex;
+        flex-direction: column;
+        width: 1024px;
+        height: 1332px;
+        padding: 160px 24px 80px 24px;
+        color: inherit;
+    }
+
+    .withyou_react_1 {
+        display: none;
+    }
+
+    .withyou_react_2 {
+        display: flex;
+        color: inherit;
+    }
+
+    .withyou_title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .withyou_profile {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-top: 64px;
+        color: inherit
+    }    
+
+    .withyou_photo_hasom {
+        width: 309px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_hasom_none {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/hasom_2.png");
+    }
+
+    .artist_hasom_active {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/hasom_active_2.png");
+    }
+
+    .withyou_photo_hahyeon {
+        width: 310x;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_hahyeon_none {
+        width: 310x;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/hahyeon_2.png");
+    }
+
+    .artist_hahyeon_active {
+        width: 310x;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/hahyeon_active_2.png");
+    }
+
+    .withyou_photo_seoyeon {
+        width: 309x;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_seoyeon_none {
+        width: 309x;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/seoyeon_2.png");
+    }
+
+    .artist_seoyeon_active {
+        width: 309x;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/seoyeon_active_2.png");
+    }
+
+    .withyou_photo_minseop {
+        width: 309x;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_minseop_none {
+        width: 309x;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/minseop_2.png");
+    }
+
+    .artist_minseop_active {
+        width: 309x;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/minseop_active_2.png");
+    }
+
+    .withyou_photo_sohyun {
+        width: 310x;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_sohyun_none {
+        width: 310x;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/sohyun_2.png");
+    }
+
+    .artist_sohyun_active {
+        width: 310x;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/sohyun_active_2.png");
+    }
+
+    .withyou_photo_sohee {
+        width: 309x;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_sohee_none {
+        width: 309x;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/sohee_2.png");
+    }
+
+    .artist_sohee_active {
+        width: 309x;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/sohee_active_2.png");
+    }
+
+    .withyou_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+        width: 309px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .withyou_intro_2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+        width: 310px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .withyou_intro div {
+        color: inherit;
+    }
+
+}
+
+/* Program */
+
 @media (max-width:1024px) {
 
     .program {
@@ -589,6 +1171,15 @@ body {
         color: inherit;
     }
 
+    .program_react_1 {
+        display: flex;
+        color: inherit;
+    }
+
+    .program_react_2 {
+        display: none;
+    }
+
     .program_title {
         font-weight: 600;
         font-size: 18px;
@@ -605,14 +1196,14 @@ body {
         margin-top: 12px;
     }
 
-    #program_list_1 {
+    .program_list_down_1 {
         width: 328px;
         height: 44px;
         background: #FFFFFF;
         box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
         border-radius: 8px;
         padding: 12px 14px;
-        margin-top: 12px;
+        margin-top: 24px;
         color: inherit;
         display: flex;
         flex-direction: row;
@@ -640,7 +1231,7 @@ body {
         letter-spacing: -0.02em;
     }
 
-    #program_list_2 {
+    .program_list_down_2 {
         width: 328px;
         height: 44px;
         background: #FFFFFF;
@@ -675,7 +1266,7 @@ body {
         letter-spacing: -0.02em;
     }
 
-    #program_list_3 {
+    .program_list_down_3 {
         width: 328px;
         height: 44px;
         background: #FFFFFF;
@@ -710,7 +1301,7 @@ body {
         letter-spacing: -0.02em;
     }
 
-    #program_list_4 {
+    .program_list_down_4 {
         width: 328px;
         height: 44px;
         background: #FFFFFF;
@@ -745,7 +1336,7 @@ body {
         letter-spacing: -0.02em;
     }
 
-    #program_list_5 {
+    .program_list_down_5 {
         width: 328px;
         height: 44px;
         background: #FFFFFF;
@@ -811,7 +1402,262 @@ body {
     }
 }
 
+@media (min-width:1024px) {
+
+    .program {
+        width: 100%;
+        height: auto;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .program_box {
+        width: 1024px;
+        height: auto;
+        padding: 40px 24px 168px 24px;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+    }
+
+    .program_react_1 {
+        display: none;
+    }
+
+    .program_react_2 {
+        display: flex;
+        color: inherit;
+    }
+
+    .program_title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .program_notice {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #616161;
+        margin-top: 32px;
+    }
+
+    .program_list_down_1 {
+        width: 976px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px;
+        margin-top: 32px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
+    .program_list_1 {
+        width: 976px;
+        height: 180px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px 34px 32px;
+        margin-top: 32px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_down_2 {
+        width: 976px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
+    .program_list_2 {
+        width: 976px;
+        height: 432px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px 34px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_down_3 {
+        width: 976px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
+    .program_list_3 {
+        width: 976px;
+        height: 180px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px 34px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_down_4 {
+        width: 976px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
+    .program_list_4 {
+        width: 976px;
+        height: 376px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px 34px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_down_5 {
+        width: 976px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+
+    .program_list_5 {
+        width: 976px;
+        height: 404px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        padding: 22px 32px 34px 32px;
+        margin-top: 16px;
+        color: inherit;
+        display: none;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .program_list_title {
+        color: inherit;
+    }
+
+    .program_list_text {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-top: 32px;
+        color: inherit;
+    }
+
+    .program_button {
+        width: 16px;
+        height: 16px;
+        margin-right: 2px;
+        background-color: transparent;
+        border:0px;
+    }
+
+    .program_polygon {
+        width: 28px;
+        height: 24px;
+    }
+
+    .program_polygon_1 {
+        width: 28px;
+        height: 24px;
+    }
+}
+
 @media (max-width:1024px) {
+
+    .event_box_react {
+        display: flex;
+    }
 
     .event {
         width: 100%;
@@ -1003,6 +1849,13 @@ body {
         background:url("/static/nature_project/assets/svg/checkbox_check.svg") no-repeat center/16px 16px; float: right}
 }
 
+@media (min-width:1024px) {
+
+    .event_box_react {
+        display: none;
+    }
+}
+
 @media (max-width:1024px) {
 
     .part2 {
@@ -1019,6 +1872,15 @@ body {
         height: 920px;
         padding: 40px 0px 80px 16px;
         color: inherit;
+    }
+
+    .table_react_1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table_react_2 {
+        display: none;
     }
     
     .table_title {
@@ -1198,6 +2060,225 @@ body {
     }
 }
 
+@media (min-width:1024px) {
+
+    .part2 {
+        width: 100%;
+        height: 1292px;
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        color: #FFFFFF;
+    }
+
+    .table_box {
+        display: flex;
+        flex-direction: column;
+        width: 1024px;
+        height: 1292px;
+        padding: 160px 24px 80px 24px;
+        color: inherit;
+    }
+
+    .table_react_1 {
+        display: none;
+    }
+
+    .table_react_2 {
+        display: flex;
+    }
+    
+    .table_title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .table_profile {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-top: 64px;
+        color: inherit;
+    }
+
+    .table_photo_yochan {
+        width: 309px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_yochan_none {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/yochan_2.png");
+    }
+
+    .artist_yochan_active {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/yochan_active_2.png");
+    }
+
+    .table_photo_hyunjin {
+        width: 310px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_hyunjin_none {
+        width: 310px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/hyunjin_2.png");
+    }
+
+    .artist_hyunjin_active {
+        width: 310px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/hyunjin_active_2.png");
+    }
+
+    .table_photo_jonghwan {
+        width: 309px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_jonghwan_none {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/jonghwan_2.png");
+    }
+
+    .artist_jonghwan_active {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/jonghwan_active_2.png");
+    }
+
+    .table_photo_dahyun {
+        width: 309px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_dahyun_none {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/dahyun_2.png");
+    }
+
+    .artist_dahyun_active {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/dahyun_active_2.png");
+    }
+
+    .table_photo_yunseo {
+        width: 310px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_yunseo_none {
+        width: 310px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/yunseo_2.png");
+    }
+
+    .artist_yunseo_active {
+        width: 310px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/yunseo_active_2.png");
+    }
+
+    .table_photo_youngju {
+        width: 309px;
+        height: 400px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .artist_youngju_none {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        content: url("/static/nature_project/assets/img/program/youngju_2.png");
+    }
+
+    .artist_youngju_active {
+        width: 309px;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        top:0px;
+        content: url("/static/nature_project/assets/img/program/youngju_active_2.png");
+    }
+
+    .table_intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+        width: 309px;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .table_intro_2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+        width: 310px;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .table_intro div {
+        color: inherit;
+    }
+
+}
+
 @media (max-width:1024px) {
 
     .chair {
@@ -1218,6 +2299,14 @@ body {
         flex-direction: column;
     }
 
+    .chair_react_1 {
+        display: flex;
+    }
+
+    .chair_react_2 {
+        display: none;
+    }
+
     .chair_title_1 {
         font-weight: 600;
         font-size: 18px;
@@ -1230,6 +2319,7 @@ body {
         line-height: 22px;
         letter-spacing: -0.02em;
         margin-top: 24px;
+        color: #F5F5F5;
     }
 
     .chair_title_2 {
@@ -1246,12 +2336,87 @@ body {
         height: 33px;
         font-size: 16px;
         line-height: 24px;
-        text-align: left;
         letter-spacing: -0.01em;
         border-bottom: 1px solid #ffffff;
         margin-top: 56px;
         color: inherit;
         text-align: end;
+    }
+
+    .chair_link_text {
+        margin-bottom: 8px;
+    }
+
+    .chair a:link {color: #ffffff;}
+    .chair a:visited {color: #ffffff;}
+}
+
+@media (min-width:1024px) {
+
+    .chair {
+        width: 100%;
+        height: 734px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        color: #ffffff
+    }
+
+    .chair_box {
+        width: 1024px;
+        height: 734px;
+        padding: 80px 24px 169px 24px;
+        display: flex;
+        color: inherit;
+        flex-direction: column;
+    }
+
+    .chair_react_1 {
+        display: none;
+    }
+
+    .chair_react_2 {
+        display: flex;
+    }
+
+    .chair_title_1 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .chair_text {
+        width: 476px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-top: 24px;
+        color: #F5F5F5;
+    }
+
+    .chair_title_2 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+
+    .chair_link {
+        font-weight: 600;
+        width: 976px;
+        height: 39px;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.01em;
+        border-bottom: 1px solid #ffffff;
+        margin-top: 115px;
+        color: inherit;
+        text-align: end;
+    }
+
+    .chair_link_text {
+        margin-bottom: 12px;
     }
 
     .chair a:link {color: #ffffff;}
@@ -1276,6 +2441,14 @@ body {
         display: flex;
         flex-direction: column;
         color: inherit;
+    }
+
+    .support1_react_1 {
+        display: flex;
+    }
+
+    .support1_react_2 {
+        display: none;
     }
 
     .support_title {
@@ -1360,6 +2533,133 @@ body {
 
 }
 
+@media (min-width:1024px) {
+
+    .support1 {
+        width: 100%;
+        height: 1052px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .support1_box {
+        width: 1024px;
+        height: 1052px;
+        padding: 160px 24px 168px 24px;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+    }
+
+    .support1_react_1 {
+        display: none;
+    }
+
+    .support1_react_2 {
+        display: flex;
+    }
+
+    .support_title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .support_photo {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-top: 64px;
+        color: inherit;
+    }
+
+    .support_slide {
+        width: 976px;
+        height: 216px;
+        background: url("/static/nature_project/assets/img/program/nature_slide_2.png");
+        background-size: cover;
+        animation: shift 49.5s infinite linear;
+        margin-top: 24px;
+    }
+
+    @keyframes shift {
+        from{background-position: 0 0;}
+        to{background-position: -4624px 0;}
+    }
+
+    .support_staff {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-top: 80px;
+        color: inherit;
+    }
+
+    .support_staff_list {
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+    }
+
+    .support_staff_left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: inherit;
+    }
+
+    .support_staff_middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: inherit;
+    }
+
+    .support_staff_right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: inherit;
+    }
+
+    .support_staff_wrap {
+        width: 309px;
+        height: 36px;
+        margin-top:24px;
+        border-bottom: 1px solid #616161;
+    }
+
+    .support_staff_wrap {
+        width: 310px;
+        height: 36px;
+        margin-top:24px;
+        border-bottom: 1px solid #616161;
+    }
+
+    .support_staff_role {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }    
+
+    .support_staff_name {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+}
+
 @media (max-width:1024px) {
 
     .support2 {
@@ -1388,6 +2688,10 @@ body {
         color: inherit;
     }
 
+    .support_project_image {
+        display: none;
+    }
+
     .support_project_text {
         font-size: 13.7px;
         line-height: 22px;
@@ -1396,7 +2700,7 @@ body {
         color: inherit;
     }
 
-    .support_project_box {
+    .support_project_box_1 {
         width: 328px;
         height: 56px;
         background: #FFFFFF;
@@ -1409,6 +2713,10 @@ body {
         justify-content: space-between;
         align-items: center;
         margin-top: 32px;
+    }
+
+    .support_project_box_2 {
+        display: none;
     }
 
     .support_project_account {
@@ -1426,6 +2734,98 @@ body {
         line-height: 22px;
         color: black;
         border: none;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    .support2 {
+        width: 100%;
+        height: 1088px;
+        background-color: #F7FCE7;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .support2_box {
+        width: 1024px;
+        height: 1088px;
+        padding: 160px 0px 168px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: inherit;
+    }
+
+    .support_project {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        color: inherit;
+    }
+
+    .support_project_image {
+        width: 561px;
+        height: 392px;
+        object-fit: cover;
+        margin-top: 8px;
+    }
+
+    .support_project_text {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-top: 24px;
+        color: inherit;
+        text-align: center;
+    }
+
+    .support_project_box_1 {
+        display: none;
+    }
+
+    .support_project_box_2 {
+        margin-top: 52px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: inherit;
+    }
+
+    .support_project_account {
+        width: 465px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 16px;
+        padding: 22px 58px;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .support_project_button {
+        width: 160px;
+        height: 80px;
+        background: #DBFD5C;
+        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 16px;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        margin-left: 16px;
+        color: inherit;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -1553,4 +2953,130 @@ body {
         padding-top: 24px;
         padding-bottom: 24px;
     }
+}
+
+@media (min-width:1024px) {
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        background-color: black;
+    }
+
+    .footer_box {
+        width: 1024px;
+        height: 400px;
+    }
+
+    .footer_info {
+        width: 1024px;
+        height: 280px;
+        padding: 0px 24px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer_info-left {
+        display: flex;
+        flex-direction: column;
+        padding-top: 72px;
+        margin-bottom: 139px;
+    }
+
+    .footer_info-contact {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .footer_info-link {
+        display: flex;
+        flex-direction: row;
+        padding-top: 16px;
+    }
+
+    .footer_info-link_image {
+        width: 20px;
+        height: 20px;
+        margin-left: 40px;
+        margin-top: 3px;
+    }
+
+    .footer_info-link_text {
+        font-size: 16px;
+        line-height: 26px;
+        padding-left: 6px;
+    }
+
+    .footer_info-right {
+        display: flex;
+        flex-direction: column;
+        padding-left: 140px;
+        padding-top: 72px;
+        margin-bottom: 137px;
+    }
+
+    .footer_info-contact_2 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .footer_info-click {
+        width: 488px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    .footer_input_box {
+        width: 360px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px; 
+        outline: none;
+        background-color: transparent;
+        padding: 0px 0px;
+    }
+
+    input::placeholder {
+        color: #E0E0E0;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .footer-submit-button {
+        width: 120px;
+        height: 36px;
+        background: #DBFD5C;
+        border-radius: 4px;
+        margin-left: 8px;
+        font-size: 16px;
+        line-height: 24px;
+        color: black;
+    }
+
+    .footer_info-line {
+        width: 100%;
+        height: 120px;
+        border-top: 1px solid #424242;
+    }
+
+    .footer_info-copyright {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        line-height: 20px;
+        color: #9E9E9E;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
 }
