@@ -1820,12 +1820,11 @@ body {
 
     .footer_info-click {
         width: 328px;
-        height: 88px;
+        height: 100px;
         display: flex;
         flex-direction: column;
         align-items: end;
         margin-top: 8px;
-        margin-bottom: 93px;
     }
 
     .footer_input_box {
@@ -1846,12 +1845,24 @@ body {
         margin-bottom: 5px;
     }
 
+    .footer_input_notice_1 {
+        font-size: 8px;
+        line-height: 20px;
+        margin-top: 4px;
+        color: inherit;
+        text-align: end;
+    }
+
+    .footer_input_notice_2 {
+        display: none;
+    }
+
     .footer-submit-button {
         width: 120px;
         height: 36px;
         background: #DBFD5C;
         border-radius: 6px;
-        margin-top: 16px;
+        margin-top: 4px;
         font-size: 14px;
         line-height: 20px;
         color: black;
@@ -1936,7 +1947,6 @@ body {
         flex-direction: column;
         padding-left: 140px;
         padding-top: 72px;
-        margin-bottom: 137px;
     }
 
     .footer_info-contact_2 {
@@ -1970,6 +1980,19 @@ body {
         font-size: 14px;
         line-height: 20px;
         margin-bottom: 5px;
+    }
+
+    .footer_input_notice_1 {
+        display: none;
+    }
+
+    .footer_input_notice_2 {
+        font-size: 8px;
+        line-height: 20px;
+        margin-top: 4px;
+        color: inherit;
+        text-align: end;
+        margin-right: 128px;
     }
 
     .footer-submit-button {
