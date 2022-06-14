@@ -118,7 +118,7 @@ body {
         align-items: center;
         padding-left: 24px;
         padding-right: 24px;
-        width: 100%
+        width: calc(33.04% + 686px);
     }
     
     .nav_home {
