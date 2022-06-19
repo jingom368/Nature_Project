@@ -1531,7 +1531,9 @@ main {
         }
 
         .support_project_account::after {
-            content: "(김비안)";
+            @include desktop {
+                content: "(김비안)";
+            }
         }
 
         .support_project_button {

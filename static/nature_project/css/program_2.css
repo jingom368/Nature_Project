@@ -453,7 +453,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .support2 .support2_box .support_project_account { width: 465px; height: 80px; background: #FFFFFF; box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12); border-radius: 16px; padding: 22px 58px; font-size: 24px; line-height: 36px; letter-spacing: -0.02em; display: flex; justify-content: center; align-items: center; } }
 
-.support2 .support2_box .support_project_account::after { content: "(김비안)"; }
+@media (min-width: 1024px) { .support2 .support2_box .support_project_account::after { content: "(김비안)"; } }
 
 .support2 .support2_box .support_project_button { color: black; background: #DBFD5C; border: none; }
 
