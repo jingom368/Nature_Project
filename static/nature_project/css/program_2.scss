@@ -31,77 +31,42 @@ body {
     color:inherit
 }
 
+.flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: space-between;
+    color: inherit;  
+}
+
+// 반응형
+
+$breakpoint-desktop: 1024px;
+@mixin mobile {
+    @media (max-width: #{$breakpoint-desktop - 1px}) {
+      @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+}
+
 /* header */
 
-@media (max-width: 1024px) {
-    header {
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        width: 100%;
+header {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    @include mobile {
         height: 48px;
-        z-index: 10;
     }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 16px;
-        padding-right: 16px;
-        width: 100%
-    }
-    
-    .nav_home {
-        display: flex;
-        flex-direction: row;
-        width: 166px;
-        justify-content: space-between;
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    .nav_active {
-        position: relative;
-        color:#DBFD5C;
-        font-weight: 600;
-    }
-
-    .nav_point {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: #DBFD5C;
-        display: inline-block;
-        margin-bottom: 15px;
-    }
-
-    .nav_button {
-        width: 120px;
-        height: 24px;
-        border: 1px solid #FFFFFF;
-        border-radius: 6px;
-        background-color: transparent;
-        font-size: 13px;
-        line-height: 20px;
-        letter-spacing: -0.04em;
-        padding: 0px 0px;
-    }
-
-    .nav_button::after{content: "관객참여 Talk 가기";}
-}
-
-@media (min-width: 1024px) {
-
-    header {
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        width: 100%;
+    @include desktop {
         height: 64px;
-        z-index: 10;
     }
 
     nav {
@@ -109,51 +74,66 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-left: 24px;
-        padding-right: 24px;
-        width: calc(33.04% + 686px);
-    }
-    
-    .nav_home {
-        display: flex;
-        flex-direction: row;
-        width: 251px;
-        justify-content: space-between;
-        font-size: 18px;
-        line-height: 26px;
-    }
+        @include mobile {
+            padding: 0px 16px;
+            width: 100%
+        }
+        @include desktop {
+            padding: 0px 24px;
+            width: calc(33.04% + 686px);
+        }
 
-    .nav_active {
-        position: relative;
-        color:#DBFD5C;
-        font-weight: 600;
-    }
+        .nav_home {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include mobile {
+                width: 166px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @include desktop {
+                width: 251px;
+                font-size: 18px;
+                line-height: 26px;
+            }
 
-    .nav_point {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: #DBFD5C;
-        display: inline-block;
-        margin-bottom: 15px;
-    }
+            .nav_active {
+                color:#DBFD5C;
+                font-weight: 600;
+            }
 
-    .nav_button {
-        width: 160px;
-        height: 36px;
-        border: 1px solid #FFFFFF;
-        border-radius: 8px;
-        background-color: transparent;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.04em;
-        padding: 0px 0px;
-    }
+            .nav_point {
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #DBFD5C;
+                display: inline-block;
+            }
+        }
 
-    .nav_button::after{content: "관객참여 Talk 가기";}
+        .nav_button {
+            border: 1px solid #FFFFFF;
+            background-color: transparent;
+            letter-spacing: -0.04em;
+            @include mobile {
+                width: 120px;
+                height: 24px;
+                border-radius: 6px;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            @include desktop {
+                width: 160px;
+                height: 36px;
+                border-radius: 8px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
 }
-
 
 /* main */
 
@@ -175,12 +155,9 @@ body {
     color: $color;
 }
 
-@media (max-width:1024px) {
-
-    main {
-        width: 100%;
-        height: auto;
-    }
+main {
+    width: 100%;
+    height: auto;
 
     .item_wrapper {
         width: 100%;
@@ -188,19 +165,20 @@ body {
         position: relative;
     }
 
-    /* item_wrapper */
-
     .main_image {
         display: flex;
         width: 100%;
-        height: 480px;
-        vertical-align: middle;
         object-fit: cover;
-    }
+        @include mobile {
+            height: 480px;
+            content : url("/static/nature_project/assets/img/program/nature_background.png")
+        }
+        @include desktop {
+            height: 1200px;
+            content : url("/static/nature_project/assets/img/program/nature_background_2.png")
 
-    .main_image_2 {
-        display: none;
-    }
+        }
+    }    
 
     .item-info-box {
         position: absolute;
@@ -208,41 +186,6 @@ body {
         top:0px;
     }
 }
-
-@media (min-width:1024px) {
-
-    main {
-        width: 100%;
-        height: auto;
-    }
-
-    .item_wrapper {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    /* item_wrapper */
-
-    .main_image {
-        display: none;
-    }
-
-    .main_image_2 {
-        display: flex;
-        width: 100%;
-        height: 1200px;
-        vertical-align: middle;
-        object-fit: cover;
-    }
-
-    .item-info-box {
-        position: absolute;
-        width: 100%;
-        top:0px;
-    }
-}
-
 
 /* Intro */
 
@@ -280,83 +223,6 @@ body {
     top: $t;
 }
 
-@media (max-width:1024px) {
-
-    .introduction {
-        @include container($h:480px, $bg:null);
-        padding-top: 48px;
-    }
-
-    .intro_box {
-        @include container($w:360px, $h:562px, $bg:null);
-    }
-
-    .intro_title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 28px;
-        letter-spacing: -0.02em;
-        margin-top: 80px;
-        text-align: center;
-    }
-
-    .intro_nature {
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: #DBFD5C;
-        margin-top: 8px;
-    }
-
-    .intro_border {
-        position: relative;
-        width: 328px;
-        height: 211.5px;
-        border-bottom: 1px solid #ffffff;
-        margin-bottom: 84.5px;
-    }
-
-    @for $i from 1 through 5 {
-        .intro_round_#{$i} {
-            @if ($i==1) {
-                @include intro_round();
-            }
-            @else if ($i== 2) {
-                @include intro_round($l:95px);
-            }
-            @else if ($i== 3) {
-                @include intro_round($l:161px);
-            }
-            @else if ($i== 4) {
-                @include intro_round($l:227px);
-            }
-            @else if ($i== 5) {
-                @include intro_round($l:293px);
-            }
-        }
-
-        .intro_line_text_#{$i} {
-            @if ($i==1) {
-                @include intro_line_text();
-            }
-            @else if ($i== 2) {
-                @include intro_line_text($l:71px);
-            }
-            @else if ($i== 3) {
-                @include intro_line_text($l:141px);
-            }
-            @else if ($i== 4) {
-                @include intro_line_text($l:207px);
-            }
-            @else if ($i== 5) {
-                @include intro_line_text($l:271px);
-            }
-        }
-    }
-
-    // .intro_title::after{content:"Artist Profile & Program"; white-space: pre;}
-}
-
 @mixin intro_round_d($l, $w:10px, $h:10px, $t:209px) {
     @include intro_round($l:$l, $w:$w, $h:$h, $t:$t);
 } 
@@ -365,82 +231,123 @@ body {
     @include intro_line_text($l:$l, $t:$t, $font-size:$font-size, $line-height:$line-height, $letter-spacing:$letter-spacing);
 }
 
-@media (min-width:1024px) {
 
-    .introduction {
+.introduction {
+    @include mobile {
+        @include container($h:480px, $bg:null);
+        padding-top: 48px;
+    }
+    @include desktop {
         @include container($h:1200px, $bg:null);
         padding-top: 64px;
     }
 
     .intro_box {
-        @include container($h:1200px, $bg:null);
-    }
+        @include mobile {
+            @include container($w:360px, $h:432px, $bg:null);
+        }
+        @include desktop {
+            @include container($w:1024px, $h:1136px, $bg:null);
+        }
 
-    .intro_title {
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 68px;
-        letter-spacing: -0.02em;
-        margin-top: 240px;
-        text-align: center;
-    }
-
-    .intro_nature {
-        font-size: 34px;
-        line-height: 40px;
-        color: #DBFD5C;
-        margin-top: 40px;
-    }
-
-    .intro_border {
-        position: relative;
-        width: 477px;
-        height: 214px;
-        border-bottom: 2px solid #ffffff;
-        margin-bottom: 534px;
-    }
-
-    @for $i from 1 through 5 {
-        .intro_round_#{$i} {
-            @if ($i==1) {
-                @include intro_round_d($l: 37px);
+        .intro_title {
+            letter-spacing: -0.02em;
+            @include mobile {
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 28px;
+                margin-top: 80px;
             }
-            @else if ($i== 2) {
-                @include intro_round_d($l: 135px);
-            }
-            @else if ($i== 3) {
-                @include intro_round_d($l: 233px);
-            }
-            @else if ($i== 4) {
-                @include intro_round_d($l: 331px);
-            }
-            @else if ($i== 5) {
-                @include intro_round_d($l: 429px);
+            @include desktop {
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 68px;
+                margin-top: 240px;
             }
         }
 
-        .intro_line_text_#{$i} {
-            @if ($i==1) {
-                @include intro_line_text_d($l:25px);
+        .intro_nature {
+            color: #DBFD5C;
+            letter-spacing: -0.02em;
+            @include mobile {
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 8px;
             }
-            @else if ($i== 2) {
-                @include intro_line_text_d($l:101px);
+            @include desktop {
+                font-size: 34px;
+                line-height: 40px;
+                margin-top: 40px;
             }
-            @else if ($i== 3) {
-                @include intro_line_text_d($l:205px);
+        }
+
+        .intro_border {
+            position: relative;
+            @include mobile {
+                width: 328px;
+                height: 211.5px;
+                border-bottom: 1px solid #ffffff;
+                margin-bottom: 84.5px;
             }
-            @else if ($i== 4) {
-                @include intro_line_text_d($l:303px);
+            @include desktop {
+                width: 477px;
+                height: 214px;
+                border-bottom: 2px solid #ffffff;
+                margin-bottom: 534px;
             }
-            @else if ($i== 5) {
-                @include intro_line_text_d($l:397px);
+            
+            @for $i from 1 through 5 {
+                @include mobile {
+                    .intro_round_#{$i} {
+                        @include intro_round($l:29px+66px*(($i)-1));
+                    }
+            
+                    .intro_line_text_#{$i} {
+                        @if ($i==1) {
+                            @include intro_line_text();
+                        }
+                        @else if ($i== 2) {
+                            @include intro_line_text($l:71px);
+                        }
+                        @else if ($i== 3) {
+                            @include intro_line_text($l:141px);
+                        }
+                        @else if ($i== 4) {
+                            @include intro_line_text($l:207px);
+                        }
+                        @else if ($i== 5) {
+                            @include intro_line_text($l:271px);
+                        }
+                    }
+                }
+
+                @include desktop {
+                    .intro_round_#{$i} {
+                        @include intro_round_d($l:37px+98px*(($i)-1));
+                    }
+            
+                    .intro_line_text_#{$i} {
+                        @if ($i==1) {
+                            @include intro_line_text_d($l:25px);
+                        }
+                        @else if ($i== 2) {
+                            @include intro_line_text_d($l:101px);
+                        }
+                        @else if ($i== 3) {
+                            @include intro_line_text_d($l:205px);
+                        }
+                        @else if ($i== 4) {
+                            @include intro_line_text_d($l:303px);
+                        }
+                        @else if ($i== 5) {
+                            @include intro_line_text_d($l:397px);
+                        }
+                    }
+                }
             }
         }
     }
-    
-    /* .intro_title::after{content:""; white-space: pre;} */
 }
-
 
 /* guest */
 
@@ -452,6 +359,7 @@ body {
     $position: null,
     $display: null,
     $top: 0px,
+    $content: null,
 ) {
     width: $w;
     height: $h;
@@ -460,2101 +368,1388 @@ body {
     position: $position;
     display: $display;
     top: $top;
+    content: $content;
 }
 
-@media (max-width:1024px) {
+@mixin artist_photo_d ($w: 309px, $h: 400px, $mt:null, $position: null, $display: null, $content:null) {
+    @include artist_photo($w:$w, $h:$h, $mt:$mt, $position:$position, $display:$display, $content:$content)
+}
 
-    .guest {
+.guest {
+    @include mobile {
         @include container($h:732px);
     }
-
-    .guest_box {
-        @include container($w:360px, $h:732px, $align-items:null);
-        padding: 0px 16px 56px 16px;
-    }
-
-    .guset_title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-top: 40px;
-        color: inherit
-    }    
-
-    .guest_photo_wrap {
-        color: inherit;
-    }
-
-    .guest_photo_aran {
-        @include artist_photo($w:328px, $h:240px, $mt:32px, $position:relative);
-    }
-
-    .artist_aran_none {
-        @include artist_photo($w:328px, $h:240px);
-    }
-
-    .artist_aran_active {
-        @include artist_photo($w:328px, $h:240px, $position:absolute, $display: none);
-    }
-
-    .guest_intro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8px;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .guest_intro div {
-        color: inherit;
-    }
-
-    .guest_photo_hyekyung {
-        @include artist_photo($w:328px, $h:240px, $mt:24px, $position:relative);
-    }
-
-    .artist_hyekyung_none {
-        @include artist_photo($w:328px, $h:240px);
-    }
-
-    .artist_hyekyung_active {
-        @include artist_photo($w:328px, $h:240px, $position:absolute, $display: none);
-    }
-}
-
-@media (min-width:1024px) {
-
-    .guest {
+    @include desktop {
         @include container($h:1104px);
     }
 
     .guest_box {
-        @include container($w:1024px, $h:1104px, $align-items:null);
-        padding: 0px 24px 168px 24px;
-    }
+        @include mobile {
+            @include container($w:360px, $h:732px, $align-items:null);
+            padding: 0px 16px 56px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:1104px, $align-items:null);
+            padding: 160px 24px 168px 24px;
+        }
 
-    .guset_title {
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 64px;
-        letter-spacing: -0.02em;
-        margin-top: 160px;
-        color: inherit;
-    }    
+        .guset_title {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 22px;
+                line-height: 36px;
+                margin-top: 40px;
+            }
+            @include desktop {
+                font-size: 40px;
+                line-height: 64px;
+            }
+        }
 
-    .guest_photo_wrap {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-    }
+        .guest_photo_wrap {
+            color: inherit;
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
-    .guest_photo_aran {
-        width: 476px;
-        height: 600px;
-        margin-top: 64px;
-        position: relative;
-        object-fit: cover;
-    }
+            .guest_intro {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+                color: inherit;
 
-    .artist_aran_none {
-        width: 476px;
-        height: 600px;        
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/aran_2.png");
-    }
+                @include mobile {
+                    margin-top: 8px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @include desktop {
+                    margin-top: 16px;
+                    font-size: 20px;
+                    line-height: 32px;
+                }
 
-    .artist_aran_active {
-        width: 476px;
-        height: 600px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/aran_active_2.png");
-    }
+                div {
+                    color: inherit;
+                }
+            }
 
-    .guest_intro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 16px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .guest_intro div {
-        color: inherit;
-    }
-
-    .guest_photo_hyekyung {
-        width: 476px;
-        height: 600px;
-        margin-top: 64px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_hyekyung_none {
-        width: 476px;
-        height: 600px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/hyekyung_2.png");
-    }
-
-    .artist_hyekyung_active {
-        width: 476px;
-        height: 600px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/hyekyung_active_2.png");
+            $artists: (aran, hyekyung);
+            
+            @each $artist in $artists {
+                @include mobile {
+                    .guest_photo_#{$artist} {
+                        @if ($artist == aran) {
+                            @include artist_photo($w:328px, $h:240px, $mt:32px, $position:relative);
+                        } @else {
+                            @include artist_photo($w:328px, $h:240px, $mt:24px, $position:relative);
+                        }
+                    }
+                    .artist_#{$artist}_none {
+                        @include artist_photo($w:328px, $h:240px,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}.png"));
+                    }
+                    .artist_#{$artist}_active {
+                        @include artist_photo($w:328px, $h:240px, $position:absolute, $display: none,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_active.png"));
+                    }
+                }
+                @include desktop {
+                    .guest_photo_#{$artist} {
+                        @include artist_photo_d($w:476px, $h:600px, $mt:64px, $position:relative);
+                    }
+                    .artist_#{$artist}_none {
+                        @include artist_photo_d($w:476px, $h:600px,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_2.png"));
+                    }
+                    .artist_#{$artist}_active {
+                        @include artist_photo_d($w:476px, $h:600px, $position:absolute, $display:none,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_active_2.png"));
+                    }
+                }
+            }
+        }
     }
 }
 
+/* withyou */ 
+// 두 번 쓴 것 묶어주기
 
-/* withyou */
-
-@media (max-width:1024px) {
-
-    .withyou {
+.withyou {
+    @include mobile {
         @include container($h:920px, $bg:#fafafa);
         color: black;
     }
-
-    .withyou_box {
-        @include container($w:360px, $h:920px, $align-items:null, $bg:#fafafa);
-        padding: 0px 16px;
-    }
-
-    .withyou_react_1 {
-        display: flex;
-        color: inherit;
-    }
-
-    .withyou_react_2 {
-        display: none;
-    }
-
-    .withyou_title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-top: 40px;
-        color: inherit
-    }
-
-    .withyou_profile {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        margin-top: 32px;
-        color: inherit
-    }    
-
-    $artists: (hasom, hahyeon, seoyeon, minseop, sohyun, sohee);
-
-    @each $artist in $artists {
-        .withyou_photo_#{$artist} {
-            @if ($artist == hasom or $artist == hahyeon) {
-                @include artist_photo($mt:12px, $position:relative);
-            } @else {
-                @include artist_photo($mt:24px, $position:relative);
-            }
-        }
-        .artist_#{$artist}_none {
-            @include artist_photo();
-        }
-        .artist_#{$artist}_active {
-            @include artist_photo($position:absolute, $display: none);
-        }
-    }
-
-    .withyou_intro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 4px;
-        width: 156px;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .withyou_intro div {
-        color: inherit;
-    }
-
-}
-
-@media (min-width:1024px) {
-
-    .withyou {
+    @include desktop {
         @include container($h:1332px, $bg:#fafafa);
         color: black;
     }
 
     .withyou_box {
-        @include container($w:1024px, $h:1332px, $align-items:null, $bg:#fafafa);
-        padding: 160px 24px 80px 24px;
+        @include mobile {
+            @include container($w:360px, $h:920px, $align-items:null, $bg:#fafafa);
+            padding: 40px 16px 56px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:1332px, $align-items:null, $bg:#fafafa);
+            padding: 160px 24px 80px 24px;
+        }
+
+        .withyou_title {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 22px;
+                line-height: 36px;
+            }
+            @include desktop {
+                font-size: 40px;
+                line-height: 64px;
+            }
+        }
+
+        .withyou_profile {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 32px;
+            }
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
+                margin-top: 64px;
+            }
+        }
+
+        $artists: (hasom, hahyeon, seoyeon, minseop, sohyun, sohee);
+
+        @each $artist in $artists {
+            @include mobile {
+                .withyou_photo_#{$artist} {
+                    @if ($artist == hasom or $artist == hahyeon) {
+                        @include artist_photo($mt:12px, $position:relative);
+                    } @else {
+                        @include artist_photo($mt:24px, $position:relative);
+                    }
+                }
+                .artist_#{$artist}_none {
+                    @include artist_photo(
+                        $content:url("/static/nature_project/assets/img/program/#{$artist}.png"));
+                }
+                .artist_#{$artist}_active {
+                    @include artist_photo($position:absolute, $display: none,
+                        $content:url("/static/nature_project/assets/img/program/#{$artist}_active.png")
+                    );
+                }
+            }
+
+            @include desktop {
+                .withyou_photo_#{$artist} {
+                    @include artist_photo_d($mt:24px, $position:relative);
+                }
+                .artist_#{$artist}_none {
+                    @include artist_photo_d (
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_2.png")
+                    );
+                }
+                .artist_#{$artist}_active {
+                    @include artist_photo_d ($position:absolute, $display: none,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_active_2.png")
+                    );
+                }
+            }
+        }
+
+        .withyou_intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                margin-top: 4px;
+                width: 156px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @include desktop {
+                margin-top: 8px;
+                width: 309px;
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }
+
+        .withyou_intro div {
+            color: inherit;
+        }
     }
-
-    .withyou_react_1 {
-        display: none;
-    }
-
-    .withyou_react_2 {
-        display: flex;
-        color: inherit;
-    }
-
-    .withyou_title {
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 64px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .withyou_profile {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-top: 64px;
-        color: inherit
-    }    
-
-    .withyou_photo_hasom {
-        width: 309px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_hasom_none {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/hasom_2.png");
-    }
-
-    .artist_hasom_active {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/hasom_active_2.png");
-    }
-
-    .withyou_photo_hahyeon {
-        width: 310x;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_hahyeon_none {
-        width: 310x;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/hahyeon_2.png");
-    }
-
-    .artist_hahyeon_active {
-        width: 310x;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/hahyeon_active_2.png");
-    }
-
-    .withyou_photo_seoyeon {
-        width: 309x;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_seoyeon_none {
-        width: 309x;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/seoyeon_2.png");
-    }
-
-    .artist_seoyeon_active {
-        width: 309x;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/seoyeon_active_2.png");
-    }
-
-    .withyou_photo_minseop {
-        width: 309x;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_minseop_none {
-        width: 309x;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/minseop_2.png");
-    }
-
-    .artist_minseop_active {
-        width: 309x;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/minseop_active_2.png");
-    }
-
-    .withyou_photo_sohyun {
-        width: 310x;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_sohyun_none {
-        width: 310x;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/sohyun_2.png");
-    }
-
-    .artist_sohyun_active {
-        width: 310x;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/sohyun_active_2.png");
-    }
-
-    .withyou_photo_sohee {
-        width: 309x;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_sohee_none {
-        width: 309x;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/sohee_2.png");
-    }
-
-    .artist_sohee_active {
-        width: 309x;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/sohee_active_2.png");
-    }
-
-    .withyou_intro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8px;
-        width: 309px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .withyou_intro div {
-        color: inherit;
-    }
-
-    .withyou_intro_2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8px;
-        width: 310px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .withyou_intro_2 div {
-        color: inherit;
-    }
-
 }
 
 /* Program */
 
-@media (max-width:1024px) {
+@mixin program_list (
+    $w: 328px,
+    $h: 44px,
+    $bg: #FFFFFF,
+    $p: 12px 14px,
+    $pb: if($h !=44px, 18px, null),
+    $mt: 12px,
+    $box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12),
+    $border-radius: 8px,
+    $color: inherit,
+    $display: flex,
+    $font-size: 14px,
+    $line-height: 20px,
+    $letter-spacing: -0.02em,
+) {
+    width: $w;
+    height: $h;
+    background: $bg;
+    padding: $p;
+    padding-bottom: $pb;
+    margin-top: $mt;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    color: $color;
+    display: $display;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
 
-    .program {
-        @include container($h:auto, $bg:#fafafa);
-        color: black;
-    }
+@mixin program_list_d (
+    $w: 976px,
+    $h: 80px,
+    $p: 22px 32px,
+    $pb: if($h !=80px, 34px, null),
+    $border-radius: 12px,
+    $mt: 16px,
+    $display: flex,
+    $font-size: 24px,
+    $line-height: 36px,
+    $letter-spacing: -0.02em,
+) {
+    @include program_list($w:$w, $h:$h, $p:$p, $pb:$pb, $border-radius:$border-radius, $mt:$mt, $display:$display, $font-size:$font-size, $line-height:$line-height, $letter-spacing:$letter-spacing);
+}
+
+@mixin program_list_position (
+    $position: relative,
+    $justify-content: space-between,
+    $align-items: center,
+) {
+    position: $position;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+.program {
+    @include container($h:auto, $bg:#fafafa);
+    color: black;
 
     .program_box {
-        @include container($w:360px, $h:auto, $align-items:null, $bg:#fafafa);
-        padding: 0px 16px 56px 16px;
-    }
-
-    .program_react_1 {
-        display: flex;
-        color: inherit;
-    }
-
-    .program_react_2 {
-        display: none;
-    }
-
-    .program_title {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .program_notice {
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: #616161;
-        margin-top: 12px;
-    }
-
-    @mixin program_list (
-        $w: 328px,
-        $h: 44px,
-        $bg: #FFFFFF,
-        $p: 12px 14px,
-        $pb: if($h !=44px, 18px, null),
-        $mt: 12px,
-        $box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12),
-        $border-radius: 8px,
-        $color: inherit,
-        $display: flex,
-        $font-size: 14px,
-        $line-height: 20px,
-        $letter-spacing: -0.02em,
-    ) {
-        width: $w;
-        height: $h;
-        background: $bg;
-        padding: $p;
-        padding-bottom: $pb;
-        margin-top: $mt;
-        box-shadow: $box-shadow;
-        border-radius: $border-radius;
-        color: $color;
-        display: $display;
-        font-size: $font-size;
-        line-height: $line-height;
-        letter-spacing: $letter-spacing;
-    }
-
-    @mixin program_list_position (
-        $position: relative,
-        $justify-content: space-between,
-        $align-items: center,
-    ) {
-        position: $position;
-        justify-content: $justify-content;
-        align-items: $align-items;
-    }
-
-    @for $i from 1 through 5 {
-        .program_list_down_#{$i} {
-            @include program_list($mt: if($i==1, 24px, 12px));
-            @include program_list_position();
+        @include mobile {
+            @include container($w:360px, $h:auto, $align-items:null, $bg:#fafafa);
+            padding: 0px 16px 56px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:auto, $align-items:null, $bg:#fafafa);
+            padding: 40px 24px 168px 24px;
         }
 
-        .program_list_#{$i} {
-            @if ($i==1) {
-                @include program_list($h:116px, $mt:24px, $display:none);
+        .program_title {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
             }
-            @else if ($i== 2) {
-                @include program_list($h:446px, $display:none);
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
             }
-            @else if ($i== 3) {
-                @include program_list($h:116px, $display:none);
-            }
-            @else if ($i== 4) {
-                @include program_list($h:270px, $display:none);
-            }
-            @else if ($i== 5) {
-                @include program_list($h:292px, $display:none);
-            }
-            flex-direction: column;
         }
-    }
 
-    .program_list_title {
-        color: inherit;
-    }
+        .program_notice {
+            letter-spacing: -0.02em;
+            color: #616161;
+            @include mobile {
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 12px;
+            }
+            @include desktop {
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: 32px;
+            }
+        }
 
-    .program_list_text {
-        line-height: 22px;
-        margin-top: 22px;
-        color: inherit;
-    }
+        @for $i from 1 through 5 {
+            @include mobile {
+                .program_list_down_#{$i} {
+                    @include program_list($mt: if($i==1, 24px, 12px));
+                    @include program_list_position();
+                }
+        
+                .program_list_#{$i} {
+                    @if ($i==1) {
+                        @include program_list($h:116px, $mt:24px, $display:none);
+                    }
+                    @else if ($i== 2) {
+                        @include program_list($h:446px, $display:none);
+                    }
+                    @else if ($i== 3) {
+                        @include program_list($h:116px, $display:none);
+                    }
+                    @else if ($i== 4) {
+                        @include program_list($h:270px, $display:none);
+                    }
+                    @else if ($i== 5) {
+                        @include program_list($h:292px, $display:none);
+                    }
+                    flex-direction: column;
+                }
+            }
+            @include desktop {
+                .program_list_down_#{$i} {
+                    @include program_list_d($mt: if($i==1, 32px, 16px));
+                    @include program_list_position();
+                }
+        
+                .program_list_#{$i} {
+                    @if ($i==1) {
+                        @include program_list_d($h:180px, $mt:32px, $display:none);
+                    }
+                    @else if ($i== 2) {
+                        @include program_list_d($h:432px, $display:none);
+                    }
+                    @else if ($i== 3) {
+                        @include program_list_d($h:180px, $display:none);
+                    }
+                    @else if ($i== 4) {
+                        @include program_list_d($h:376px, $display:none);
+                    }
+                    @else if ($i== 5) {
+                        @include program_list_d($h:404px, $display:none);
+                    }
+                    flex-direction: column;
+                }
+            }
+        }
 
-    .program_button {
-        width: 16px;
-        height: 16px;
-        margin-right: 2px;
-        background-color: transparent;
-        border:0px;
-    }
+        .program_list_title {
+            color: inherit;
+        }
 
-    .program_polygon {
-        width: 14px;
-        height: 12px;
-        cursor: pointer;
-    }
+        .program_list_text {
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                line-height: 22px;
+                margin-top: 22px;
+            }
+            @include desktop {
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: 32px;
+            }
+        }
+        
+        .program_polygon {
+            @include mobile {
+                width: 14px;
+                height: 12px;
+            }
+            @include desktop {
+                width: 28px;
+                height: 24px;
+            }
+        }
 
-    .program_polygon_1 {
-        width: 14px;
-        height: 12px;
-        cursor: pointer;
+        .program_list_2 .program_list_text::after {
+            white-space: pre;
+            @include mobile {
+                content: "만져지는 바람결, 반짝이는 새소리, 까슬한 작은 풀
+                \A잎. 이것들은 바짝 긴장했던 몸을 녹이고 숨을 쉬게
+                \A한다. 이제 가장 지독했던 기억들을 곱씹으면서 
+                \A이 순간을 느끼면 된다.
+                \A
+                \A자연이라는 단어의 두 번째 뜻은, 보랏빛 연기라는
+                \A의미이다. 특히 보라가 주는 오묘한 색채는 불안정,
+                \A불행, 신비, 억압됨을 보여준다. 
+                \A나는 주로 일상에서 감당할 수 없는 스트레스를
+                \A받았을 땐 자연으로 산책을 하러 가곤 한다. 
+                \A자연의 소리와 색채를 보고 들으면 안정됨을 느껴서
+                \A인지, 마음이 힘들었던 이유를 곱씹게 된다. 힘듦에서 
+                \A벗어나려고 발버둥 치는 것이 아니라, 하나도 빠짐없
+                \A이 그 기분을 온전히 느끼고 더 깊이 내려간다. 
+                \A    
+                \A자연 속에서 보랏빛 연기를 온전히 느끼는 것. 이것이
+                \A나에게는 가장 자연스러운 모습이다.";
+            }
+            @include desktop {
+                content : "만져지는 바람결, 반짝이는 새소리, 까슬한 작은풀잎.
+                \A이것들은 바짝 긴장했던 몸을 녹이고 숨을 쉬게 한다.
+                \A이제 가장 지독했던 기억들을 곱씹으면서 이 순간을 느끼면 된다.
+                \A    
+                \A자연이라는 단어의 두번째 뜻은 보라 빛 연기라는 의미다.
+                \A특히 보라가 주는 오묘한 색채는 불안정, 불행, 신비, 억압됨을 보여준다.
+                \A나는 주로 일상에서 감당할 수 없는 스트레스를 받았을 땐 자연으로 산책을 하러 가곤 한다.
+                \A자연의 소리와 색채를 보고 들으면 안정됨을 느껴서인지, 마음이 힘들었던 이유를 곱씹게 된다.
+                \A힘듦에서 벗어나려고 발버둥 치는 것이 아니라, 하나도 빠짐없이 그 기분을 온전히 느끼고 더 깊이 내려간다.
+                \A                        
+                \A자연속에서 보라 빛 연기를 온전히 느끼는 것. 이것이 나에겐 가장 자연스러운 모습이다.";
+            }
+        }
     }
 }
 
-@media (min-width:1024px) {
+/* event */
 
-    .program {
-        @include container($h:auto, $bg:#fafafa);
-        color: black;
-    }
-
-    .program_box {
-        @include container($w:1024px, $h:auto, $align-items:null, $bg:#fafafa);
-        padding: 40px 24px 168px 24px;
-    }
-
-    .program_react_1 {
-        display: none;
-    }
-
-    .program_react_2 {
-        display: flex;
-        color: inherit;
-    }
-
-    .program_title {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .program_notice {
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: #616161;
-        margin-top: 32px;
-    }
-
-    .program_list_down_1 {
-        width: 976px;
-        height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px;
-        margin-top: 32px;
-        color: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        position: relative;
-    }
-
-    .program_list_1 {
-        width: 976px;
-        height: 180px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px 34px 32px;
-        margin-top: 32px;
-        color: inherit;
-        display: none;
-        flex-direction: column;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .program_list_down_2 {
-        width: 976px;
-        height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        position: relative;
-    }
-
-    .program_list_2 {
-        width: 976px;
-        height: 432px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px 34px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: none;
-        flex-direction: column;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .program_list_down_3 {
-        width: 976px;
-        height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        position: relative;
-    }
-
-    .program_list_3 {
-        width: 976px;
-        height: 180px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px 34px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: none;
-        flex-direction: column;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .program_list_down_4 {
-        width: 976px;
-        height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        position: relative;
-    }
-
-    .program_list_4 {
-        width: 976px;
-        height: 376px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px 34px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: none;
-        flex-direction: column;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .program_list_down_5 {
-        width: 976px;
-        height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        position: relative;
-    }
-
-    .program_list_5 {
-        width: 976px;
-        height: 404px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 12px;
-        padding: 22px 32px 34px 32px;
-        margin-top: 16px;
-        color: inherit;
-        display: none;
-        flex-direction: column;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .program_list_title {
-        color: inherit;
-    }
-
-    .program_list_text {
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: -0.02em;
-        margin-top: 32px;
-        color: inherit;
-    }
-
-    .program_button {
-        width: 16px;
-        height: 16px;
-        margin-right: 2px;
-        background-color: transparent;
-        border:0px;
-    }
-
-    .program_polygon {
-        width: 28px;
-        height: 24px;
-    }
-
-    .program_polygon_1 {
-        width: 28px;
-        height: 24px;
-    }
-}
-
-@media (max-width:1024px) {
-
-    .event_box_react {
-        display: flex;
-    }
+@include mobile {
 
     .event {
         @include container($h:868px, $bg: #F7FCE7);
         color: black;
-    }
-
-    .event_box {
-        @include container($w:360px, $h:868px, $align-items:null, $bg: #F7FCE7);
-        padding: 40px 16px 56px 16px;        
-    }
-
-    .event_title {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .event_text {
-        font-size: 14px;
-        line-height: 22px;
-        letter-spacing: -0.02em;
-        margin-top: 24px;
-        color: inherit;
-    }
-
-    .event_notice {
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: #616161;
-        margin-top: 8px;
-    }
-
-    form {
-        color:inherit
-    }
-
-    .event_list_1 {
-        margin-top: 12px;
-        color: inherit;
-    }
-
-    .event_list_number {
-        font-size: 16px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .event_list_choice {
-        width: 256px;
-        height: 44px;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 8px;
-        padding: 12px 14px;
-        -webkit-appearance:none; /* for chrome */
-        -moz-appearance:none; /*for firefox*/ 
-        appearance:none;
-        background: url("/static/nature_project/assets/svg/polygon.svg") no-repeat 94% 50%/14px 12px;
-        font-size: 14px;
-        line-height: 20px;
-        background-color: #ffffff;
-        color: #616161;
-        border:none;
-        outline: none;
-    }
-
-    select::-ms-expand{
-        display:none;/*for IE10,11*/
-    }
-
-    .event_list_choice_1 {
-        width: 200px;
-        height: 30px;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: #616161;
-    }
-
-    .event_list_name {
-        font-size: 14px;
-        line-height: 24px;
-        color: inherit;
-        margin-top: 48px;
-    }
-
-    .event_list_phonenumber {
-        font-size: 14px;
-        line-height: 24px;
-        color: inherit;
-        margin-top: 24px;
-    }
-
-    .event_name {
-        width: 328px;
-        height: 36px;
-        border-right:0px; 
-        border-top:0px; 
-        border-left:0px; 
-        border-bottom: 1px solid #BDBDBD;;
-        outline: none;
-        margin-top: 4px;
-        padding: 0px 0px;
-        background-color: transparent;
-        color: inherit;
-        border-radius: 0px;
-    }
-
-    .event_phonenumber {
-        width: 328px;
-        height: 36px;
-        border-right:0px; 
-        border-top:0px; 
-        border-left:0px;
-        border-bottom: 1px solid #BDBDBD;;
-        outline: none;
-        margin-top: 4px;
-        padding: 0px 0px;
-        background-color: transparent;
-        color: inherit;
-        border-radius: 0px;
-    }
-
-    .event_list_notice_2 {
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: -0.005em;
-        margin-top: 2px;
-        color: #616161;
-    }
-
-    .event_list_button {
-        width: 328px;
-        height: 56px;
-        background: #DBFD5C;
-        box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
-        border-radius: 12px;
-        margin-top: 32px;
-        font-size: 16px;
-        line-height: 22px;       
-        color: black;
-        border: none;
-    }
-
-    .event_list_agree {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-        margin-top: 18px;
-    }
-
-    .event_list_text {
-        font-size: 14px;
-        line-height: 24px;
-        color: inherit;
-    }
-
-    .event_list_check {
-        /* width: 16px;
-        height: 24px; */
-        width: 20px;
-        height: 24px;
-    }
-
-    .event_list_check input[type="checkbox"] {
-        display: none;
-    }
-
-    .event_list_check input[type="checkbox"] + label {
-        width: 20px;
-        height: 20px;
-        margin: 2px 0px 0px 0px;
-        background:url("/static/nature_project/assets/svg/checkbox_none.svg") no-repeat center/16px 16px;
-    }
-
-    .event_list_check input[type="checkbox"]:checked + label {
-        background:url("/static/nature_project/assets/svg/checkbox_check.svg") no-repeat center/16px 16px; float: right}
-}
-
-@media (min-width:1024px) {
-
-    .event_box_react {
-        display: none;
-    }
-}
-
-@media (max-width:1024px) {
-
-    .part2 {
-        @include container($h:920px);
-    }
-
-    .table_box {
-        @include container($w:360px, $h:920px, $align-items:null);
-        padding: 40px 0px 80px 16px;
-    }
-
-    .table_react_1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .table_react_2 {
-        display: none;
-    }
     
-    .table_title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
+        .event_box {
+            @include container($w:360px, $h:868px, $align-items:null, $bg: #F7FCE7);
+            padding: 40px 16px 56px 16px;        
+        
+            .event_title {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: -0.02em;
+                color: inherit;
+            }
+        
+            .event_text {
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: -0.02em;
+                margin-top: 24px;
+                color: inherit;
+            }
 
-    .table_profile {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        margin-top: 32px;
-        color: inherit;
-    }
+            .event_notice {
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: -0.02em;
+                color: #616161;
+                margin-top: 8px;
+            }
 
-    $artists: (yochan, hyunjin, jonghwan, dahyun, yunseo, youngju);
+            form {
+                color:inherit;
 
-    @each $artist in $artists {
-        .table_photo_#{$artist} {
-            @if ($artist == yochan or $artist == hyunjin) {
-                @include artist_photo($mt:12px, $position:relative);
-            } @else {
-                @include artist_photo($mt:24px, $position:relative);
+                .event_list_1 {
+                    margin-top: 12px;
+                    color: inherit;
+                
+                    .event_list_number {
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: -0.02em;
+                        color: inherit;
+                    }
+
+                    .event_list_choice {
+                        width: 256px;
+                        height: 44px;
+                        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+                        border-radius: 8px;
+                        padding: 12px 14px;
+                        -webkit-appearance:none; /* for chrome */
+                        -moz-appearance:none; /*for firefox*/ 
+                        appearance:none;
+                        background: url("/static/nature_project/assets/svg/polygon.svg") no-repeat 94% 50%/14px 12px;
+                        font-size: 14px;
+                        line-height: 20px;
+                        background-color: #ffffff;
+                        color: #616161;
+                        border:none;
+                        outline: none;
+
+                        .event_list_choice_1 {
+                            width: 200px;
+                            height: 30px;
+                            font-size: 14px;
+                            line-height: 20px;
+                            letter-spacing: -0.02em;
+                            color: #616161;
+                        }
+                    }
+
+                    select::-ms-expand{
+                        display:none;/*for IE10,11*/
+                    }
+                }
+
+                .event_list_name {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: inherit;
+                    margin-top: 48px;
+                }
+
+                .event_name {
+                    width: 328px;
+                    height: 36px;
+                    border-right:0px; 
+                    border-top:0px; 
+                    border-left:0px; 
+                    border-bottom: 1px solid #BDBDBD;;
+                    outline: none;
+                    margin-top: 4px;
+                    padding: 0px 0px;
+                    background-color: transparent;
+                    color: inherit;
+                    border-radius: 0px;
+                }
+
+                .event_list_phonenumber {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: inherit;
+                    margin-top: 24px;
+                }
+
+                .event_phonenumber {
+                    width: 328px;
+                    height: 36px;
+                    border-right:0px; 
+                    border-top:0px; 
+                    border-left:0px;
+                    border-bottom: 1px solid #BDBDBD;;
+                    outline: none;
+                    margin-top: 4px;
+                    padding: 0px 0px;
+                    background-color: transparent;
+                    color: inherit;
+                    border-radius: 0px;
+                }
+
+                .event_list_notice_2 {
+                    font-size: 12px;
+                    line-height: 20px;
+                    letter-spacing: -0.005em;
+                    margin-top: 2px;
+                    color: #616161;
+                }
+
+                .event_list_button {
+                    width: 328px;
+                    height: 56px;
+                    background: #DBFD5C;
+                    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+                    border-radius: 12px;
+                    margin-top: 32px;
+                    font-size: 16px;
+                    line-height: 22px;       
+                    color: black;
+                    border: none;
+                }
+
+                .event_list_agree {
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: inherit;
+                    margin-top: 18px;
+
+                    .event_list_text {
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: inherit;
+                    }
+
+                    .event_list_check {
+                        width: 20px;
+                        height: 24px;
+                    }
+
+                    .event_list_check input[type="checkbox"] {
+                        display: none;
+                    }
+                
+                    .event_list_check input[type="checkbox"] + label {
+                        width: 20px;
+                        height: 20px;
+                        margin: 2px 0px 0px 0px;
+                        background:url("/static/nature_project/assets/svg/checkbox_none.svg") no-repeat center/16px 16px;
+                    }
+                
+                    .event_list_check input[type="checkbox"]:checked + label {
+                        background:url("/static/nature_project/assets/svg/checkbox_check.svg") no-repeat center/16px 16px; float: right
+                    }
+                }
             }
         }
-        .artist_#{$artist}_none {
-            @include artist_photo();
-        }
-        .artist_#{$artist}_active {
-            @include artist_photo($position:absolute, $display: none);
-        }
-    }
-
-    .table_intro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 4px;
-        width: 156px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .table_intro div {
-        color: inherit;
-    }
-
-    .part2 .row_flex {
-        margin-right: 16px;
     }
 }
 
-@media (min-width:1024px) {
+@include desktop {
+    .event {
+        display: none;
+    }
+}
 
-    .part2 {
+/* part2 */
+
+.part2 {
+    @include mobile {
+        @include container($h:920px);
+    }
+    @include desktop {
         @include container($h:1292px);
     }
-
-    .table_box {
-        @include container($w:1024px, $h:1292px, $align-items:null);
-        padding: 160px 24px 80px 24px;
-    }
-
-    .table_react_1 {
-        display: none;
-    }
-
-    .table_react_2 {
-        display: flex;
-    }
     
-    .table_title {
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 64px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
+    .table_box {
+        @include mobile {
+            @include container($w:360px, $h:920px, $align-items:null);
+            padding: 40px 16px 56px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:1292px, $align-items:null);
+            padding: 160px 24px 40px 24px;
+        }
 
-    .table_profile {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-top: 64px;
-        color: inherit;
-    }
+        .table_title {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 22px;
+                line-height: 36px;
+            }
+            @include desktop {
+                font-size: 40px;
+                line-height: 64px;
+            }
+        }
 
-    .table_photo_yochan {
-        width: 309px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
+        .table_profile {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 32px;
+            }
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
+                margin-top: 64px;
+            }
+        }
 
-    .artist_yochan_none {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/yochan_2.png");
-    }
+        $artists: (yochan, hyunjin, jonghwan, dahyun, yunseo, youngju);
 
-    .artist_yochan_active {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/yochan_active_2.png");
-    }
+        @each $artist in $artists {
+            @include mobile {
+                .table_photo_#{$artist} {
+                    @if ($artist == yochan or $artist == hyunjin) {
+                        @include artist_photo($mt:12px, $position:relative);
+                    } @else {
+                        @include artist_photo($mt:24px, $position:relative);
+                    }
+                }
+                .artist_#{$artist}_none {
+                    @include artist_photo();
+                }
+                .artist_#{$artist}_active {
+                    @include artist_photo($position:absolute, $display: none);
+                }
+            }
+    
+            @include desktop {
+                .table_photo_#{$artist} {
+                    @include artist_photo_d($mt:24px, $position:relative);
+                }
+                .artist_#{$artist}_none {
+                    @include artist_photo_d (
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_2.png")
+                    );
+                }
+                .artist_#{$artist}_active {
+                    @include artist_photo_d ($position:absolute, $display: none,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_active_2.png")
+                    );
+                }
+            }
+        }
 
-    .table_photo_hyunjin {
-        width: 310px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
+        .table_intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                margin-top: 4px;
+                width: 156px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @include desktop {
+                margin-top: 8px;
+                width: 309px;
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }
 
-    .artist_hyunjin_none {
-        width: 310px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/hyunjin_2.png");
+        .table_intro div {
+            color: inherit;
+        }
     }
-
-    .artist_hyunjin_active {
-        width: 310px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/hyunjin_active_2.png");
-    }
-
-    .table_photo_jonghwan {
-        width: 309px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_jonghwan_none {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/jonghwan_2.png");
-    }
-
-    .artist_jonghwan_active {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/jonghwan_active_2.png");
-    }
-
-    .table_photo_dahyun {
-        width: 309px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_dahyun_none {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/dahyun_2.png");
-    }
-
-    .artist_dahyun_active {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/dahyun_active_2.png");
-    }
-
-    .table_photo_yunseo {
-        width: 310px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_yunseo_none {
-        width: 310px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/yunseo_2.png");
-    }
-
-    .artist_yunseo_active {
-        width: 310px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/yunseo_active_2.png");
-    }
-
-    .table_photo_youngju {
-        width: 309px;
-        height: 400px;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .artist_youngju_none {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        content: url("/static/nature_project/assets/img/program/youngju_2.png");
-    }
-
-    .artist_youngju_active {
-        width: 309px;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        display: none;
-        top:0px;
-        content: url("/static/nature_project/assets/img/program/youngju_active_2.png");
-    }
-
-    .table_intro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8px;
-        width: 309px;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .table_intro_2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8px;
-        width: 310px;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .table_intro div {
-        color: inherit;
-    }
-
 }
 
-@media (max-width:1024px) {
+/* chair */
 
-    .chair {
+.chair {
+    @include mobile {
         @include container($h:504px);
     }
-
-    .chair_box {
-        @include container($w:360px, $h:504px, $align-items:null);
-        padding: 0px 16px 58px 16px;
-    }
-
-    .chair_react_1 {
-        display: flex;
-    }
-
-    .chair_react_2 {
-        display: none;
-    }
-
-    .chair_title_1 {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-    }
-
-    .chair_text {
-        font-size: 14px;
-        line-height: 22px;
-        letter-spacing: -0.02em;
-        margin-top: 24px;
-        color: #F5F5F5;
-    }
-
-    .chair_title_2 {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        margin-top: 64px;
-    }
-
-    .chair_link {
-        font-weight: 600;
-        width: 328px;
-        height: 33px;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        border-bottom: 1px solid #ffffff;
-        margin-top: 56px;
-        color: inherit;
-        text-align: end;
-    }
-
-    .chair_link_text {
-        margin-bottom: 8px;
-    }
-
-    .chair a:link {color: #ffffff;}
-    .chair a:visited {color: #ffffff;}
-}
-
-@media (min-width:1024px) {
-
-    .chair {
+    @include desktop {
         @include container($h:734px);
     }
 
     .chair_box {
-        @include container($w:1024px, $h:734px, $align-items:null);
-        padding: 80px 24px 169px 24px;        
+        @include mobile {
+            @include container($w:360px, $h:504px, $align-items:null);
+            padding: 0px 16px 58px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:734px, $align-items:null);
+            padding: 80px 24px 169px 24px;  
+        }
+
+        .row_flex_1 {
+            @include desktop {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                color: inherit;
+            }
+        }
+
+        .chair_title_1 {
+            font-weight: 600;
+            letter-spacing: -0.02em;   
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+
+        .chair_text {
+            letter-spacing: -0.02em;
+            @include mobile {
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 24px;
+            }
+            @include desktop {
+                width: 476px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .row_flex_2 {
+            @include desktop {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                color: inherit;
+                margin-top: 80px;
+            }
+        }
+
+        .chair_title_2 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 64px;
+            }
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+
+        .chair_link {
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #ffffff;
+            color: inherit;
+            text-align: end;
+            @include mobile {
+                width: 328px;
+                height: 33px;
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 56px;
+            }
+            @include desktop {
+                width: 976px;
+                height: 39px;
+                font-size: 18px;
+                line-height: 26px;
+                margin-top: 115px;
+            }
+        }
+
+        .chair_link_text {
+            @include mobile {
+                margin-bottom: 8px;
+            }
+            @include desktop {
+                margin-bottom: 12px;
+            }
+        }
+    
+        .chair a:link {color: #ffffff;}
+        .chair a:visited {color: #ffffff;}
     }
-
-
-    .chair_react_1 {
-        display: none;
-    }
-
-    .chair_react_2 {
-        display: flex;
-    }
-
-    .chair_title_1 {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .chair_text {
-        width: 476px;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: -0.02em;
-        margin-top: 24px;
-        color: #F5F5F5;
-    }
-
-    .chair_title_2 {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-    }
-
-    .chair_link {
-        font-weight: 600;
-        width: 976px;
-        height: 39px;
-        font-size: 18px;
-        line-height: 26px;
-        letter-spacing: -0.01em;
-        border-bottom: 1px solid #ffffff;
-        margin-top: 115px;
-        color: inherit;
-        text-align: end;
-    }
-
-    .chair_link_text {
-        margin-bottom: 12px;
-    }
-
-    .chair a:link {color: #ffffff;}
-    .chair a:visited {color: #ffffff;}
 }
 
-@media (max-width:1024px) {
+/* support1 */
 
-    .support1 {
+.support1 {
+    @include mobile {
         @include container($h:552px, $bg:#ffffff);
         color: black;
     }
-
-    .support1_box {
-        @include container($w:360px, $h:552px, $align-items:null, $bg:#ffffff);
-        padding: 40px 16px 56px 16px;
-    }
-
-    .support1_react_1 {
-        display: flex;
-    }
-
-    .support1_react_2 {
-        display: none;
-    }
-
-    .support_title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .support_photo {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        margin-top: 32px;
-        color: inherit;
-    }
-
-    .support_slide {
-        width: 328px;
-        height: 132px;
-        background: url("/static/nature_project/assets/img/program/nature_slide.png");
-        background-size: cover;
-        animation: shift 30s infinite linear;
-        margin-top: 24px;
-    }
-
-    @keyframes shift {
-        from{background-position: 0 0;}
-        to{background-position: -2800px 0;}
-    }
-
-    .support_staff {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        margin-top:56px;
-        color: inherit;
-    }
-
-    .support_staff_list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-    }
-
-    .support_staff_left {
-        display: flex;
-        flex-direction: column;
-        color: inherit;
-    }
-
-    .support_staff_right {
-        display: flex;
-        flex-direction: column;
-        color: inherit;
-    }
-
-    .support_staff_wrap {
-        width: 155px;
-        margin-top:8px;
-    }
-
-    .support_staff_role {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }    
-
-    .support_staff_name {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-}
-
-@media (min-width:1024px) {
-
-    .support1 {
+    @include desktop {
         @include container($h:1052px, $bg:#ffffff);
         color: black;
     }
 
     .support1_box {
-        @include container($w:1024px, $h:1052px, $align-items:null, $bg:#ffffff);
-        padding: 160px 24px 168px 24px;
+        @include mobile {
+            @include container($w:360px, $h:552px, $align-items:null, $bg:#ffffff);
+            padding: 40px 16px 56px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:1052px, $align-items:null, $bg:#ffffff);
+            padding: 160px 24px 168px 24px;
+        }
+
+        .support_title {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 22px;
+                line-height: 36px;
+            }
+            @include desktop {
+                font-size: 40px;
+                line-height: 64px;            
+            }
+        }
+
+        .support_photo {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 32px;            
+            }
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
+                margin-top: 64px;
+            }
+        }
+
+        .support_slide {
+            margin-top: 24px; 
+            @include mobile {
+                width: 328px;
+                height: 132px;
+                background: url("/static/nature_project/assets/img/program/nature_slide.png");
+                animation: shift 30s infinite linear;     
+                background-size: cover;                
+                @keyframes shift {
+                    from{background-position: 0 0;}
+                    to{background-position: -2800px 0;}
+                }
+            }
+            @include desktop {
+                width: 976px;
+                height: 216px;
+                background: url("/static/nature_project/assets/img/program/nature_slide_2.png");
+                animation: shift 49.5s infinite linear;
+                background-size: cover;
+                @keyframes shift {
+                    from{background-position: 0 0;}
+                    to{background-position: -4624px 0;}
+                }
+            }
+        }
+
+        .support_staff {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;   
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top:56px;     
+            }
+            @include desktop {
+                font-size: 28px;
+                line-height: 36px;
+                margin-top: 80px;
+            }
+        }
+
+        .support_staff_list {
+            display: flex;
+            color: inherit;  
+            @include mobile {
+                flex-direction: row;
+                justify-content: space-between; 
+            }
+            @include desktop {
+                flex-direction: column;
+            }
+
+            @include mobile {
+                .support_staff_left, .support_staff_right {
+                    display: flex;
+                    flex-direction: column;
+                    color: inherit;
+                }
+            }
+
+            @include desktop {
+                .support_staff_left, .support_staff_middle, .support_staff_right {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: inherit;
+                }
+            }
+
+            .support_staff_wrap {
+                @include mobile {
+                    width: 155px;
+                    margin-top:8px;
+                }
+                @include desktop {
+                    width: 309px;
+                    height: 36px;
+                    margin-top:24px;
+                    border-bottom: 1px solid #616161;
+                }
+                
+                .support_staff_role {
+                    font-weight: 500;
+                    letter-spacing: -0.02em;
+                    color: inherit;
+                    @include mobile {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    @include desktop {
+                        font-size: 20px;
+                        line-height: 32px;
+                    }
+                }    
+
+                .support_staff_name {
+                    font-weight: 400;
+                    letter-spacing: -0.02em;
+                    color: inherit;    
+                    @include mobile {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    @include desktop {
+                        font-size: 20px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+
+        .support1_react_1 {
+            @include mobile {
+                display: flex;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+    
+        .support1_react_2 {
+            @include mobile {
+                display: none;
+            }
+            @include desktop {
+                display: flex;
+            }
+        }
     }
-
-    .support1_react_1 {
-        display: none;
-    }
-
-    .support1_react_2 {
-        display: flex;
-    }
-
-    .support_title {
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 64px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .support_photo {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-top: 64px;
-        color: inherit;
-    }
-
-    .support_slide {
-        width: 976px;
-        height: 216px;
-        background: url("/static/nature_project/assets/img/program/nature_slide_2.png");
-        background-size: cover;
-        animation: shift 49.5s infinite linear;
-        margin-top: 24px;
-    }
-
-    @keyframes shift {
-        from{background-position: 0 0;}
-        to{background-position: -4624px 0;}
-    }
-
-    .support_staff {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-top: 80px;
-        color: inherit;
-    }
-
-    .support_staff_list {
-        display: flex;
-        flex-direction: column;
-        color: inherit;
-    }
-
-    .support_staff_left {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-    }
-
-    .support_staff_middle {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-    }
-
-    .support_staff_right {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-    }
-
-    .support_staff_wrap {
-        width: 309px;
-        height: 36px;
-        margin-top:24px;
-        border-bottom: 1px solid #616161;
-    }
-
-    .support_staff_wrap {
-        width: 310px;
-        height: 36px;
-        margin-top:24px;
-        border-bottom: 1px solid #616161;
-    }
-
-    .support_staff_role {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }    
-
-    .support_staff_name {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
 }
 
-@media (max-width:1024px) {
+/* support2 */
 
-    .support2 {
+.support2 {
+    @include mobile {
         @include container($h:342px, $bg:#F7FCE7);
         color: black;
     }
-
-    .support2_box {
-        @include container($w:360px, $h:342px, $align-items:null, $bg: #F7FCE7);
-        padding: 40px 0px 56px 16px;
-    }
-
-    .support_project {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
-
-    .support_project_image {
-        display: none;
-    }
-
-    .support_project_text {
-        font-size: 13.7px;
-        line-height: 22px;
-        letter-spacing: -0.02em;
-        margin-top: 24px;
-        color: inherit;
-    }
-
-    .support_project_box_1 {
-        width: 328px;
-        height: 56px;
-        background: #FFFFFF;
-        box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
-        border-radius: 12px;
-        padding: 6px 6px 6px 16px;
-        color: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 32px;
-    }
-
-    .support_project_box_2 {
-        display: none;
-    }
-
-    .support_project_account {
-        font-size: 16px;
-        line-height: 22px;
-        color: inherit;
-    }
-
-    .support_project_button {
-        width: 96px;
-        height: 44px;
-        background: #DBFD5C;
-        border-radius: 12px;
-        font-size: 16px;
-        line-height: 22px;
-        color: black;
-        border: none;
-    }
-
-}
-
-@media (min-width:1024px) {
-
-    .support2 {
+    @include desktop {
         @include container($h:1088px, $bg:#F7FCE7);
         color: black;
     }
 
     .support2_box {
-        @include container($w:1024px, $h:1088px, $bg: #F7FCE7);
-        padding: 160px 0px 168px 0px;
-    }
+        @include mobile {
+            @include container($w:360px, $h:342px, $align-items:null, $bg: #F7FCE7);
+            padding: 40px 0px 56px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:1088px, $bg: #F7FCE7);
+            padding: 160px 0px 168px 0px;
+        }
 
-    .support_project {
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 64px;
-        letter-spacing: -0.02em;
-        color: inherit;
-    }
+        .support_project {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: inherit;
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            @include desktop {  
+                font-size: 40px;
+                line-height: 64px;
+            }
+        }
 
-    .support_project_image {
-        width: 561px;
-        height: 392px;
-        object-fit: cover;
-        margin-top: 8px;
-    }
+        .support_project_image {
+            @include mobile {
+                display: none;
+            }
+            @include desktop {  
+                width: 561px;
+                height: 392px;
+                object-fit: cover;
+                margin-top: 8px;
+            }
+        }
 
-    .support_project_text {
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: -0.02em;
-        margin-top: 24px;
-        color: inherit;
-        text-align: center;
-    }
+        .support_project_text {
+            letter-spacing: -0.02em;
+            margin-top: 24px;
+            color: inherit;
+            @include mobile {
+                font-size: 13.7px;
+                line-height: 22px;
+            }
+            @include desktop {  
+                font-size: 18px;
+                line-height: 28px;
+                text-align: center;
+            }
+        }
 
-    .support_project_box_1 {
-        display: none;
-    }
+        .support_project_box {
+            @include mobile {
+                width: 328px;
+                height: 56px;
+                background: #FFFFFF;
+                box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+                border-radius: 12px;
+                padding: 6px 6px 6px 16px;
+                color: inherit;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 32px;
+            }
+            @include desktop {  
+                margin-top: 52px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                color: inherit;
+            }
+        }
 
-    .support_project_box_2 {
-        margin-top: 52px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: inherit;
-    }
+        .support_project_account {
+            color: inherit;
+            @include mobile {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            @include desktop {  
+                width: 465px;
+                height: 80px;
+                background: #FFFFFF;
+                box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+                border-radius: 16px;
+                padding: 22px 58px;
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: -0.02em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
 
-    .support_project_account {
-        width: 465px;
-        height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 16px;
-        padding: 22px 58px;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        color: inherit;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .support_project_account::after {
+            content: "(김비안)";
+        }
 
-    .support_project_button {
-        width: 160px;
-        height: 80px;
-        background: #DBFD5C;
-        box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 16px;
-        font-size: 24px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-        margin-left: 16px;
-        color: inherit;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .support_project_button {
+            color: black;
+            background: #DBFD5C;
+            border: none;
+            @include mobile {
+                width: 96px;
+                height: 44px;
+                border-radius: 12px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            @include desktop {  
+                width: 160px;
+                height: 80px;
+                box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+                border-radius: 16px;
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: -0.02em;
+                margin-left: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
-
 }
 
 /* footer */
 
-@media (max-width:1024px) {
-
-    .footer_box {
-        width: 360px;
-        height: 460px;
-    }
-
-    footer {
+footer {
+    @include mobile {
         @include container($h:460px);
     }
-
-    .footer_info {
-        @include container($w:360px, $h:344px);
-        padding: 48px 16px 0px 16px;
-    }
-
-    .footer_info {
-        width: 360px;
-        height: 344px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer_info-left {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer_info-contact {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 26px;  
-    }
-
-    .footer_info-link {
-        display: flex;
-        flex-direction: row;
-        padding-top: 12px;
-    }
-
-    .footer_info-link_image {
-        width: 20px;
-        height: 20px;
-        margin-top: 3px;
-        margin-left: 24px;
-    }
-
-    .footer_info-link_text {
-        font-size: 16px;
-        line-height: 26px;
-        padding-left: 6px;
-    }
-
-    .footer_info-right {
-        display: flex;
-        flex-direction: column;
-        padding-top: 64px;
-    }
-
-    .footer_info-contact_2 {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 26px;  
-    }
-
-    .footer_info-click {
-        width: 328px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        margin-top: 8px;
-    }
-
-    .footer_input_box {
-        width: 328px;
-        height: 36px;
-        border-right:0px; 
-        border-top:0px; 
-        border-left:0px; 
-        outline: none;
-        background-color: transparent;
-        padding: 0px 0px;
-    }
-
-    input::placeholder {
-        color: #E0E0E0;
-        font-size: 14px;
-        line-height: 24px;
-        margin-bottom: 5px;
-    }
-
-    .footer_input_notice_1 {
-        font-size: 8px;
-        line-height: 20px;
-        margin-top: 4px;
-        color: inherit;
-        text-align: end;
-    }
-
-    .footer_input_notice_2 {
-        display: none;
-    }
-
-    .footer-submit-button {
-        width: 120px;
-        height: 36px;
-        background: #DBFD5C;
-        border-radius: 6px;
-        margin-top: 4px;
-        font-size: 14px;
-        line-height: 20px;
-        color: black;
-    }
-
-    .footer_info-line {
-        width: 100%;
-        height: 68px;
-        border-top: 1px solid #424242;
-    }
-
-    .footer_info-copyright {
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        line-height: 20px;
-        color: #9E9E9E;
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-}
-
-@media (min-width:1024px) {
-
-    footer {
+    @include desktop {
         @include container($h:400px);
     }
 
     .footer_info {
-        @include container($w:1024px, $h:280px, $flex-direction:row, $align-items:null);
-        padding: 72px 24px 0px 24px;
-    }
+        @include mobile {
+            @include container($w:360px, $h:391px);
+            padding: 48px 16px 0px 16px;
+        }
+        @include desktop {
+            @include container($w:1024px, $h:280px, $flex-direction:row, $align-items:null);
+            padding: 72px 24px 0px 24px;
+        }
 
-    .footer_info-left {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 139px;
-    }
+        .footer_info-left {
+            display: flex;
+            flex-direction: column;
+            @include desktop {
+                margin-bottom: 139px;
+            }
 
-    .footer_info-contact {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 26px;
-    }
+            .footer_info-contact {
+                font-weight: 600;
+                line-height: 26px;
+                @include mobile {
+                    font-size: 16px;
+                }
+                @include desktop {
+                    font-size: 18px;
+                }
+            }
 
-    .footer_info-link {
-        display: flex;
-        flex-direction: row;
-        padding-top: 16px;
-    }
+            .footer_info-link {
+                display: flex;
+                flex-direction: row;
+                @include mobile {
+                    padding-top: 12px;
+                }
+                @include desktop {
+                    padding-top: 16px;
+                }
 
-    .footer_info-link_image {
-        width: 20px;
-        height: 20px;
-        margin-left: 40px;
-        margin-top: 3px;
-    }
+                .footer_info-link_image {
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 3px;
+                    @include mobile {
+                        margin-left: 24px;
+                    }
+                    @include desktop {
+                        margin-left: 40px;
+                    }
+                }
+            
+                .footer_info-link_text {
+                    font-size: 16px;
+                    line-height: 26px;
+                    padding-left: 6px;
+                }
+            }
+        }
 
-    .footer_info-link_text {
-        font-size: 16px;
-        line-height: 26px;
-        padding-left: 6px;
-    }
+        .footer_info-right {
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                padding-top: 64px;
+            }
+            @include desktop {
+                padding-left: 140px;
+            }
 
-    .footer_info-right {
-        display: flex;
-        flex-direction: column;
-        padding-left: 140px;
-    }
+            .footer_info-click {
+                display: flex;
+                margin-top: 8px;
+                @include mobile {
+                    width: 328px;
+                    height: 100px;
+                    flex-direction: column;
+                    align-items: end;
+                    margin-bottom: 82px;
+                }
+                @include desktop {
+                    width: 488px;
+                    height: 36px;
+                    flex-direction: row;
+                }
 
-    .footer_info-contact_2 {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 26px;
-    }
+                .footer_input_box {
+                    height: 36px;
+                    border-right:0px; 
+                    border-top:0px; 
+                    border-left:0px;
+                    outline: none;
+                    background-color: transparent;
+                    padding: 0px 0px;
+                    @include mobile {
+                        width: 328px;
+                    }
+                    @include desktop {
+                        width: 360px;
+                    }
+                }
 
-    .footer_info-click {
-        width: 488px;
-        height: 36px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 8px;
-    }
+                .input::placeholder {
+                    color: #E0E0E0;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    @include mobile {
+                        line-height: 24px;
+                    }
+                    @include desktop {
+                        line-height: 20px;
+                    }
+                }
 
-    .footer_input_box {
-        width: 360px;
-        height: 36px;
-        border-right:0px; 
-        border-top:0px; 
-        border-left:0px; 
-        outline: none;
-        background-color: transparent;
-        padding: 0px 0px;
-    }
+                .footer_input_notice_1 {
+                    @include mobile {
+                        font-size: 8px;
+                        line-height: 20px;
+                        margin-top: 4px;
+                        color: inherit;
+                        text-align: end;
+                    }
+                    @include desktop {
+                        display: none;
+                    }
+                }
 
-    input::placeholder {
-        color: #E0E0E0;
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 5px;
-    }
-
-    .footer_input_notice_1 {
-        display: none;
-    }
-
-    .footer_input_notice_2 {
-        font-size: 8px;
-        line-height: 20px;
-        margin-top: 4px;
-        color: inherit;
-        text-align: end;
-        margin-right: 128px;
-    }
-
-    .footer-submit-button {
-        width: 120px;
-        height: 36px;
-        background: #DBFD5C;
-        border-radius: 4px;
-        margin-left: 8px;
-        font-size: 16px;
-        line-height: 24px;
-        color: black;
+                .footer-submit-button {
+                    width: 120px;
+                    height: 36px;
+                    background: #DBFD5C;
+                    border-radius: 6px;
+                    color: black;
+                    @include mobile {
+                        margin-top: 4px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    @include desktop {
+                        margin-left: 8px;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }            
+            }
+        
+            .footer_input_notice_2 {
+                @include mobile {
+                    display: none;
+                }
+                @include desktop {
+                    font-size: 8px;
+                    line-height: 20px;
+                    margin-top: 4px;
+                    color: inherit;
+                    text-align: end;
+                    margin-right: 128px;
+                }
+            }
+        }    
     }
 
     .footer_info-line {
         width: 100%;
-        height: 120px;
         border-top: 1px solid #424242;
-    }
+        display: flex;
+        align-items: center;
+        @include mobile {
+            height: 69px;
+        }
+        @include desktop {
+            height: 120px;
+        }
 
-    .footer_info-copyright {
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        line-height: 20px;
-        color: #9E9E9E;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        .footer_info-copyright {
+            width: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: #9E9E9E;
+            text-align: center;
+        }
     }
-
 }
-
-
-    // @for $i from 1 through 5 {
-    //     @if ($i==1) {
-    //         .intro_round_#{$i} {@include intro_round_d($l: 37px);}
-    //         .intro_line_text_#{$i} {@include intro_line_text_d($l:25px);}
-    //     }
-    //     @else if ($i== 2) {
-    //         .intro_round_#{$i} {@include intro_round_d($l: 135px);}
-    //         .intro_line_text_#{$i} {@include intro_line_text_d($l:101px);}
-    //     }
-    //     @else if ($i== 3) {
-    //         .intro_round_#{$i} {@include intro_round_d($l: 233px);}
-    //         .intro_line_text_#{$i} {@include intro_line_text_d($l:205px);}
-    //     }
-    //     @else if ($i== 4) {
-    //         .intro_round_#{$i} {@include intro_round_d($l: 331px);}
-    //         .intro_line_text_#{$i} {@include intro_line_text_d($l:303px);}
-    //     }
-    //     @else if ($i== 5) {
-    //         .intro_round_#{$i} {@include intro_round_d($l: 429px);}
-    //         .intro_line_text_#{$i} {@include intro_line_text_d($l:397px);}
-    //     }
-    // }
