@@ -9,8 +9,10 @@
 
 * {
     font-family: 'Maitree' !important;                 
-    color: #FFFFFF;
+    color: inherit;
 }
+
+a:link {color:#ffffff;}
 
 body {
     width: 100%;
@@ -22,21 +24,18 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: inherit;
 }
 
 .column_flex {
     display:flex;
     flex-direction: column;
-    color:inherit
 }
 
 .flex_wrap {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; 
-    justify-content: space-between;
-    color: inherit;  
+    justify-content: space-between;  
 }
 
 // 반응형
@@ -54,9 +53,34 @@ $breakpoint-desktop: 1024px;
     }
 }
 
+@mixin artist_photo (
+    $w: 156px,
+    $h: 200px,
+    $object-fit: cover,
+    $mt: null,
+    $position: null,
+    $display: flex,
+    $top: 0px,
+    $content: null,
+) {
+    width: $w;
+    height: $h;
+    object-fit: $object-fit;
+    margin-top: $mt;
+    position: $position;
+    display: $display;
+    top: $top;
+    content: $content;
+}
+
+@mixin artist_photo_d ($w: 309px, $h: 400px, $mt:null, $position: null, $display: flex, $content:null) {
+    @include artist_photo($w:$w, $h:$h, $mt:$mt, $position:$position, $display:$display, $content:$content)
+}
+
 /* header */
 
 header {
+    color: #ffffff;
     display: flex;
     position: fixed;
     justify-content: center;
@@ -96,6 +120,10 @@ header {
                 width: 251px;
                 font-size: 18px;
                 line-height: 26px;
+            }
+
+            .oumtt_link, .program_link, .nav_home_notion {
+                text-decoration: none;
             }
 
             .nav_active {
@@ -290,7 +318,7 @@ main {
                 margin-bottom: 84.5px;
             }
             @include desktop {
-                width: 477px;
+                width: 476px;
                 height: 214px;
                 border-bottom: 2px solid #ffffff;
                 margin-bottom: 534px;
@@ -351,30 +379,6 @@ main {
 
 /* guest */
 
-@mixin artist_photo (
-    $w: 156px,
-    $h: 200px,
-    $object-fit: cover,
-    $mt: null,
-    $position: null,
-    $display: null,
-    $top: 0px,
-    $content: null,
-) {
-    width: $w;
-    height: $h;
-    object-fit: $object-fit;
-    margin-top: $mt;
-    position: $position;
-    display: $display;
-    top: $top;
-    content: $content;
-}
-
-@mixin artist_photo_d ($w: 309px, $h: 400px, $mt:null, $position: null, $display: null, $content:null) {
-    @include artist_photo($w:$w, $h:$h, $mt:$mt, $position:$position, $display:$display, $content:$content)
-}
-
 .guest {
     @include mobile {
         @include container($h:732px);
@@ -386,7 +390,7 @@ main {
     .guest_box {
         @include mobile {
             @include container($w:360px, $h:732px, $align-items:null);
-            padding: 0px 16px 56px 16px;
+            padding: 40px 16px 56px 16px;
         }
         @include desktop {
             @include container($w:1024px, $h:1104px, $align-items:null);
@@ -396,11 +400,9 @@ main {
         .guset_title {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 22px;
                 line-height: 36px;
-                margin-top: 40px;
             }
             @include desktop {
                 font-size: 40px;
@@ -409,7 +411,6 @@ main {
         }
 
         .guest_photo_wrap {
-            color: inherit;
             @include desktop {
                 display: flex;
                 flex-direction: row;
@@ -422,7 +423,6 @@ main {
                 justify-content: space-between;
                 font-weight: 500;
                 letter-spacing: -0.02em;
-                color: inherit;
 
                 @include mobile {
                     margin-top: 8px;
@@ -433,10 +433,6 @@ main {
                     margin-top: 16px;
                     font-size: 20px;
                     line-height: 32px;
-                }
-
-                div {
-                    color: inherit;
                 }
             }
 
@@ -479,7 +475,6 @@ main {
 }
 
 /* withyou */ 
-// 두 번 쓴 것 묶어주기
 
 .withyou {
     @include mobile {
@@ -504,7 +499,6 @@ main {
         .withyou_title {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 22px;
                 line-height: 36px;
@@ -518,7 +512,6 @@ main {
         .withyou_profile {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 18px;
                 line-height: 24px;
@@ -576,7 +569,6 @@ main {
             justify-content: space-between;
             font-weight: 500;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 margin-top: 4px;
                 width: 156px;
@@ -589,10 +581,6 @@ main {
                 font-size: 20px;
                 line-height: 32px;
             }
-        }
-
-        .withyou_intro div {
-            color: inherit;
         }
     }
 }
@@ -609,6 +597,7 @@ main {
     $box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12),
     $border-radius: 8px,
     $color: inherit,
+
     $display: flex,
     $font-size: 14px,
     $line-height: 20px,
@@ -671,7 +660,6 @@ main {
         .program_title {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 18px;
                 line-height: 24px;
@@ -749,14 +737,8 @@ main {
                 }
             }
         }
-
-        .program_list_title {
-            color: inherit;
-        }
-
         .program_list_text {
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 line-height: 22px;
                 margin-top: 22px;
@@ -834,7 +816,6 @@ main {
                 font-size: 18px;
                 line-height: 24px;
                 letter-spacing: -0.02em;
-                color: inherit;
             }
         
             .event_text {
@@ -842,7 +823,6 @@ main {
                 line-height: 22px;
                 letter-spacing: -0.02em;
                 margin-top: 24px;
-                color: inherit;
             }
 
             .event_notice {
@@ -854,17 +834,13 @@ main {
             }
 
             form {
-                color:inherit;
-
                 .event_list_1 {
                     margin-top: 12px;
-                    color: inherit;
                 
                     .event_list_number {
                         font-size: 16px;
                         line-height: 20px;
                         letter-spacing: -0.02em;
-                        color: inherit;
                     }
 
                     .event_list_choice {
@@ -899,10 +875,13 @@ main {
                     }
                 }
 
+                .event_list_1:first-child {
+                    margin-top: 32px;
+                }
+
                 .event_list_name {
                     font-size: 14px;
                     line-height: 24px;
-                    color: inherit;
                     margin-top: 48px;
                 }
 
@@ -917,14 +896,12 @@ main {
                     margin-top: 4px;
                     padding: 0px 0px;
                     background-color: transparent;
-                    color: inherit;
                     border-radius: 0px;
                 }
 
                 .event_list_phonenumber {
                     font-size: 14px;
                     line-height: 24px;
-                    color: inherit;
                     margin-top: 24px;
                 }
 
@@ -939,7 +916,6 @@ main {
                     margin-top: 4px;
                     padding: 0px 0px;
                     background-color: transparent;
-                    color: inherit;
                     border-radius: 0px;
                 }
 
@@ -968,13 +944,11 @@ main {
                     display:flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    color: inherit;
                     margin-top: 18px;
 
                     .event_list_text {
                         font-size: 14px;
                         line-height: 24px;
-                        color: inherit;
                     }
 
                     .event_list_check {
@@ -987,6 +961,7 @@ main {
                     }
                 
                     .event_list_check input[type="checkbox"] + label {
+                        display: flex;
                         width: 20px;
                         height: 20px;
                         margin: 2px 0px 0px 0px;
@@ -1031,7 +1006,6 @@ main {
         .table_title {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 22px;
                 line-height: 36px;
@@ -1045,7 +1019,6 @@ main {
         .table_profile {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 18px;
                 line-height: 24px;
@@ -1070,10 +1043,14 @@ main {
                     }
                 }
                 .artist_#{$artist}_none {
-                    @include artist_photo();
+                    @include artist_photo(
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}.png")
+                    );
                 }
                 .artist_#{$artist}_active {
-                    @include artist_photo($position:absolute, $display: none);
+                    @include artist_photo($position:absolute, $display: none,
+                        $content: url("/static/nature_project/assets/img/program/#{$artist}_active.png")
+                    );
                 }
             }
     
@@ -1100,7 +1077,6 @@ main {
             justify-content: space-between;
             font-weight: 500;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 margin-top: 4px;
                 width: 156px;
@@ -1113,10 +1089,6 @@ main {
                 font-size: 20px;
                 line-height: 32px;
             }
-        }
-
-        .table_intro div {
-            color: inherit;
         }
     }
 }
@@ -1146,7 +1118,6 @@ main {
                 display:flex;
                 flex-direction: row;
                 justify-content: space-between;
-                color: inherit;
             }
         }
 
@@ -1182,7 +1153,6 @@ main {
                 display:flex;
                 flex-direction: row;
                 justify-content: space-between;
-                color: inherit;
                 margin-top: 80px;
             }
         }
@@ -1205,7 +1175,6 @@ main {
             font-weight: 600;
             letter-spacing: -0.01em;
             border-bottom: 1px solid #ffffff;
-            color: inherit;
             text-align: end;
             @include mobile {
                 width: 328px;
@@ -1221,14 +1190,22 @@ main {
                 line-height: 26px;
                 margin-top: 115px;
             }
-        }
 
-        .chair_link_text {
-            @include mobile {
-                margin-bottom: 8px;
+            .chair_notion {
+                text-decoration: none;
             }
-            @include desktop {
-                margin-bottom: 12px;
+
+            .chair_link_text {
+                @include mobile {
+                    margin-bottom: 8px;
+                }
+                @include desktop {
+                    margin-bottom: 12px;
+                }
+            }
+
+            .chair_link_arrow {
+                margin-left: 4px;
             }
         }
     
@@ -1262,7 +1239,6 @@ main {
         .support_title {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 22px;
                 line-height: 36px;
@@ -1276,7 +1252,6 @@ main {
         .support_photo {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 18px;
                 line-height: 24px;
@@ -1317,8 +1292,7 @@ main {
 
         .support_staff {
             font-weight: 600;
-            letter-spacing: -0.02em;
-            color: inherit;   
+            letter-spacing: -0.02em;   
             @include mobile {
                 font-size: 18px;
                 line-height: 24px;
@@ -1332,49 +1306,46 @@ main {
         }
 
         .support_staff_list {
-            display: flex;
-            color: inherit;  
+            display: grid;
             @include mobile {
-                flex-direction: row;
-                justify-content: space-between; 
+                width: 328px;
+                height: 104px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                gap: 8px 18px;
+                margin-top: 24px;
             }
             @include desktop {
-                flex-direction: column;
-            }
-
-            @include mobile {
-                .support_staff_left, .support_staff_right {
-                    display: flex;
-                    flex-direction: column;
-                    color: inherit;
-                }
-            }
-
-            @include desktop {
-                .support_staff_left, .support_staff_middle, .support_staff_right {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    color: inherit;
-                }
+                width: 976px;
+                height: 156px;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 24px 24.5px;
+                margin-top: 48px;
             }
 
             .support_staff_wrap {
-                @include mobile {
-                    width: 155px;
-                    margin-top:8px;
-                }
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 @include desktop {
-                    width: 309px;
-                    height: 36px;
-                    margin-top:24px;
                     border-bottom: 1px solid #616161;
+                    @for $i from 2 through 7 {
+                        &:nth-child(#{$i}) {
+                            @if ($i <= 4) {
+                                grid-row-start: 2;
+                            } @else {
+                                grid-row-start: 3;
+                            }
+                        }
+                    }
                 }
-                
+
                 .support_staff_role {
                     font-weight: 500;
                     letter-spacing: -0.02em;
-                    color: inherit;
                     @include mobile {
                         font-size: 14px;
                         line-height: 20px;
@@ -1384,11 +1355,10 @@ main {
                         line-height: 32px;
                     }
                 }    
-
+        
                 .support_staff_name {
                     font-weight: 400;
-                    letter-spacing: -0.02em;
-                    color: inherit;    
+                    letter-spacing: -0.02em;    
                     @include mobile {
                         font-size: 14px;
                         line-height: 20px;
@@ -1398,24 +1368,6 @@ main {
                         line-height: 32px;
                     }
                 }
-            }
-        }
-
-        .support1_react_1 {
-            @include mobile {
-                display: flex;
-            }
-            @include desktop {
-                display: none;
-            }
-        }
-    
-        .support1_react_2 {
-            @include mobile {
-                display: none;
-            }
-            @include desktop {
-                display: flex;
             }
         }
     }
@@ -1446,7 +1398,6 @@ main {
         .support_project {
             font-weight: 600;
             letter-spacing: -0.02em;
-            color: inherit;
             @include mobile {
                 font-size: 18px;
                 line-height: 24px;
@@ -1472,7 +1423,6 @@ main {
         .support_project_text {
             letter-spacing: -0.02em;
             margin-top: 24px;
-            color: inherit;
             @include mobile {
                 font-size: 13.7px;
                 line-height: 22px;
@@ -1492,7 +1442,6 @@ main {
                 box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
                 border-radius: 12px;
                 padding: 6px 6px 6px 16px;
-                color: inherit;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -1504,12 +1453,10 @@ main {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                color: inherit;
             }
         }
 
         .support_project_account {
-            color: inherit;
             @include mobile {
                 font-size: 16px;
                 line-height: 22px;
@@ -1611,6 +1558,14 @@ footer {
                 @include desktop {
                     padding-top: 16px;
                 }
+                
+                .footer_notion, .footer_instagram, .footer_youtube {
+                    text-decoration: none; display: inline-flex;
+                }
+
+                .footer_notion:first-child .footer_info-link_image:first-child {
+                    margin-left: 0px;
+                }
 
                 .footer_info-link_image {
                     width: 20px;
@@ -1691,7 +1646,6 @@ footer {
                         font-size: 8px;
                         line-height: 20px;
                         margin-top: 4px;
-                        color: inherit;
                         text-align: end;
                     }
                     @include desktop {
@@ -1726,7 +1680,6 @@ footer {
                     font-size: 8px;
                     line-height: 20px;
                     margin-top: 4px;
-                    color: inherit;
                     text-align: end;
                     margin-right: 128px;
                 }

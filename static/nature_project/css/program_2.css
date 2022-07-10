@@ -2,18 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Maitree&display=swap");
 @font-face { font-family: 'Maitree'; src: url("/static/nature_project/assets/fonts/RIDIBatang_min.otf") format("opentype"); font-style: normal; unicode-range: U+AC00-D7A3; }
 
-* { font-family: 'Maitree' !important; color: #FFFFFF; }
+* { font-family: 'Maitree' !important; color: inherit; }
+
+a:link { color: #ffffff; }
 
 body { width: 100%; height: auto; }
 
-.row_flex { display: flex; flex-direction: row; justify-content: space-between; align-items: center; color: inherit; }
+.row_flex { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 
-.column_flex { display: flex; flex-direction: column; color: inherit; }
+.column_flex { display: flex; flex-direction: column; }
 
-.flex_wrap { display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between; color: inherit; }
+.flex_wrap { display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between; }
 
 /* header */
-header { display: flex; position: fixed; justify-content: center; width: 100%; z-index: 10; }
+header { color: #ffffff; display: flex; position: fixed; justify-content: center; width: 100%; z-index: 10; }
 
 @media (max-width: 1023px) { header { height: 48px; } }
 
@@ -30,6 +32,8 @@ header nav .nav_home { display: flex; flex-direction: row; justify-content: spac
 @media (max-width: 1023px) { header nav .nav_home { width: 166px; font-size: 14px; line-height: 20px; } }
 
 @media (min-width: 1024px) { header nav .nav_home { width: 251px; font-size: 18px; line-height: 26px; } }
+
+header nav .nav_home .oumtt_link, header nav .nav_home .program_link, header nav .nav_home .nav_home_notion { text-decoration: none; }
 
 header nav .nav_home .nav_active { color: #DBFD5C; font-weight: 600; }
 
@@ -79,7 +83,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (max-width: 1023px) { .introduction .intro_box .intro_border { width: 328px; height: 211.5px; border-bottom: 1px solid #ffffff; margin-bottom: 84.5px; } }
 
-@media (min-width: 1024px) { .introduction .intro_box .intro_border { width: 477px; height: 214px; border-bottom: 2px solid #ffffff; margin-bottom: 534px; } }
+@media (min-width: 1024px) { .introduction .intro_box .intro_border { width: 476px; height: 214px; border-bottom: 2px solid #ffffff; margin-bottom: 534px; } }
 
 @media (max-width: 1023px) { .introduction .intro_box .intro_border .intro_round_1 { position: absolute; width: 6px; height: 6px; border-radius: 50%; left: 29px; top: 208.5px; background-color: #ffffff; } .introduction .intro_box .intro_border .intro_line_text_1 { position: absolute; font-size: 11px; line-height: 20px; letter-spacing: -0.04em; left: 20px; top: 218.5px; } }
 
@@ -106,35 +110,31 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .guest { width: 100%; height: 1104px; display: flex; flex-direction: column; align-items: center; background-color: #000000; color: #ffffff; } }
 
-@media (max-width: 1023px) { .guest .guest_box { width: 360px; height: 732px; display: flex; flex-direction: column; background-color: #000000; color: inherit; padding: 0px 16px 56px 16px; } }
+@media (max-width: 1023px) { .guest .guest_box { width: 360px; height: 732px; display: flex; flex-direction: column; background-color: #000000; color: inherit; padding: 40px 16px 56px 16px; } }
 
 @media (min-width: 1024px) { .guest .guest_box { width: 1024px; height: 1104px; display: flex; flex-direction: column; background-color: #000000; color: inherit; padding: 160px 24px 168px 24px; } }
 
-.guest .guest_box .guset_title { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.guest .guest_box .guset_title { font-weight: 600; letter-spacing: -0.02em; }
 
-@media (max-width: 1023px) { .guest .guest_box .guset_title { font-size: 22px; line-height: 36px; margin-top: 40px; } }
+@media (max-width: 1023px) { .guest .guest_box .guset_title { font-size: 22px; line-height: 36px; } }
 
 @media (min-width: 1024px) { .guest .guest_box .guset_title { font-size: 40px; line-height: 64px; } }
 
-.guest .guest_box .guest_photo_wrap { color: inherit; }
-
 @media (min-width: 1024px) { .guest .guest_box .guest_photo_wrap { display: flex; flex-direction: row; justify-content: space-between; } }
 
-.guest .guest_box .guest_photo_wrap .guest_intro { display: flex; flex-direction: row; justify-content: space-between; font-weight: 500; letter-spacing: -0.02em; color: inherit; }
+.guest .guest_box .guest_photo_wrap .guest_intro { display: flex; flex-direction: row; justify-content: space-between; font-weight: 500; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .guest .guest_box .guest_photo_wrap .guest_intro { margin-top: 8px; font-size: 16px; line-height: 24px; } }
 
 @media (min-width: 1024px) { .guest .guest_box .guest_photo_wrap .guest_intro { margin-top: 16px; font-size: 20px; line-height: 32px; } }
 
-.guest .guest_box .guest_photo_wrap .guest_intro div { color: inherit; }
+@media (max-width: 1023px) { .guest .guest_box .guest_photo_wrap .guest_photo_aran { width: 328px; height: 240px; object-fit: cover; margin-top: 32px; position: relative; display: flex; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_aran_none { width: 328px; height: 240px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/aran.png"); } .guest .guest_box .guest_photo_wrap .artist_aran_active { width: 328px; height: 240px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/aran_active.png"); } }
 
-@media (max-width: 1023px) { .guest .guest_box .guest_photo_wrap .guest_photo_aran { width: 328px; height: 240px; object-fit: cover; margin-top: 32px; position: relative; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_aran_none { width: 328px; height: 240px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/aran.png"); } .guest .guest_box .guest_photo_wrap .artist_aran_active { width: 328px; height: 240px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/aran_active.png"); } }
+@media (min-width: 1024px) { .guest .guest_box .guest_photo_wrap .guest_photo_aran { width: 476px; height: 600px; object-fit: cover; margin-top: 64px; position: relative; display: flex; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_aran_none { width: 476px; height: 600px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/aran_2.png"); } .guest .guest_box .guest_photo_wrap .artist_aran_active { width: 476px; height: 600px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/aran_active_2.png"); } }
 
-@media (min-width: 1024px) { .guest .guest_box .guest_photo_wrap .guest_photo_aran { width: 476px; height: 600px; object-fit: cover; margin-top: 64px; position: relative; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_aran_none { width: 476px; height: 600px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/aran_2.png"); } .guest .guest_box .guest_photo_wrap .artist_aran_active { width: 476px; height: 600px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/aran_active_2.png"); } }
+@media (max-width: 1023px) { .guest .guest_box .guest_photo_wrap .guest_photo_hyekyung { width: 328px; height: 240px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_hyekyung_none { width: 328px; height: 240px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung.png"); } .guest .guest_box .guest_photo_wrap .artist_hyekyung_active { width: 328px; height: 240px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung_active.png"); } }
 
-@media (max-width: 1023px) { .guest .guest_box .guest_photo_wrap .guest_photo_hyekyung { width: 328px; height: 240px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_hyekyung_none { width: 328px; height: 240px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung.png"); } .guest .guest_box .guest_photo_wrap .artist_hyekyung_active { width: 328px; height: 240px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung_active.png"); } }
-
-@media (min-width: 1024px) { .guest .guest_box .guest_photo_wrap .guest_photo_hyekyung { width: 476px; height: 600px; object-fit: cover; margin-top: 64px; position: relative; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_hyekyung_none { width: 476px; height: 600px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung_2.png"); } .guest .guest_box .guest_photo_wrap .artist_hyekyung_active { width: 476px; height: 600px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung_active_2.png"); } }
+@media (min-width: 1024px) { .guest .guest_box .guest_photo_wrap .guest_photo_hyekyung { width: 476px; height: 600px; object-fit: cover; margin-top: 64px; position: relative; display: flex; top: 0px; } .guest .guest_box .guest_photo_wrap .artist_hyekyung_none { width: 476px; height: 600px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung_2.png"); } .guest .guest_box .guest_photo_wrap .artist_hyekyung_active { width: 476px; height: 600px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyekyung_active_2.png"); } }
 
 /* withyou */
 @media (max-width: 1023px) { .withyou { width: 100%; height: 920px; display: flex; flex-direction: column; align-items: center; background-color: #fafafa; color: #ffffff; color: black; } }
@@ -145,49 +145,47 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .withyou .withyou_box { width: 1024px; height: 1332px; display: flex; flex-direction: column; background-color: #fafafa; color: inherit; padding: 160px 24px 80px 24px; } }
 
-.withyou .withyou_box .withyou_title { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.withyou .withyou_box .withyou_title { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .withyou .withyou_box .withyou_title { font-size: 22px; line-height: 36px; } }
 
 @media (min-width: 1024px) { .withyou .withyou_box .withyou_title { font-size: 40px; line-height: 64px; } }
 
-.withyou .withyou_box .withyou_profile { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.withyou .withyou_box .withyou_profile { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .withyou .withyou_box .withyou_profile { font-size: 18px; line-height: 24px; margin-top: 32px; } }
 
 @media (min-width: 1024px) { .withyou .withyou_box .withyou_profile { font-size: 28px; line-height: 36px; margin-top: 64px; } }
 
-@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_hasom { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; top: 0px; } .withyou .withyou_box .artist_hasom_none { width: 156px; height: 200px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hasom.png"); } .withyou .withyou_box .artist_hasom_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hasom_active.png"); } }
+@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_hasom { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_hasom_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hasom.png"); } .withyou .withyou_box .artist_hasom_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hasom_active.png"); } }
 
-@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_hasom { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_hasom_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hasom_2.png"); } .withyou .withyou_box .artist_hasom_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hasom_active_2.png"); } }
+@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_hasom { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_hasom_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hasom_2.png"); } .withyou .withyou_box .artist_hasom_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hasom_active_2.png"); } }
 
-@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_hahyeon { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; top: 0px; } .withyou .withyou_box .artist_hahyeon_none { width: 156px; height: 200px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon.png"); } .withyou .withyou_box .artist_hahyeon_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon_active.png"); } }
+@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_hahyeon { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_hahyeon_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon.png"); } .withyou .withyou_box .artist_hahyeon_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon_active.png"); } }
 
-@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_hahyeon { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_hahyeon_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon_2.png"); } .withyou .withyou_box .artist_hahyeon_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon_active_2.png"); } }
+@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_hahyeon { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_hahyeon_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon_2.png"); } .withyou .withyou_box .artist_hahyeon_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hahyeon_active_2.png"); } }
 
-@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_seoyeon { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_seoyeon_none { width: 156px; height: 200px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon.png"); } .withyou .withyou_box .artist_seoyeon_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon_active.png"); } }
+@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_seoyeon { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_seoyeon_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon.png"); } .withyou .withyou_box .artist_seoyeon_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon_active.png"); } }
 
-@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_seoyeon { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_seoyeon_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon_2.png"); } .withyou .withyou_box .artist_seoyeon_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon_active_2.png"); } }
+@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_seoyeon { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_seoyeon_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon_2.png"); } .withyou .withyou_box .artist_seoyeon_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/seoyeon_active_2.png"); } }
 
-@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_minseop { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_minseop_none { width: 156px; height: 200px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/minseop.png"); } .withyou .withyou_box .artist_minseop_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/minseop_active.png"); } }
+@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_minseop { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_minseop_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/minseop.png"); } .withyou .withyou_box .artist_minseop_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/minseop_active.png"); } }
 
-@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_minseop { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_minseop_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/minseop_2.png"); } .withyou .withyou_box .artist_minseop_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/minseop_active_2.png"); } }
+@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_minseop { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_minseop_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/minseop_2.png"); } .withyou .withyou_box .artist_minseop_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/minseop_active_2.png"); } }
 
-@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_sohyun { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_sohyun_none { width: 156px; height: 200px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun.png"); } .withyou .withyou_box .artist_sohyun_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun_active.png"); } }
+@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_sohyun { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_sohyun_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun.png"); } .withyou .withyou_box .artist_sohyun_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun_active.png"); } }
 
-@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_sohyun { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_sohyun_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun_2.png"); } .withyou .withyou_box .artist_sohyun_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun_active_2.png"); } }
+@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_sohyun { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_sohyun_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun_2.png"); } .withyou .withyou_box .artist_sohyun_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohyun_active_2.png"); } }
 
-@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_sohee { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_sohee_none { width: 156px; height: 200px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/sohee.png"); } .withyou .withyou_box .artist_sohee_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohee_active.png"); } }
+@media (max-width: 1023px) { .withyou .withyou_box .withyou_photo_sohee { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_sohee_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/sohee.png"); } .withyou .withyou_box .artist_sohee_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohee_active.png"); } }
 
-@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_sohee { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .withyou .withyou_box .artist_sohee_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/sohee_2.png"); } .withyou .withyou_box .artist_sohee_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohee_active_2.png"); } }
+@media (min-width: 1024px) { .withyou .withyou_box .withyou_photo_sohee { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .withyou .withyou_box .artist_sohee_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/sohee_2.png"); } .withyou .withyou_box .artist_sohee_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/sohee_active_2.png"); } }
 
-.withyou .withyou_box .withyou_intro { display: flex; flex-direction: row; justify-content: space-between; font-weight: 500; letter-spacing: -0.02em; color: inherit; }
+.withyou .withyou_box .withyou_intro { display: flex; flex-direction: row; justify-content: space-between; font-weight: 500; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .withyou .withyou_box .withyou_intro { margin-top: 4px; width: 156px; font-size: 14px; line-height: 20px; } }
 
 @media (min-width: 1024px) { .withyou .withyou_box .withyou_intro { margin-top: 8px; width: 309px; font-size: 20px; line-height: 32px; } }
-
-.withyou .withyou_box .withyou_intro div { color: inherit; }
 
 /* Program */
 .program { width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; background-color: #fafafa; color: #ffffff; color: black; }
@@ -196,7 +194,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .program .program_box { width: 1024px; height: auto; display: flex; flex-direction: column; background-color: #fafafa; color: inherit; padding: 40px 24px 168px 24px; } }
 
-.program .program_box .program_title { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.program .program_box .program_title { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .program .program_box .program_title { font-size: 18px; line-height: 24px; } }
 
@@ -228,9 +226,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .program .program_box .program_list_down_5 { width: 976px; height: 80px; background: #FFFFFF; padding: 22px 32px; margin-top: 16px; box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12); border-radius: 12px; color: inherit; display: flex; font-size: 24px; line-height: 36px; letter-spacing: -0.02em; position: relative; justify-content: space-between; align-items: center; } .program .program_box .program_list_5 { width: 976px; height: 404px; background: #FFFFFF; padding: 22px 32px; padding-bottom: 34px; margin-top: 16px; box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12); border-radius: 12px; color: inherit; display: none; font-size: 24px; line-height: 36px; letter-spacing: -0.02em; flex-direction: column; } }
 
-.program .program_box .program_list_title { color: inherit; }
-
-.program .program_box .program_list_text { letter-spacing: -0.02em; color: inherit; }
+.program .program_box .program_list_text { letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .program .program_box .program_list_text { line-height: 22px; margin-top: 22px; } }
 
@@ -247,7 +243,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 @media (min-width: 1024px) { .program .program_box .program_list_2 .program_list_text::after { content: "만져지는 바람결, 반짝이는 새소리, 까슬한 작은풀잎. \A이것들은 바짝 긴장했던 몸을 녹이고 숨을 쉬게 한다. \A이제 가장 지독했던 기억들을 곱씹으면서 이 순간을 느끼면 된다. \A     \A자연이라는 단어의 두번째 뜻은 보라 빛 연기라는 의미다. \A특히 보라가 주는 오묘한 색채는 불안정, 불행, 신비, 억압됨을 보여준다. \A나는 주로 일상에서 감당할 수 없는 스트레스를 받았을 땐 자연으로 산책을 하러 가곤 한다. \A자연의 소리와 색채를 보고 들으면 안정됨을 느껴서인지, 마음이 힘들었던 이유를 곱씹게 된다. \A힘듦에서 벗어나려고 발버둥 치는 것이 아니라, 하나도 빠짐없이 그 기분을 온전히 느끼고 더 깊이 내려간다. \A                         \A자연속에서 보라 빛 연기를 온전히 느끼는 것. 이것이 나에겐 가장 자연스러운 모습이다."; } }
 
 /* event */
-@media (max-width: 1023px) { .event { width: 100%; height: 868px; display: flex; flex-direction: column; align-items: center; background-color: #F7FCE7; color: #ffffff; color: black; } .event .event_box { width: 360px; height: 868px; display: flex; flex-direction: column; background-color: #F7FCE7; color: inherit; padding: 40px 16px 56px 16px; } .event .event_box .event_title { font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: -0.02em; color: inherit; } .event .event_box .event_text { font-size: 14px; line-height: 22px; letter-spacing: -0.02em; margin-top: 24px; color: inherit; } .event .event_box .event_notice { font-size: 12px; line-height: 20px; letter-spacing: -0.02em; color: #616161; margin-top: 8px; } .event .event_box form { color: inherit; } .event .event_box form .event_list_1 { margin-top: 12px; color: inherit; } .event .event_box form .event_list_1 .event_list_number { font-size: 16px; line-height: 20px; letter-spacing: -0.02em; color: inherit; } .event .event_box form .event_list_1 .event_list_choice { width: 256px; height: 44px; box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12); border-radius: 8px; padding: 12px 14px; -webkit-appearance: none; /* for chrome */ -moz-appearance: none; /*for firefox*/ appearance: none; background: url("/static/nature_project/assets/svg/polygon.svg") no-repeat 94% 50% / 14px 12px; font-size: 14px; line-height: 20px; background-color: #ffffff; color: #616161; border: none; outline: none; } .event .event_box form .event_list_1 .event_list_choice .event_list_choice_1 { width: 200px; height: 30px; font-size: 14px; line-height: 20px; letter-spacing: -0.02em; color: #616161; } .event .event_box form .event_list_1 select::-ms-expand { display: none; /*for IE10,11*/ } .event .event_box form .event_list_name { font-size: 14px; line-height: 24px; color: inherit; margin-top: 48px; } .event .event_box form .event_name { width: 328px; height: 36px; border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 1px solid #BDBDBD; outline: none; margin-top: 4px; padding: 0px 0px; background-color: transparent; color: inherit; border-radius: 0px; } .event .event_box form .event_list_phonenumber { font-size: 14px; line-height: 24px; color: inherit; margin-top: 24px; } .event .event_box form .event_phonenumber { width: 328px; height: 36px; border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 1px solid #BDBDBD; outline: none; margin-top: 4px; padding: 0px 0px; background-color: transparent; color: inherit; border-radius: 0px; } .event .event_box form .event_list_notice_2 { font-size: 12px; line-height: 20px; letter-spacing: -0.005em; margin-top: 2px; color: #616161; } .event .event_box form .event_list_button { width: 328px; height: 56px; background: #DBFD5C; box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24); border-radius: 12px; margin-top: 32px; font-size: 16px; line-height: 22px; color: black; border: none; } .event .event_box form .event_list_agree { display: flex; flex-direction: row; justify-content: space-between; color: inherit; margin-top: 18px; } .event .event_box form .event_list_agree .event_list_text { font-size: 14px; line-height: 24px; color: inherit; } .event .event_box form .event_list_agree .event_list_check { width: 20px; height: 24px; } .event .event_box form .event_list_agree .event_list_check input[type="checkbox"] { display: none; } .event .event_box form .event_list_agree .event_list_check input[type="checkbox"] + label { width: 20px; height: 20px; margin: 2px 0px 0px 0px; background: url("/static/nature_project/assets/svg/checkbox_none.svg") no-repeat center/16px 16px; } .event .event_box form .event_list_agree .event_list_check input[type="checkbox"]:checked + label { background: url("/static/nature_project/assets/svg/checkbox_check.svg") no-repeat center/16px 16px; float: right; } }
+@media (max-width: 1023px) { .event { width: 100%; height: 868px; display: flex; flex-direction: column; align-items: center; background-color: #F7FCE7; color: #ffffff; color: black; } .event .event_box { width: 360px; height: 868px; display: flex; flex-direction: column; background-color: #F7FCE7; color: inherit; padding: 40px 16px 56px 16px; } .event .event_box .event_title { font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: -0.02em; } .event .event_box .event_text { font-size: 14px; line-height: 22px; letter-spacing: -0.02em; margin-top: 24px; } .event .event_box .event_notice { font-size: 12px; line-height: 20px; letter-spacing: -0.02em; color: #616161; margin-top: 8px; } .event .event_box form .event_list_1 { margin-top: 12px; } .event .event_box form .event_list_1 .event_list_number { font-size: 16px; line-height: 20px; letter-spacing: -0.02em; } .event .event_box form .event_list_1 .event_list_choice { width: 256px; height: 44px; box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12); border-radius: 8px; padding: 12px 14px; -webkit-appearance: none; /* for chrome */ -moz-appearance: none; /*for firefox*/ appearance: none; background: url("/static/nature_project/assets/svg/polygon.svg") no-repeat 94% 50% / 14px 12px; font-size: 14px; line-height: 20px; background-color: #ffffff; color: #616161; border: none; outline: none; } .event .event_box form .event_list_1 .event_list_choice .event_list_choice_1 { width: 200px; height: 30px; font-size: 14px; line-height: 20px; letter-spacing: -0.02em; color: #616161; } .event .event_box form .event_list_1 select::-ms-expand { display: none; /*for IE10,11*/ } .event .event_box form .event_list_1:first-child { margin-top: 32px; } .event .event_box form .event_list_name { font-size: 14px; line-height: 24px; margin-top: 48px; } .event .event_box form .event_name { width: 328px; height: 36px; border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 1px solid #BDBDBD; outline: none; margin-top: 4px; padding: 0px 0px; background-color: transparent; border-radius: 0px; } .event .event_box form .event_list_phonenumber { font-size: 14px; line-height: 24px; margin-top: 24px; } .event .event_box form .event_phonenumber { width: 328px; height: 36px; border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 1px solid #BDBDBD; outline: none; margin-top: 4px; padding: 0px 0px; background-color: transparent; border-radius: 0px; } .event .event_box form .event_list_notice_2 { font-size: 12px; line-height: 20px; letter-spacing: -0.005em; margin-top: 2px; color: #616161; } .event .event_box form .event_list_button { width: 328px; height: 56px; background: #DBFD5C; box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24); border-radius: 12px; margin-top: 32px; font-size: 16px; line-height: 22px; color: black; border: none; } .event .event_box form .event_list_agree { display: flex; flex-direction: row; justify-content: space-between; margin-top: 18px; } .event .event_box form .event_list_agree .event_list_text { font-size: 14px; line-height: 24px; } .event .event_box form .event_list_agree .event_list_check { width: 20px; height: 24px; } .event .event_box form .event_list_agree .event_list_check input[type="checkbox"] { display: none; } .event .event_box form .event_list_agree .event_list_check input[type="checkbox"] + label { display: flex; width: 20px; height: 20px; margin: 2px 0px 0px 0px; background: url("/static/nature_project/assets/svg/checkbox_none.svg") no-repeat center/16px 16px; } .event .event_box form .event_list_agree .event_list_check input[type="checkbox"]:checked + label { background: url("/static/nature_project/assets/svg/checkbox_check.svg") no-repeat center/16px 16px; float: right; } }
 
 @media (min-width: 1024px) { .event { display: none; } }
 
@@ -260,49 +256,47 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .part2 .table_box { width: 1024px; height: 1292px; display: flex; flex-direction: column; background-color: #000000; color: inherit; padding: 160px 24px 40px 24px; } }
 
-.part2 .table_box .table_title { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.part2 .table_box .table_title { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .part2 .table_box .table_title { font-size: 22px; line-height: 36px; } }
 
 @media (min-width: 1024px) { .part2 .table_box .table_title { font-size: 40px; line-height: 64px; } }
 
-.part2 .table_box .table_profile { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.part2 .table_box .table_profile { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .part2 .table_box .table_profile { font-size: 18px; line-height: 24px; margin-top: 32px; } }
 
 @media (min-width: 1024px) { .part2 .table_box .table_profile { font-size: 28px; line-height: 36px; margin-top: 64px; } }
 
-@media (max-width: 1023px) { .part2 .table_box .table_photo_yochan { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; top: 0px; } .part2 .table_box .artist_yochan_none { width: 156px; height: 200px; object-fit: cover; top: 0px; } .part2 .table_box .artist_yochan_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; } }
+@media (max-width: 1023px) { .part2 .table_box .table_photo_yochan { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_yochan_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/yochan.png"); } .part2 .table_box .artist_yochan_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/yochan_active.png"); } }
 
-@media (min-width: 1024px) { .part2 .table_box .table_photo_yochan { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_yochan_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/yochan_2.png"); } .part2 .table_box .artist_yochan_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/yochan_active_2.png"); } }
+@media (min-width: 1024px) { .part2 .table_box .table_photo_yochan { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_yochan_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/yochan_2.png"); } .part2 .table_box .artist_yochan_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/yochan_active_2.png"); } }
 
-@media (max-width: 1023px) { .part2 .table_box .table_photo_hyunjin { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; top: 0px; } .part2 .table_box .artist_hyunjin_none { width: 156px; height: 200px; object-fit: cover; top: 0px; } .part2 .table_box .artist_hyunjin_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; } }
+@media (max-width: 1023px) { .part2 .table_box .table_photo_hyunjin { width: 156px; height: 200px; object-fit: cover; margin-top: 12px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_hyunjin_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hyunjin.png"); } .part2 .table_box .artist_hyunjin_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyunjin_active.png"); } }
 
-@media (min-width: 1024px) { .part2 .table_box .table_photo_hyunjin { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_hyunjin_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/hyunjin_2.png"); } .part2 .table_box .artist_hyunjin_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyunjin_active_2.png"); } }
+@media (min-width: 1024px) { .part2 .table_box .table_photo_hyunjin { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_hyunjin_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/hyunjin_2.png"); } .part2 .table_box .artist_hyunjin_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/hyunjin_active_2.png"); } }
 
-@media (max-width: 1023px) { .part2 .table_box .table_photo_jonghwan { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_jonghwan_none { width: 156px; height: 200px; object-fit: cover; top: 0px; } .part2 .table_box .artist_jonghwan_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; } }
+@media (max-width: 1023px) { .part2 .table_box .table_photo_jonghwan { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_jonghwan_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/jonghwan.png"); } .part2 .table_box .artist_jonghwan_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/jonghwan_active.png"); } }
 
-@media (min-width: 1024px) { .part2 .table_box .table_photo_jonghwan { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_jonghwan_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/jonghwan_2.png"); } .part2 .table_box .artist_jonghwan_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/jonghwan_active_2.png"); } }
+@media (min-width: 1024px) { .part2 .table_box .table_photo_jonghwan { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_jonghwan_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/jonghwan_2.png"); } .part2 .table_box .artist_jonghwan_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/jonghwan_active_2.png"); } }
 
-@media (max-width: 1023px) { .part2 .table_box .table_photo_dahyun { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_dahyun_none { width: 156px; height: 200px; object-fit: cover; top: 0px; } .part2 .table_box .artist_dahyun_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; } }
+@media (max-width: 1023px) { .part2 .table_box .table_photo_dahyun { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_dahyun_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/dahyun.png"); } .part2 .table_box .artist_dahyun_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/dahyun_active.png"); } }
 
-@media (min-width: 1024px) { .part2 .table_box .table_photo_dahyun { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_dahyun_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/dahyun_2.png"); } .part2 .table_box .artist_dahyun_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/dahyun_active_2.png"); } }
+@media (min-width: 1024px) { .part2 .table_box .table_photo_dahyun { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_dahyun_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/dahyun_2.png"); } .part2 .table_box .artist_dahyun_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/dahyun_active_2.png"); } }
 
-@media (max-width: 1023px) { .part2 .table_box .table_photo_yunseo { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_yunseo_none { width: 156px; height: 200px; object-fit: cover; top: 0px; } .part2 .table_box .artist_yunseo_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; } }
+@media (max-width: 1023px) { .part2 .table_box .table_photo_yunseo { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_yunseo_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/yunseo.png"); } .part2 .table_box .artist_yunseo_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/yunseo_active.png"); } }
 
-@media (min-width: 1024px) { .part2 .table_box .table_photo_yunseo { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_yunseo_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/yunseo_2.png"); } .part2 .table_box .artist_yunseo_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/yunseo_active_2.png"); } }
+@media (min-width: 1024px) { .part2 .table_box .table_photo_yunseo { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_yunseo_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/yunseo_2.png"); } .part2 .table_box .artist_yunseo_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/yunseo_active_2.png"); } }
 
-@media (max-width: 1023px) { .part2 .table_box .table_photo_youngju { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_youngju_none { width: 156px; height: 200px; object-fit: cover; top: 0px; } .part2 .table_box .artist_youngju_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; } }
+@media (max-width: 1023px) { .part2 .table_box .table_photo_youngju { width: 156px; height: 200px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_youngju_none { width: 156px; height: 200px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/youngju.png"); } .part2 .table_box .artist_youngju_active { width: 156px; height: 200px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/youngju_active.png"); } }
 
-@media (min-width: 1024px) { .part2 .table_box .table_photo_youngju { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; top: 0px; } .part2 .table_box .artist_youngju_none { width: 309px; height: 400px; object-fit: cover; top: 0px; content: url("/static/nature_project/assets/img/program/youngju_2.png"); } .part2 .table_box .artist_youngju_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/youngju_active_2.png"); } }
+@media (min-width: 1024px) { .part2 .table_box .table_photo_youngju { width: 309px; height: 400px; object-fit: cover; margin-top: 24px; position: relative; display: flex; top: 0px; } .part2 .table_box .artist_youngju_none { width: 309px; height: 400px; object-fit: cover; display: flex; top: 0px; content: url("/static/nature_project/assets/img/program/youngju_2.png"); } .part2 .table_box .artist_youngju_active { width: 309px; height: 400px; object-fit: cover; position: absolute; display: none; top: 0px; content: url("/static/nature_project/assets/img/program/youngju_active_2.png"); } }
 
-.part2 .table_box .table_intro { display: flex; flex-direction: row; justify-content: space-between; font-weight: 500; letter-spacing: -0.02em; color: inherit; }
+.part2 .table_box .table_intro { display: flex; flex-direction: row; justify-content: space-between; font-weight: 500; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .part2 .table_box .table_intro { margin-top: 4px; width: 156px; font-size: 14px; line-height: 20px; } }
 
 @media (min-width: 1024px) { .part2 .table_box .table_intro { margin-top: 8px; width: 309px; font-size: 20px; line-height: 32px; } }
-
-.part2 .table_box .table_intro div { color: inherit; }
 
 /* chair */
 @media (max-width: 1023px) { .chair { width: 100%; height: 504px; display: flex; flex-direction: column; align-items: center; background-color: #000000; color: #ffffff; } }
@@ -313,7 +307,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .chair .chair_box { width: 1024px; height: 734px; display: flex; flex-direction: column; background-color: #000000; color: inherit; padding: 80px 24px 169px 24px; } }
 
-@media (min-width: 1024px) { .chair .chair_box .row_flex_1 { display: flex; flex-direction: row; justify-content: space-between; color: inherit; } }
+@media (min-width: 1024px) { .chair .chair_box .row_flex_1 { display: flex; flex-direction: row; justify-content: space-between; } }
 
 .chair .chair_box .chair_title_1 { font-weight: 600; letter-spacing: -0.02em; }
 
@@ -327,7 +321,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .chair .chair_box .chair_text { width: 476px; font-size: 18px; line-height: 28px; } }
 
-@media (min-width: 1024px) { .chair .chair_box .row_flex_2 { display: flex; flex-direction: row; justify-content: space-between; color: inherit; margin-top: 80px; } }
+@media (min-width: 1024px) { .chair .chair_box .row_flex_2 { display: flex; flex-direction: row; justify-content: space-between; margin-top: 80px; } }
 
 .chair .chair_box .chair_title_2 { font-weight: 600; letter-spacing: -0.02em; }
 
@@ -335,15 +329,19 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .chair .chair_box .chair_title_2 { font-size: 28px; line-height: 36px; } }
 
-.chair .chair_box .chair_link { font-weight: 600; letter-spacing: -0.01em; border-bottom: 1px solid #ffffff; color: inherit; text-align: end; }
+.chair .chair_box .chair_link { font-weight: 600; letter-spacing: -0.01em; border-bottom: 1px solid #ffffff; text-align: end; }
 
 @media (max-width: 1023px) { .chair .chair_box .chair_link { width: 328px; height: 33px; font-size: 16px; line-height: 24px; margin-top: 56px; } }
 
 @media (min-width: 1024px) { .chair .chair_box .chair_link { width: 976px; height: 39px; font-size: 18px; line-height: 26px; margin-top: 115px; } }
 
-@media (max-width: 1023px) { .chair .chair_box .chair_link_text { margin-bottom: 8px; } }
+.chair .chair_box .chair_link .chair_notion { text-decoration: none; }
 
-@media (min-width: 1024px) { .chair .chair_box .chair_link_text { margin-bottom: 12px; } }
+@media (max-width: 1023px) { .chair .chair_box .chair_link .chair_link_text { margin-bottom: 8px; } }
+
+@media (min-width: 1024px) { .chair .chair_box .chair_link .chair_link_text { margin-bottom: 12px; } }
+
+.chair .chair_box .chair_link .chair_link_arrow { margin-left: 4px; }
 
 .chair .chair_box .chair a:link { color: #ffffff; }
 
@@ -358,13 +356,13 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .support1 .support1_box { width: 1024px; height: 1052px; display: flex; flex-direction: column; background-color: #ffffff; color: inherit; padding: 160px 24px 168px 24px; } }
 
-.support1 .support1_box .support_title { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.support1 .support1_box .support_title { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .support1 .support1_box .support_title { font-size: 22px; line-height: 36px; } }
 
 @media (min-width: 1024px) { .support1 .support1_box .support_title { font-size: 40px; line-height: 64px; } }
 
-.support1 .support1_box .support_photo { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.support1 .support1_box .support_photo { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .support1 .support1_box .support_photo { font-size: 18px; line-height: 24px; margin-top: 32px; } }
 
@@ -378,45 +376,33 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 @media (min-width: 1024px) { .support1 .support1_box .support_slide { width: 976px; height: 216px; background: url("/static/nature_project/assets/img/program/nature_slide_2.png"); animation: shift 49.5s infinite linear; background-size: cover; } @keyframes shift { from { background-position: 0 0; }
     to { background-position: -4624px 0; } } }
 
-.support1 .support1_box .support_staff { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.support1 .support1_box .support_staff { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .support1 .support1_box .support_staff { font-size: 18px; line-height: 24px; margin-top: 56px; } }
 
 @media (min-width: 1024px) { .support1 .support1_box .support_staff { font-size: 28px; line-height: 36px; margin-top: 80px; } }
 
-.support1 .support1_box .support_staff_list { display: flex; color: inherit; }
+.support1 .support1_box .support_staff_list { display: grid; }
 
-@media (max-width: 1023px) { .support1 .support1_box .support_staff_list { flex-direction: row; justify-content: space-between; } }
+@media (max-width: 1023px) { .support1 .support1_box .support_staff_list { width: 328px; height: 104px; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); gap: 8px 18px; margin-top: 24px; } }
 
-@media (min-width: 1024px) { .support1 .support1_box .support_staff_list { flex-direction: column; } }
+@media (min-width: 1024px) { .support1 .support1_box .support_staff_list { width: 976px; height: 156px; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 24px 24.5px; margin-top: 48px; } }
 
-@media (max-width: 1023px) { .support1 .support1_box .support_staff_list .support_staff_left, .support1 .support1_box .support_staff_list .support_staff_right { display: flex; flex-direction: column; color: inherit; } }
+.support1 .support1_box .support_staff_list .support_staff_wrap { width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: space-between; }
 
-@media (min-width: 1024px) { .support1 .support1_box .support_staff_list .support_staff_left, .support1 .support1_box .support_staff_list .support_staff_middle, .support1 .support1_box .support_staff_list .support_staff_right { display: flex; flex-direction: row; justify-content: space-between; color: inherit; } }
+@media (min-width: 1024px) { .support1 .support1_box .support_staff_list .support_staff_wrap { border-bottom: 1px solid #616161; } .support1 .support1_box .support_staff_list .support_staff_wrap:nth-child(2) { grid-row-start: 2; } .support1 .support1_box .support_staff_list .support_staff_wrap:nth-child(3) { grid-row-start: 2; } .support1 .support1_box .support_staff_list .support_staff_wrap:nth-child(4) { grid-row-start: 2; } .support1 .support1_box .support_staff_list .support_staff_wrap:nth-child(5) { grid-row-start: 3; } .support1 .support1_box .support_staff_list .support_staff_wrap:nth-child(6) { grid-row-start: 3; } .support1 .support1_box .support_staff_list .support_staff_wrap:nth-child(7) { grid-row-start: 3; } }
 
-@media (max-width: 1023px) { .support1 .support1_box .support_staff_list .support_staff_wrap { width: 155px; margin-top: 8px; } }
-
-@media (min-width: 1024px) { .support1 .support1_box .support_staff_list .support_staff_wrap { width: 309px; height: 36px; margin-top: 24px; border-bottom: 1px solid #616161; } }
-
-.support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_role { font-weight: 500; letter-spacing: -0.02em; color: inherit; }
+.support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_role { font-weight: 500; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_role { font-size: 14px; line-height: 20px; } }
 
 @media (min-width: 1024px) { .support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_role { font-size: 20px; line-height: 32px; } }
 
-.support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_name { font-weight: 400; letter-spacing: -0.02em; color: inherit; }
+.support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_name { font-weight: 400; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_name { font-size: 14px; line-height: 20px; } }
 
 @media (min-width: 1024px) { .support1 .support1_box .support_staff_list .support_staff_wrap .support_staff_name { font-size: 20px; line-height: 32px; } }
-
-@media (max-width: 1023px) { .support1 .support1_box .support1_react_1 { display: flex; } }
-
-@media (min-width: 1024px) { .support1 .support1_box .support1_react_1 { display: none; } }
-
-@media (max-width: 1023px) { .support1 .support1_box .support1_react_2 { display: none; } }
-
-@media (min-width: 1024px) { .support1 .support1_box .support1_react_2 { display: flex; } }
 
 /* support2 */
 @media (max-width: 1023px) { .support2 { width: 100%; height: 342px; display: flex; flex-direction: column; align-items: center; background-color: #F7FCE7; color: #ffffff; color: black; } }
@@ -427,7 +413,7 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .support2 .support2_box { width: 1024px; height: 1088px; display: flex; flex-direction: column; align-items: center; background-color: #F7FCE7; color: inherit; padding: 160px 0px 168px 0px; } }
 
-.support2 .support2_box .support_project { font-weight: 600; letter-spacing: -0.02em; color: inherit; }
+.support2 .support2_box .support_project { font-weight: 600; letter-spacing: -0.02em; }
 
 @media (max-width: 1023px) { .support2 .support2_box .support_project { font-size: 18px; line-height: 24px; } }
 
@@ -437,17 +423,15 @@ main .item-info-box { position: absolute; width: 100%; top: 0px; }
 
 @media (min-width: 1024px) { .support2 .support2_box .support_project_image { width: 561px; height: 392px; object-fit: cover; margin-top: 8px; } }
 
-.support2 .support2_box .support_project_text { letter-spacing: -0.02em; margin-top: 24px; color: inherit; }
+.support2 .support2_box .support_project_text { letter-spacing: -0.02em; margin-top: 24px; }
 
 @media (max-width: 1023px) { .support2 .support2_box .support_project_text { font-size: 13.7px; line-height: 22px; } }
 
 @media (min-width: 1024px) { .support2 .support2_box .support_project_text { font-size: 18px; line-height: 28px; text-align: center; } }
 
-@media (max-width: 1023px) { .support2 .support2_box .support_project_box { width: 328px; height: 56px; background: #FFFFFF; box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24); border-radius: 12px; padding: 6px 6px 6px 16px; color: inherit; display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 32px; } }
+@media (max-width: 1023px) { .support2 .support2_box .support_project_box { width: 328px; height: 56px; background: #FFFFFF; box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24); border-radius: 12px; padding: 6px 6px 6px 16px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 32px; } }
 
-@media (min-width: 1024px) { .support2 .support2_box .support_project_box { margin-top: 52px; display: flex; flex-direction: row; justify-content: space-between; color: inherit; } }
-
-.support2 .support2_box .support_project_account { color: inherit; }
+@media (min-width: 1024px) { .support2 .support2_box .support_project_box { margin-top: 52px; display: flex; flex-direction: row; justify-content: space-between; } }
 
 @media (max-width: 1023px) { .support2 .support2_box .support_project_account { font-size: 16px; line-height: 22px; } }
 
@@ -486,6 +470,10 @@ footer .footer_info .footer_info-left .footer_info-link { display: flex; flex-di
 
 @media (min-width: 1024px) { footer .footer_info .footer_info-left .footer_info-link { padding-top: 16px; } }
 
+footer .footer_info .footer_info-left .footer_info-link .footer_notion, footer .footer_info .footer_info-left .footer_info-link .footer_instagram, footer .footer_info .footer_info-left .footer_info-link .footer_youtube { text-decoration: none; display: inline-flex; }
+
+footer .footer_info .footer_info-left .footer_info-link .footer_notion:first-child .footer_info-link_image:first-child { margin-left: 0px; }
+
 footer .footer_info .footer_info-left .footer_info-link .footer_info-link_image { width: 20px; height: 20px; margin-top: 3px; }
 
 @media (max-width: 1023px) { footer .footer_info .footer_info-left .footer_info-link .footer_info-link_image { margin-left: 24px; } }
@@ -518,7 +506,7 @@ footer .footer_info .footer_info-right .footer_info-click .input::placeholder { 
 
 @media (min-width: 1024px) { footer .footer_info .footer_info-right .footer_info-click .input::placeholder { line-height: 20px; } }
 
-@media (max-width: 1023px) { footer .footer_info .footer_info-right .footer_info-click .footer_input_notice_1 { font-size: 8px; line-height: 20px; margin-top: 4px; color: inherit; text-align: end; } }
+@media (max-width: 1023px) { footer .footer_info .footer_info-right .footer_info-click .footer_input_notice_1 { font-size: 8px; line-height: 20px; margin-top: 4px; text-align: end; } }
 
 @media (min-width: 1024px) { footer .footer_info .footer_info-right .footer_info-click .footer_input_notice_1 { display: none; } }
 
@@ -530,7 +518,7 @@ footer .footer_info .footer_info-right .footer_info-click .footer-submit-button 
 
 @media (max-width: 1023px) { footer .footer_info .footer_info-right .footer_input_notice_2 { display: none; } }
 
-@media (min-width: 1024px) { footer .footer_info .footer_info-right .footer_input_notice_2 { font-size: 8px; line-height: 20px; margin-top: 4px; color: inherit; text-align: end; margin-right: 128px; } }
+@media (min-width: 1024px) { footer .footer_info .footer_info-right .footer_input_notice_2 { font-size: 8px; line-height: 20px; margin-top: 4px; text-align: end; margin-right: 128px; } }
 
 footer .footer_info-line { width: 100%; border-top: 1px solid #424242; display: flex; align-items: center; }
 
