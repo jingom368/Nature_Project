@@ -4,8 +4,9 @@
 
 <br /><br/>
 <h1>Main - desktop</h1>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/11de7838-ba4e-4836-b73e-08c8edd39b98"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/c4e545c4-8927-46f1-a46f-81c981aa6096"></div>
 
 <br/><br/>
-<h1>Program - mobile</h1>
+<h1>Program - desktop</h1>
 
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/d1aea4b9-1493-41bb-9848-1be3c30b2bd8"></div>
