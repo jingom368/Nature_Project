@@ -4,7 +4,7 @@
 
 <br /><br/>
 <h1>Main - desktop</h1>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/378c29db-5715-49d8-8848-0a0144fbaf8b"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/11de7838-ba4e-4836-b73e-08c8edd39b98"></div>
 
 <br/><br/>
 <h1>Program - mobile</h1>
