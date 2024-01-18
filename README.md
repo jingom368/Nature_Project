@@ -20,4 +20,6 @@
 
 <br/><br/>
 <h1>Program - mobile (360px)</h1>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/db694c85-e980-4691-b813-f679659a8129"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/21848845-a0ec-4bd5-b42d-1179deb58bf4"></div>
+
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/21848845-a0ec-4bd5-b42d-1179deb58bf4"></div>
