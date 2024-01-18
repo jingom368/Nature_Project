@@ -3,15 +3,19 @@
 <div><img src="https://github.com/jingom368/oumtt/assets/67932739/86cb5ec2-f238-4702-ac98-40e33f607979"></div>
 
 <br /><br/>
-<h1>Main - desktop</h1>
+<h1>Main - desktop (2048px)</h1>
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/c4e545c4-8927-46f1-a46f-81c981aa6096"></div>
 
 <br/><br/>
-<h1>Program - desktop</h1>
+<h1>Program - desktop (2048px)</h1>
 
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/d1aea4b9-1493-41bb-9848-1be3c30b2bd8"></div>
 
 
+<br /><br/>
+<h1>Main - mobile (360px)</h1>
+
+
 <br/><br/>
-<h1>Program - mobile</h1>
+<h1>Program - mobile (360px)</h1>
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/db694c85-e980-4691-b813-f679659a8129"></div>
