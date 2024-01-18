@@ -14,6 +14,7 @@
 
 <br /><br/>
 <h1>Main - mobile (360px)</h1>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/d0647d37-68ba-4b8f-806e-7ecdd1ebee16"></div>
 
 
 <br/><br/>
