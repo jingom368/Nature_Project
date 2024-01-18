@@ -1,4 +1,4 @@
-<h1>텀블벅 - 크라우드펀딩</h1>
+![127 0 0 1_8000_(Samsung Galaxy S8+) (6)](https://github.com/jingom368/Nature_Project/assets/67932739/f68fb7a2-4ee8-41c1-97fc-5d7800a7d944)<h1>텀블벅 - 크라우드펀딩</h1>
 <h2><a href="https://tumblbug.com/projectoumtt?ref=%EA%B2%80%EC%83%89%2F%ED%82%A4%EC%9B%8C%EB%93%9C">[인간전시 프로젝트 바로가기]</a></h2>
 <div><img src="https://github.com/jingom368/oumtt/assets/67932739/86cb5ec2-f238-4702-ac98-40e33f607979"></div>
 
@@ -14,7 +14,8 @@
 
 <br /><br/>
 <h1>Main - mobile (360px)</h1>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/d0647d37-68ba-4b8f-806e-7ecdd1ebee16"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/76d38b18-4f0b-4669-9a87-8ff47f15ea24"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/a5209a65-a968-4a51-ba7d-dde796c33e84"></div>
 
 
 <br/><br/>
