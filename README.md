@@ -10,7 +10,7 @@
 <br/><br/>
 <h1>Program - desktop (1024px ~ 2048px)</h1>
 
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/39316847-a6e9-4943-8191-6f587e94dc6d"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/c066d5b3-1881-4041-b165-6d28af44ac3e"></div>
 
 
 <br /><br/>
