@@ -21,5 +21,5 @@
 
 <br/><br/>
 <h1>Program - mobile (360px ~ 1024px)</h1>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/a6cc6818-e07f-46c2-96f1-4aacdde8c822"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/ceda5dbd-de05-415b-9b68-07584770b382" width="1440px"></div>
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/9467b9b5-a5f4-46f9-bc34-8d95d445369b"></div>
