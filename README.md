@@ -5,7 +5,7 @@
 
 <br /><br/>
 <h1>Main - desktop (1024px ~ 2048px)</h1>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/c4e545c4-8927-46f1-a46f-81c981aa6096"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/927bae7c-d8f7-419b-bd5d-7272d719aa83"></div>
 
 <br/><br/>
 <h1>Program - desktop (1024px ~ 2048px)</h1>
