@@ -16,7 +16,7 @@
 <br /><br/>
 <h1>Main - mobile (360px ~ 1024px)</h1>
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/09a43ae8-bc09-41dd-9881-1d8954954834" width="1440px"></div>
-<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/44e41908-7875-47b6-b1a9-b31c737e2879"></div>
+<div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/55543884-5abe-48c3-8fa9-511a4f6d65e3" width="1440px"></div>
 
 
 <br/><br/>
