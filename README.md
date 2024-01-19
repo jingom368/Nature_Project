@@ -15,6 +15,7 @@
   
 <div>한 달 동안 약 1,000명의 방문자를 기록하였으며, 공연 당일에는 300명의 관람객을 유치하였습니다.</div>
 <div>방문자와 관람객이 전 연령층에서 고르게 분포하였음을 확인하였습니다. 이를 통해 프로젝트의 전반적인 가능성을 확인하였습니다.</div>
+<br />
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/c737c446-0c2e-43a0-8331-4c623a1eb79e"></div>
 <div><img src="https://github.com/jingom368/Nature_Project/assets/67932739/02ab72e1-2aa3-4beb-9242-0194b55fff5a"></div>
 
